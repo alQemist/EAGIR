@@ -1,4 +1,4 @@
-## Enterprise Architecture and Governance (Application Not Included)
+# Enterprise Architecture and Governance Application Not Included
 Ben Marchbanks
 ![Image](/docs/assets/img/eag.png)
 
