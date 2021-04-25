@@ -23,6 +23,7 @@ Enhanced Features:
 
 ### Application Portfolio - app_portfolio
 ![Image](/docs/assets/img/app_portfolio.png)
+[open](https://alqemist.github.io/EAGIR/app_portfolio/)
 Enhanced Features:
 - Implements [TIME](https://blog.planview.com/driving-transparency-time-analysis-apm/) rationalization method
 - Indicates current level resource commitment
