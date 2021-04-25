@@ -4,7 +4,7 @@
 
 Visualization Code are provided here under MIT License.
 
-### Visualization Repository Created using [d3.js](https://d3js.org)
+### This Visualization Repository built using [d3.js](https://d3js.org) Javascript library.
 
 These visualizations support **Enterprise Architecture/Domain Modeling** in several ways.
 - Generate data driven visuals of key modeling concepts
@@ -33,6 +33,7 @@ Enhanced Features:
 (coming soon)
 
 ### Domain Persona Chart - domain_persona
+(coming soon)
 
 You can use the [editor on GitHub](https://github.com/alQemist/EAGIR/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
