@@ -1,6 +1,6 @@
 ![Image](/docs/assets/img/eag.png)
 
-##Enterprise Architecture and Governance
+## Enterprise Architecture and Governance
 developed in 2020 by Ben Marchbanks.
 
 Visualization Code are provided here under MIT License.
