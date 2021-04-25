@@ -20,6 +20,7 @@ Enhanced Features:
 - Data Dictionary descriptions
 
 ### Application Portfolio - app_portfolio
+![Image](/docs/assets/img/app_portfolio.png)
 Enhanced Features:
 - Implements [TIME](https://blog.planview.com/driving-transparency-time-analysis-apm/) rationalization method
 - Indicates current level resource commitment
