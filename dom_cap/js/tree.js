@@ -212,13 +212,9 @@ function showTooltip(d) {
 
 }
 
-function addTreeView(target, jdata, subject) {
+function addTreeView(target, data, subject) {
 
     const threshold = 80; // max number of nodes to display at opening
-
-    var data = jdata.sort((a, b) => {
-        return a['parent'] - b['[parent]'];
-    });
 
     var b = d3.select("body")
     b.selectAll("svg").remove()
