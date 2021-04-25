@@ -7,7 +7,7 @@ These visualizations support **Enterprise Architecture/Domain Modeling** in seve
 - Publish EA source data to stakeholders and application developers
 - Provide insights to Architecture Review Board
 
-![Image]('eag.png')
+![Image]('https://github.com/alQemist/EAGIR/blob/gh-pages/eag.png')
 
 The Enterprise Architecture and Governance application was developed in 2020 by Ben Marchbanks.
 This subset of visualizations are provided under MIT License to the public.
