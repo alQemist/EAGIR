@@ -28,7 +28,7 @@ d3.json("data/config.json", function (obj) {
     toggleStyle();
 })
 
-d3.csv("data/matrix.csv", function (d) {
+d3.csv("data/data.csv", function (d) {
 
     column_keys = Object.keys(d[0]);
 
