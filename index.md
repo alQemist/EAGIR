@@ -8,7 +8,7 @@ Visualization Code are provided here under MIT License.
 
 These visualizations support **Enterprise Architecture/Domain Modeling** in several ways.
 - Generate data driven visuals of key modeling concepts
-- Be the single source of truth for Enterprise Architecture (EA)
+- Provide a single source of truth for Enterprise Architecture (EA)
 - Publish EA source data to stakeholders and application developers
 - Provide insights to Architecture Review Board
 
