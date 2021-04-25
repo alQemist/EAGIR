@@ -3,7 +3,7 @@ Ben Marchbanks
 ![Image](/docs/assets/img/eag.png)
 
 
-Only Visualization Code are provided (MIT License)
+Only the code and sample data used to generate the visualizations are provided here (MIT License).
 
 ### This Visualization Repository built using [d3.js](https://d3js.org) Javascript library.
 
