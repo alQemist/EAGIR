@@ -1,4 +1,4 @@
-# FULL EAG APPLICATION IS NOT INLCUDED
+### FULL EAG APPLICATION IS NOT INLCUDED
 (EAG authored by Ben Marchbanks)
 ![Image](/docs/assets/img/eag.png)
 
