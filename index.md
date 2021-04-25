@@ -1,9 +1,9 @@
-## Enterprise Architecture and Governance # Ben Marchbanks
+## Enterprise Architecture and Governance (Application Not Included)
+Ben Marchbanks
 ![Image](/docs/assets/img/eag.png)
 
 
-
-Visualization Code are provided here under MIT License.
+Only Visualization Code are provided (MIT License)
 
 ### This Visualization Repository built using [d3.js](https://d3js.org) Javascript library.
 
