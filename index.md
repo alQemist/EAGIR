@@ -1,5 +1,11 @@
 ## A Repository of Visualizations Created using d3.js
 
+As part of a larger Enterprise Architecture - Domain Modeling project these visualizations were created to serve several purposes.
+- Present data driven representations of key modeling concepts
+- Represent the single source of truth for Enterprise Architecture
+- Publishing the source data to stakeholders and application developers
+- Provide insights for Architecture Review Board
+
 You can use the [editor on GitHub](https://github.com/alQemist/EAGIR/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
