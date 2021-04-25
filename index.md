@@ -1,6 +1,9 @@
 ![Image](/docs/assets/img/eag.png)
 
-**Enterprise Architecture and Governance** application was developed in 2020 by Ben Marchbanks.
+##Enterprise Architecture and Governance
+developed in 2020 by Ben Marchbanks.
+
+Visualization Code are provided here under MIT License.
 
 ### Visualization Repository Created using [d3.js](https://d3js.org)
 
