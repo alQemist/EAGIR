@@ -28,6 +28,7 @@ Enhanced Features:
 - Indicates current level resource commitment
 - Suggest future level of resource commitment
 - Domain ownership indicators
+- Import / Export Data
 
 ### Technology Stack Portfolio - tech_portfolio
 ![Image](/docs/assets/img/tech_portfolio.png)
@@ -36,6 +37,7 @@ Enhanced Features:
 - Indicates current level resource commitment
 - Suggest future level of resource commitment
 - Domain ownership indicators
+- Import / Export Data
 
 ### Domain Persona Chart - domain_persona
 (coming soon)
