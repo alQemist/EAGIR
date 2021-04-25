@@ -1,7 +1,6 @@
-The **Enterprise Architecture and Governance** application was developed in 2020 by Ben Marchbanks.
-This subset of visualizations provided below are under MIT License to the public.
-
 ![Image](/docs/assets/img/eag.png)
+
+**Enterprise Architecture and Governance** application was developed in 2020 by Ben Marchbanks.
 
 ### Visualization Repository Created using [d3.js](https://d3js.org)
 
@@ -12,6 +11,7 @@ These visualizations support **Enterprise Architecture/Domain Modeling** in seve
 - Provide insights to Architecture Review Board
 
 
+![Image](/docs/assets/img/erd.png)
 
 ### Entity Relationship Diagram - ERD
 Enhanced Features:
