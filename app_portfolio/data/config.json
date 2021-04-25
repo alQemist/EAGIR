@@ -1,0 +1,15 @@
+{
+  "style_option": 0,
+  "subject": "Application Portfolio Analysis",
+  "x_y_axis": [
+    "Business Value",
+    "Technical Merits"
+  ],
+  "trends": [
+    "Increasing",
+    "Unchanged",
+    "Decreasing",
+    "Parked"
+  ],
+  "page_title": "ENTERPRISE ARCHITECTURE AND GOVERNANCE"
+}
