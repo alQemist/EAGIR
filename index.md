@@ -3,21 +3,33 @@ l### Visualization Repository Created using [d3.js](https://d3js.org)
 
 These visualizations support **Enterprise Architecture/Domain Modeling** in several ways.
 - Generate data driven visuals of key modeling concepts
-- Be the single source of truth for Enterprise Architecture
+- Be the single source of truth for Enterprise Architecture (EA)
 - Publish EA source data to stakeholders and application developers
 - Provide insights to Architecture Review Board
+
+[image]()
 
 The Enterprise Architecture and Governance application was developed in 2020 by Ben Marchbanks.
 This subset of visualizations are provided under MIT License to the public.
 
 ### Entity Relationship Diagram - ERD
 Enhanced Features:
-- Indicates Domains (data owner)
+- Domain ownership indicator
 - ARB Review Status
 - Change Control Status
 - Data Dictionary descriptions
 
 ### Application Portfolio - app_portfolio
+Enhanced Features:
+- Implements [TIME](https://blog.planview.com/driving-transparency-time-analysis-apm/) rationalization method
+- Indicates current level resource commitment
+- Suggest future level of resource commitment
+- Domain ownership indicators
+
+### Technical Stack Portfolio - tech_portfolio
+(coming soon)
+
+### Domain Persona Chart - domain_persona
 
 You can use the [editor on GitHub](https://github.com/alQemist/EAGIR/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
