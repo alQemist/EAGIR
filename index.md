@@ -14,6 +14,7 @@ These visualizations support **Enterprise Architecture/Domain Modeling** in seve
 
 ### Entity Relationship Diagram - ERD
 ![Image](/docs/assets/img/erd.png)
+[[OPEN]](https://alqemist.github.io/EAGIR/erd/)
 
 Enhanced Features:
 - Domain ownership indicator
@@ -34,6 +35,8 @@ Enhanced Features:
 
 ### Technology Stack Portfolio - tech_portfolio
 ![Image](/docs/assets/img/tech_portfolio.png)
+[[OPEN]](https://alqemist.github.io/EAGIR/tech_portfolio/)
+
 Enhanced Features:
 - Implements [TIME](https://blog.planview.com/driving-transparency-time-analysis-apm/) rationalization method
 - Indicates current level resource commitment
