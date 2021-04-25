@@ -31,7 +31,12 @@ Enhanced Features:
 - Domain ownership indicators
 
 ### Technology Stack Portfolio - tech_portfolio
-(coming soon)
+![Image](/docs/assets/img/tech_portfolio.png)
+Enhanced Features:
+- Implements [TIME](https://blog.planview.com/driving-transparency-time-analysis-apm/) rationalization method
+- Indicates current level resource commitment
+- Suggest future level of resource commitment
+- Domain ownership indicators
 
 ### Domain Persona Chart - domain_persona
 (coming soon)
