@@ -2,7 +2,7 @@
 (EAG authored by Ben Marchbanks)
 ![Image](/docs/assets/img/eag.png)
 
-Only the code and sample data used to generate the visualizations are provided here under [GNU General Public License v3.0](/docs/assets/img/license.txt)).
+Code and sample data to generate the visualizations are provided here under [GNU General Public License v3.0](/docs/assets/img/license.txt).
 
 ### This Visualization Repository built using [d3.js](https://d3js.org) Javascript library.
 
