@@ -1,10 +1,14 @@
-## A Repository of Visualizations Created using d3.js
+### Visualization Repository Created using [d3.js](https://d3js.org)
 
-As part of a larger Enterprise Architecture - Domain Modeling project these visualizations were created to serve several purposes.
-- Present data driven representations of key modeling concepts
-- Represent the single source of truth for Enterprise Architecture
-- Publishing the source data to stakeholders and application developers
-- Provide insights for Architecture Review Board
+
+These visualizations support **Enterprise Architecture/Domain Modeling** in several ways.
+- Present data driven visuals of key modeling concepts
+- Present the single source of truth for Enterprise Architecture
+- Publish EA source data to stakeholders and application developers
+- Provide insights to Architecture Review Board
+
+The Enterprise Architecture and Governance application was created in 2020 by Ben Marchbanks.
+This repository is provided under MIT License to the public.
 
 You can use the [editor on GitHub](https://github.com/alQemist/EAGIR/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
