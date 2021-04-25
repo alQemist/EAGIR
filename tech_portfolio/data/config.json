@@ -1,0 +1,15 @@
+{
+  "style_option": 1,
+  "subject": "Technology Stack Analysis",
+  "x_y_axis": [
+    "Business Value",
+    "Technical Merits"
+  ],
+  "trends": [
+    "Increasing",
+    "Unchanged",
+    "Decreasing",
+    "Parked"
+  ],
+  "page_title": "ENTERPRISE ARCHITECTURE AND GOVERNANCE"
+}
