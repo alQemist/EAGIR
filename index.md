@@ -10,10 +10,9 @@ These visualizations support **Enterprise Architecture/Domain Modeling** in seve
 - Publish EA source data to stakeholders and application developers
 - Provide insights to Architecture Review Board
 
-
+### Entity Relationship Diagram - ERD
 ![Image](/docs/assets/img/erd.png)
 
-### Entity Relationship Diagram - ERD
 Enhanced Features:
 - Domain ownership indicator
 - ARB Review Status
