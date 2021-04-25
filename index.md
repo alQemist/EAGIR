@@ -1,5 +1,9 @@
-### Visualization Repository Created using [d3.js](https://d3js.org)
+The **Enterprise Architecture and Governance** application was developed in 2020 by Ben Marchbanks.
+This subset of visualizations provided below are under MIT License to the public.
 
+![Image](/docs/assets/img/eag.png)
+
+### Visualization Repository Created using [d3.js](https://d3js.org)
 
 These visualizations support **Enterprise Architecture/Domain Modeling** in several ways.
 - Generate data driven visuals of key modeling concepts
@@ -7,10 +11,7 @@ These visualizations support **Enterprise Architecture/Domain Modeling** in seve
 - Publish EA source data to stakeholders and application developers
 - Provide insights to Architecture Review Board
 
-![Image](/docs/assets/img/eag.png)
 
-The Enterprise Architecture and Governance application was developed in 2020 by Ben Marchbanks.
-This subset of visualizations are provided under MIT License to the public.
 
 ### Entity Relationship Diagram - ERD
 Enhanced Features:
