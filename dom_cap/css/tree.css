@@ -1,0 +1,175 @@
+
+body {
+    background: rgb(55, 55, 55);
+    margin: 0;
+    border: none;
+    font-family: Helvetica, "Nova Flat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgba(220, 220, 220, .8)
+}
+
+.lightdark {
+    position: absolute;
+    top: 7px;
+    cursor: pointer;
+    font-size: .8em !important;
+    margin: 2px;
+    padding: 5px;
+    text-decoration: underline;
+    left: 20px;
+}
+
+text {
+    fill: rgba(50, 50, 50, .9);
+}
+
+.darkish {
+    background: rgb(255, 255, 255);
+    color: rgba(55, 55, 55, .6);
+    fill:rgba(55, 55, 55, .6);
+}
+
+.darkish text  {
+    fill: rgba(55, 55, 55, .9);
+}
+
+.indicator  {
+    fill: rgba(220, 220, 220, .8);
+}
+
+.subtitle {
+    position: sticky;
+    bottom: 5px;
+    width: 95%;
+    text-align: right;
+    letter-spacing: 1em;
+    margin: 5px;
+    text-indent: 4px !important;
+    right: 20px;
+    font-size: .6em !important;
+
+}
+
+.title {
+    color: rgb(220, 220, 220);
+    width: 100%;
+    text-align: left;
+    text-indent: 40px;
+    letter-spacing: 3px;
+}
+
+
+.legend {
+    position: absolute;
+    top: 38%;
+    right: 30px;
+    width: 150px;
+    height: 350px;
+    font-size: 1em;
+}
+
+.node {
+    cursor: pointer;
+}
+
+.hlinks{
+    text-decoration: underline;
+    color: #0000ee;
+    margin:4px;
+    cursor: pointer;
+}
+.popup, .context-menu {
+    position: absolute;
+    left: -4000px;
+    top: 5%;
+    width: 70%;
+    height: auto;
+    display: inline-block;
+    opacity: 0;
+    text-align: center;
+    background: transparent;
+    padding: 20px;
+    color:white;
+}
+
+.popup-iframe {
+    width: 100%;
+    border: none;
+    margin-top: 30px;
+}
+
+.context-menu {
+    width: auto;
+    text-align: left;
+    background: transparent;
+}
+
+.context-menu li {
+    list-style: none;
+    background: lightgrey;
+    padding: 0 5px 0 5px;
+    margin: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.vtab {
+    position: absolute;
+    bottom: 10%;
+    transform: rotate(-90deg);
+    transform-origin: 0 50%;
+    font-size: 4em;
+    margin: 0;
+    text-align: center;
+    border: 0 red solid;
+    left: 80px;
+}
+
+#svgobject .link {
+    fill: none;
+    stroke: rgb(150, 150, 150);
+    stroke-width: 2px;
+}
+
+.iconbox {
+    border: none;
+    width: 100px;
+    height: 100px;
+    left: -120px;
+    position: absolute;
+}
+
+.tooltip {
+    max-width: 400px;
+    min-width: 200px;
+    height: auto;
+    position: absolute;
+    top: 15%;
+    left: -4000px;
+    opacity: 0;
+    padding: 10px;
+    background: rgba(220, 220, 220, .95);
+    color: black;
+}
+
+.tool-content {
+    margin-top: 30px !important;
+    z-index: 0 !important;
+}
+
+.close {
+    background: #cacaca !important;
+    border-radius: 50% !important;
+    border: none !important;
+    width: 25px !important;
+    height: 25px !important;
+    opacity: 1 !important;
+    line-height: .6em !important;
+    padding-bottom: 5px!important;
+}
+.saveas{
+    cursor:pointer;
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+

@@ -1,0 +1,722 @@
+[
+  {
+    "parent": "",
+    "name": "Enterprise",
+    "type": "domain",
+    "links": "",
+    "description": "Primary domain of DME-CG organization providing governance over all other domains",
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "AP/AR Management",
+    "name": "Quickbooks",
+    "type": "application",
+    "links": "",
+    "description": "Financial Management",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Assessment Form Creation",
+    "name": "Cognito Forms",
+    "type": "application",
+    "links": "",
+    "description": "Third party tool for creating and managing custom forms for data collection",
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Attestation Management",
+    "name": "Document Management",
+    "type": "capability",
+    "links": "",
+    "description": "All Documents (contract, attestations, insurance) maintained here.",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Business Account Management",
+    "name": "Request Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage Requests",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Business Account Management",
+    "name": "Request Types Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage request types",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Business Account Management",
+    "name": "User Creation",
+    "type": "capability",
+    "links": "",
+    "description": "ability to create a syste user ",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Business Account Management",
+    "name": "User Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Business Account Management",
+    "name": "User Privilege Management",
+    "type": "capability",
+    "links": "",
+    "description": "Being able to assign privileges to a user / persona",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Business Operations",
+    "name": "Business Operations Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage Business Operations domain",
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Business Operations Management",
+    "name": "Business Account Creation",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to add a new business account",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Business Operations Management",
+    "name": "Business Account Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage Business Accounts",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Business Operations Management",
+    "name": "Communications Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage Communications",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Business Operations Management",
+    "name": "Contract Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage legal contracts",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Business Operations Management",
+    "name": "Lines of Business Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage Lines of Business",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Business Operations Management",
+    "name": "Request Types Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage request types",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Capital Reserve Management ?",
+    "name": "Wells Fargo",
+    "type": "application",
+    "links": "",
+    "description": null,
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Cash Management",
+    "name": "JPMorgan Chase",
+    "type": "application",
+    "links": "",
+    "description": null,
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Clinical Services",
+    "name": "Clinical Services Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage Clinical Services",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Clinical Services Management",
+    "name": "Assessment Form Creation",
+    "type": "capability",
+    "links": "https://www.cognitoforms.com",
+    "description": "Creating standardized and customized assessment forms using third-party tool.",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Clinical Services Management",
+    "name": "Assessment Form Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to create and manage library of assessment forms",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Clinical Services Management",
+    "name": "Clinician Management",
+    "type": "capability",
+    "links": "",
+    "description": "All name, address, contact, payee information must sync with payroll company, i.e. when something is updated with payroll company or with account, it must be synced",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Clinical Services Management",
+    "name": "Communications Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage Communications",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Clinical Services Management",
+    "name": "Document Management",
+    "type": "capability",
+    "links": "",
+    "description": "All Documents (contract, attestations, insurance) maintained here.",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Clinical Services Management",
+    "name": "Performance Analysis Dashboard",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to view performance metrics and  option to perform ad hoc query depending on the user's persona privileges",
+    "state": "3",
+    "implemented": null
+  },
+  {
+    "parent": "Clinical Services Management",
+    "name": "Request Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage Requests",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Contract Management",
+    "name": "Document Management",
+    "type": "capability",
+    "links": "",
+    "description": "All Documents (contract, attestations, insurance) maintained here.",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Engineering",
+    "name": "Information Systems Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage all technical systems, hardware, software, data, media and the human assets required to support and administer the same.",
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Engineering Admin Console",
+    "name": "User Creation",
+    "type": "capability",
+    "links": "",
+    "description": "ability to create a syste user ",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Engineering Admin Console",
+    "name": "User Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Engineering Admin Console",
+    "name": "User Privilege Management",
+    "type": "capability",
+    "links": "",
+    "description": "Being able to assign privileges to a user / persona",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Engineering Admin Console",
+    "name": "Website  Gateway Controls",
+    "type": "capability",
+    "links": "",
+    "description": null,
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Engineering Admin Console",
+    "name": "Website Banner Management",
+    "type": "capability",
+    "links": "",
+    "description": null,
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Analytics",
+    "type": "subdomain",
+    "links": "",
+    "description": "Governs all internal data analysis and research capabilities",
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Business Operations",
+    "type": "subdomain",
+    "links": "",
+    "description": "Directing business operations in order to deliver quality services ",
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Clinical Services",
+    "type": "subdomain",
+    "links": "",
+    "description": "Portfolio of Services provided by our company",
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Direct To Consumer",
+    "type": "subdomain",
+    "links": "",
+    "description": "Individuals who independently request our services",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Engineering",
+    "type": "subdomain",
+    "links": "",
+    "description": "Information Technology, Security, Application Development and Support",
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "External Domains",
+    "type": "subdomain",
+    "links": "",
+    "description": "All External Domains",
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Finance",
+    "type": "subdomain",
+    "links": "",
+    "description": "Governance for Finance and Accounting",
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Health Plan",
+    "type": "subdomain",
+    "links": "",
+    "description": "Healthcare Providers (External Business Stakeholders)",
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Human Resources",
+    "type": "subdomain",
+    "links": "",
+    "description": "Human Resources Department",
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Login",
+    "type": "capability",
+    "links": "",
+    "description": "Create an IT ticket if they are unable to login.  This should be tied to valid, verified email address in our system",
+    "state": "1",
+    "implemented": "1"
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Member",
+    "type": "subdomain",
+    "links": "",
+    "description": "The individuals which are the subjects of our services",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise Architecture Governance",
+    "name": "Architectural Change Management",
+    "type": "capability",
+    "links": "https://dmecg.aha.io/initiatives/GRY-S-7",
+    "description": null,
+    "state": "3",
+    "implemented": "1"
+  },
+  {
+    "parent": "Enterprise Architecture Governance",
+    "name": "Document Management",
+    "type": "capability",
+    "links": "",
+    "description": "All Documents (contract, attestations, insurance) maintained here.",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise Architecture Governance",
+    "name": "EAG",
+    "type": "application",
+    "links": "",
+    "description": "Modeling and Documentation tool used for Enterprise Architecture",
+    "state": "0",
+    "implemented": "1"
+  },
+  {
+    "parent": "Enterprise Architecture Governance",
+    "name": "Portfolio Management",
+    "type": "capability",
+    "links": "https://dmecg.aha.io/initiatives/GRY-S-8",
+    "description": "Vetting and approval of all soft IT assets (i.e. not hardware)",
+    "state": "3",
+    "implemented": "1"
+  },
+  {
+    "parent": "Finance",
+    "name": "Financial Management",
+    "type": "capability",
+    "links": "https://dmecg.aha.io/epics/GRY-E-23,https://dmecg.aha.io/features/GRY-91",
+    "description": "Ability to govern the financial activities of the enterprise and establish the requirements for systems,services, and processes which control and manage finance activities.",
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Financial Management",
+    "name": "AP/AR Management",
+    "type": "capability",
+    "links": "",
+    "description": null,
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Financial Management",
+    "name": "Capital Reserve Management ?",
+    "type": "capability",
+    "links": "",
+    "description": null,
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Financial Management",
+    "name": "Cash Management",
+    "type": "capability",
+    "links": "",
+    "description": null,
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Financial Management",
+    "name": "Invoice Management",
+    "type": "capability",
+    "links": "",
+    "description": "Create, read, update, delete privileges for Invoices based on persona privileges.\r",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Financial Management",
+    "name": "Revenue Recognition",
+    "type": "capability",
+    "links": "",
+    "description": null,
+    "state": "0",
+    "implemented": "1"
+  },
+  {
+    "parent": "Health Plan",
+    "name": "HP Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to Manage Health Plan Domain",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "HP Management",
+    "name": "Communications Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage Communications",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "HP Management",
+    "name": "Document Management",
+    "type": "capability",
+    "links": "",
+    "description": "All Documents (contract, attestations, insurance) maintained here.",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "HP Management",
+    "name": "Invoice Management",
+    "type": "capability",
+    "links": "",
+    "description": "Create, read, update, delete privileges for Invoices based on persona privileges.\r",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "HP Management",
+    "name": "Lines of Business Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage Lines of Business",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "HP Management",
+    "name": "Performance Analysis Dashboard",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to view performance metrics and  option to perform ad hoc query depending on the user's persona privileges",
+    "state": "3",
+    "implemented": null
+  },
+  {
+    "parent": "HP Management",
+    "name": "Request Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage Requests",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "HP Management",
+    "name": "Request Types Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage request types",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "HP Management",
+    "name": "Training Management",
+    "type": "capability",
+    "links": "",
+    "description": null,
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "HP Management",
+    "name": "User Creation",
+    "type": "capability",
+    "links": "",
+    "description": "ability to create a syste user ",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "HP Management",
+    "name": "User Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "HP Management",
+    "name": "User Privilege Management",
+    "type": "capability",
+    "links": "",
+    "description": "Being able to assign privileges to a user / persona",
+    "state": "2",
+    "implemented": null
+  },
+  {
+    "parent": "Human Resources",
+    "name": "Human Resources Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage all aspects of the employee relationship from recruiting to retirement.",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Human Resources Management",
+    "name": "Attestation Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage and track Attestation documents",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Human Resources Management",
+    "name": "Contract Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage legal contracts",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Human Resources Management",
+    "name": "License Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage license documents",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Human Resources Management",
+    "name": "Payroll / Tax / Benefit Management",
+    "type": "capability",
+    "links": "",
+    "description": null,
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Information Systems Management",
+    "name": "Database Management",
+    "type": "capability",
+    "links": "",
+    "description": null,
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Information Systems Management",
+    "name": "Engineering Admin Console",
+    "type": "capability",
+    "links": "https://dmecg.aha.io/epics/GRY-E-39?active_tab=comments",
+    "description": "Ability to control access to systems, services and digital assets and protect them from unauthorized access. Should have 2FA for access to this console.",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Information Systems Management",
+    "name": "Enterprise Architecture Governance",
+    "type": "capability",
+    "links": "https://dmecg.aha.io/initiatives/ITINFR-S-3",
+    "description": "Exercise of authority over processes, standards, security, software, technology,data, and digital assets across the enterprise.",
+    "state": "0",
+    "implemented": "1"
+  },
+  {
+    "parent": "License Management",
+    "name": "Document Management",
+    "type": "capability",
+    "links": "",
+    "description": "All Documents (contract, attestations, insurance) maintained here.",
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Login",
+    "name": "2 Factor Authentication",
+    "type": "capability",
+    "links": "",
+    "description": null,
+    "state": "1",
+    "implemented": null
+  },
+  {
+    "parent": "Login",
+    "name": "User Validation",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to validate a user's credentials",
+    "state": "0",
+    "implemented": "1"
+  },
+  {
+    "parent": "Payroll / Tax / Benefit Management",
+    "name": "PayChex",
+    "type": "application",
+    "links": "",
+    "description": "Service for Managing Personnel and Payroll",
+    "state": "0",
+    "implemented": null
+  },
+  {
+    "parent": "Revenue Recognition",
+    "name": "QuickSight",
+    "type": "application",
+    "links": "",
+    "description": "AWS Dashboard Reporting application (service)",
+    "state": "0",
+    "implemented": "1"
+  },
+  {
+    "parent": "User Management",
+    "name": "Contact Method Management",
+    "type": "capability",
+    "links": "",
+    "description": "Ability to manage email,phone,address",
+    "state": "2",
+    "implemented": null
+  }
+]

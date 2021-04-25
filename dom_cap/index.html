@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Enterprise Architecture Capabilities</title>
+    <link rel="stylesheet" type="text/css" href="css/tree.css" media="screen"/>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="js/tree.js"></script>
+</head>
+<body>
+<div class="svgContainer">
+</div>
+<div class="tooltip">
+
+</div>
+<div class="popup">
+    <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <iframe class="popup-iframe" width="100%" height="100%" frameborder="0" src=""></iframe>
+
+</div>
+<div class="context-menu">
+
+    <li>Business Logic</li>
+    <li>Field List</li>
+
+
+</div>
+<div class="lightdark">light</div>
+
+</body>
+<!-- load the d3.js library -->
+
+
+
+<script>
+
+    var colors = ["rgba(114,229,239,.9)", "rgba(118,204,108,.9)", "rgba(221,142,235,.9)", "rgba(185,246,23,.9)", "rgba(253,137,146,.9)", "rgba(54,229,21,.9)", "rgba(140,171,234,.9)", "rgb(242,231,33)", "rgb(252,143,59)", "rgb(191,205,142)"];
+    var styleOption = 1;
+    var subject = "Capability Map"
+    //var indicator_colors = ["rgba(255,0,0,0)", "rgba(105,100,100,.9)","rgba(250,50,50,.9)","rgba(225,225,225,1)","rgba(0,0,255,.9)"];
+    var indicator_colors = ["rgba(200,200,200,.9)", "rgba(200,0,0,.9)","rgba(50,250,50,.9)","rgba(200,200,0,.9)","rgba(50,50,255,.9)"];
+
+    function toggleStyle() {
+
+        styleOption = !styleOption;
+
+        d3.select(".lightdark")
+            .html(function () {
+                let tx = !styleOption ? "light" : "dark"
+                return tx;
+            })
+
+        d3.select("body")
+            .classed("darkish", function () {
+                return styleOption;
+            })
+
+    }
+
+    toggleStyle();
+
+    d3.select(".lightdark").on("click", function () {
+        toggleStyle()
+    })
+
+
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function () {
+            var context = this, args = arguments;
+            var later = function () {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    }
+
+    var jsonData = d3.json("data/capabilities.json",function(d){
+        addTreeView(target, d, subject);
+        }) ;
+    var subject = subject;
+    var target = d3.select(".svgContainer");
+    var target_margin = [];
+
+    var myEfficientFn = debounce(function () {
+        addTreeView(target, jsonData, subject);
+    }, 250);
+
+
+    window.addEventListener('resize', myEfficientFn);
+
+    myEfficientFn()
+
+</script>
+
+
+
+
