@@ -1,0 +1,26 @@
+id,name,production_status,arb_status,domain,description,a_value,b_value,plot
+1001,AWS Athena,3,2,Enterprise,"Console for querying S3 Buckets",4,5,4_5
+1002,PayChex,-1,2,Human Resources","Service for Managing Personnel and Payroll",8,10,8_10
+1005,AWS QuickSight,4,2,Analytics,"AWS Dashboard Reporting application (service)",6,9,6_9
+1006,Sharepoint,4,2,Enterprise,"Enterprise Internal Website",2,2,2_2
+1008,Coupa API,4,2,Finance,"Invoicing API",10,9,10_9
+1009,Freshdesk,4,2,Engineering,"Technical support ticketing",5,3,5_3
+1010,PDFlib,4,2,Engineering,"PDF creation library",8,8,8_8
+1011,License Manager Pro,4,2,"Human Resources","Manage Clinician Licenses",7,7,7_7
+1012,MailerLite,4,2,Engineering,"Mass mailer",8,6,8_6
+1016,Google Map API,4,2,"External Domains","GEO location service for determining distances",7,9,7_9
+1017,Quickbooks API,1,0,Finance,"Financial Management",1,8,1_8
+1018,Docusign API,4,2,Enterprise,"Signing of documents",10,10,10_10
+1019,Nutshell,4,2,Engineering,"Monitor FM server performance",4,8,4_8
+1027,RDS (AWS),4,2,Enterprise,"Relational Database Service",10,10,10_10
+1029,Teams,4,2,Engineering,"Internal Collaboration Tool",9,8,9_8
+1031,WordPress,1,0,Enterprise,,1,8,1_8
+1032,Moodle,1,0,"Human Resources",,1,8,1_8
+1038,EAG,2,1,Engineering,"Modeling and Documentation tool used for Enterprise Architecture",6,10,6_10
+1039,PHPStorm,4,2,Engineering,"IDE use to develop applications or tools and perform DB admin",5,10,5_10
+1040,Visual Code,4,2,Engineering,"IDE use to develop applications or tools and perform DB admin",5,10,5_10
+1041,RDP,4,2,Engineering,"Remote Desktop application for access remove servers in order to perform administrative or development tasks.",5,10,5_10
+1042,AWS Cloud Services,4,2,Engineering,"Large portfolio os services for IT",9,9,9_9
+1043,AWS S3,4,2,Engineering,"Document storage as objects for optimization (without content indexing)",9,9,9_9
+1044,Windows Server 2016,4,2,Engineering,,9,9,9_9
+1045,Python,4,2,Engineering,"Data Transformations",7,7,7_7
