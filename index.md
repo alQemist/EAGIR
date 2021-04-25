@@ -19,7 +19,7 @@ Enhanced Features:
 - Domain ownership indicator
 - ARB Review Status
 - Change Control Status
-- Data Dictionary descriptions
+- Data Dictionary descriptions (tooltips)
 
 ### Application Portfolio - app_portfolio
 ![Image](/docs/assets/img/app_portfolio.png)
