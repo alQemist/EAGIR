@@ -1,6 +1,7 @@
+## Enterprise Architecture and Governance # Ben Marchbanks
 ![Image](/docs/assets/img/eag.png)
 
-## Enterprise Architecture and Governance by Ben Marchbanks
+
 
 Visualization Code are provided here under MIT License.
 
