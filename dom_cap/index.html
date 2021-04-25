@@ -34,7 +34,7 @@
 <div class="lightdark">light</div>
 
 </body>
-<!-- load the d3.js library -->
+
 
 
 
@@ -86,7 +86,12 @@
     }
 
     var jsonData = d3.json("data/capabilities.json",function(d){
-        addTreeView(target, d, subject);
+        setTimeout(function(){
+            let data = d.sort((a,b)=>{
+                return a['parent'] - b['[parent]'];
+            })
+            addTreeView(target, data, subject);
+        },500)
         }) ;
     var subject = subject;
     var target = d3.select(".svgContainer");
@@ -99,7 +104,6 @@
 
     window.addEventListener('resize', myEfficientFn);
 
-    myEfficientFn()
 
 </script>
 
