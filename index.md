@@ -1,14 +1,23 @@
-### Visualization Repository Created using [d3.js](https://d3js.org)
+l### Visualization Repository Created using [d3.js](https://d3js.org)
 
 
 These visualizations support **Enterprise Architecture/Domain Modeling** in several ways.
-- Present data driven visuals of key modeling concepts
-- Present the single source of truth for Enterprise Architecture
+- Generate data driven visuals of key modeling concepts
+- Be the single source of truth for Enterprise Architecture
 - Publish EA source data to stakeholders and application developers
 - Provide insights to Architecture Review Board
 
-The Enterprise Architecture and Governance application was created in 2020 by Ben Marchbanks.
-This repository is provided under MIT License to the public.
+The Enterprise Architecture and Governance application was developed in 2020 by Ben Marchbanks.
+This subset of visualizations are provided under MIT License to the public.
+
+### Entity Relationship Diagram - ERD
+Enhanced Features:
+- Indicates Domains (data owner)
+- ARB Review Status
+- Change Control Status
+- Data Dictionary descriptions
+
+### Application Portfolio - app_portfolio
 
 You can use the [editor on GitHub](https://github.com/alQemist/EAGIR/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
