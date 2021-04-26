@@ -54,9 +54,16 @@ Enhanced Features:
 - Indicates in process / implemented states
 - Tooltip Descriptions
 
+
+### Domain Capability Map - cap_map
+![Image](/docs/assets/img/cap_map.png)
+[[OPEN]](https://alqemist.github.io/EAGIR/cap_map/)
+
+Enhanced Features:
+- Collapse/Expand Nodes
+- Indicates current/future states
+
 ### Domain Persona Chart - dom_persona
 (coming soon)
 
-### Domain Capability Map - domain_capability_map
-(coming soon)
 
