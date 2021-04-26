@@ -45,7 +45,15 @@ Enhanced Features:
 - Import / Export Data
 
 ### Domain Persona Chart - domain_persona
-(coming soon)
+![Image](/docs/assets/img/dom_cap.png)
+[[OPEN]](https://alqemist.github.io/EAGIR/dom_cap/)
+
+Enhanced Features:
+- Implements [TIME](https://blog.planview.com/driving-transparency-time-analysis-apm/) rationalization method
+- Indicates current level resource commitment
+- Suggest future level of resource commitment
+- Domain ownership indicators
+- Import / Export Data
 
 ### Domain Capability Chart - domain_capability
 (coming soon)
