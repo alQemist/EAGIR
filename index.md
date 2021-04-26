@@ -44,10 +44,17 @@ Enhanced Features:
 - Domain ownership indicators
 - Import / Export Data
 
-### Domain Persona Chart - domain_persona
-(coming soon)
+### Domain Capability Chart - dom_cap
+![Image](/docs/assets/img/dom_cap.png)
+[[OPEN]](https://alqemist.github.io/EAGIR/dom_cap/)
 
-### Domain Capability Chart - domain_capability
+Enhanced Features:
+- Collapse/Expand Nodes
+- Indicates current/future states
+- Indicates in process / implemented states
+- Tooltip Descriptions
+
+### Domain Persona Chart - dom_persona
 (coming soon)
 
 ### Domain Capability Map - domain_capability_map
