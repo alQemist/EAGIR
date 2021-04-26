@@ -21,7 +21,7 @@ var context_obj = {
 }
 var char_width = 8
 var dash = 0;
-var tooltip = d3.select(".tooltip")
+var tooltip
 var closebtn = d3.selectAll(".close")
 var popup = d3.select(".popup")
 var contextmenu = d3.select(".context-menu")
@@ -92,14 +92,12 @@ function setContextMenu(d) {
 
                             let tx = "<h6>" + d.name + "</h6>" ;
                             tx += (context_obj[l] == "items") ?  t.replace(/\s*,\s*|\s+,/g, "<br>") :  ln;
-
                             showTooltip(tx)
                         })
                 }
 
             })
         }else {
-
             console.log(context_li[dt])
            if(tttx){
                let tx = "<h5>" +d.name + "</h5>" ;
@@ -195,6 +193,7 @@ function showTooltip(d) {
         })
         let regx = new RegExp(/\r|\n/g)
         let html = d.replace(regx,"<br>")
+
         tooltip.append("span")
             .classed(".tool-content", true)
             .html(html)
@@ -219,6 +218,7 @@ function addTreeView(target, data, subject) {
     var b = d3.select("body")
     b.selectAll("svg").remove()
 
+    tooltip = d3.select(".tooltip")
 
     var legend = b.append("svg")
         .classed("legend", true)
