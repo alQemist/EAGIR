@@ -1,5 +1,5 @@
 var types_array = [];
-var indicator_array = ["current_state","future state","in process","new"];
+var indicator_array = ["current_state","future state","in process","implemented"];
 var context_li = {
     "view": ["More Details", "Field List"],
     "subview": ["More Details", "Field List"],
