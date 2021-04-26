@@ -162,16 +162,16 @@
     "implemented": null
   },
   {
-    "parent": "Clinical Services",
-    "name": "Clinical Services Management",
+    "parent": "Customer Services",
+    "name": "Customer Services Management",
     "type": "capability",
     "links": "",
-    "description": "Ability to manage Clinical Services",
+    "description": "Ability to manage Customer Services",
     "state": "1",
     "implemented": null
   },
   {
-    "parent": "Clinical Services Management",
+    "parent": "Customer Services Management",
     "name": "Assessment Form Creation",
     "type": "capability",
     "links": "https://www.cognitoforms.com",
@@ -180,7 +180,7 @@
     "implemented": null
   },
   {
-    "parent": "Clinical Services Management",
+    "parent": "Customer Services Management",
     "name": "Assessment Form Management",
     "type": "capability",
     "links": "",
@@ -189,8 +189,8 @@
     "implemented": null
   },
   {
-    "parent": "Clinical Services Management",
-    "name": "Clinician Management",
+    "parent": "Customer Services Management",
+    "name": "Agent Management",
     "type": "capability",
     "links": "",
     "description": "All name, address, contact, payee information must sync with payroll company, i.e. when something is updated with payroll company or with account, it must be synced",
@@ -198,7 +198,7 @@
     "implemented": null
   },
   {
-    "parent": "Clinical Services Management",
+    "parent": "Customer Services Management",
     "name": "Communications Management",
     "type": "capability",
     "links": "",
@@ -207,7 +207,7 @@
     "implemented": null
   },
   {
-    "parent": "Clinical Services Management",
+    "parent": "Customer Services Management",
     "name": "Document Management",
     "type": "capability",
     "links": "",
@@ -216,7 +216,7 @@
     "implemented": null
   },
   {
-    "parent": "Clinical Services Management",
+    "parent": "Customer Services Management",
     "name": "Performance Analysis Dashboard",
     "type": "capability",
     "links": "",
@@ -225,7 +225,7 @@
     "implemented": null
   },
   {
-    "parent": "Clinical Services Management",
+    "parent": "Customer Services Management",
     "name": "Request Management",
     "type": "capability",
     "links": "",
@@ -298,15 +298,6 @@
   },
   {
     "parent": "Enterprise",
-    "name": "Analytics",
-    "type": "subdomain",
-    "links": "",
-    "description": "Governs all internal data analysis and research capabilities",
-    "state": "0",
-    "implemented": null
-  },
-  {
-    "parent": "Enterprise",
     "name": "Business Operations",
     "type": "subdomain",
     "links": "",
@@ -316,7 +307,7 @@
   },
   {
     "parent": "Enterprise",
-    "name": "Clinical Services",
+    "name": "Customer Services",
     "type": "subdomain",
     "links": "",
     "description": "Portfolio of Services provided by our company",
@@ -325,28 +316,10 @@
   },
   {
     "parent": "Enterprise",
-    "name": "Direct To Consumer",
-    "type": "subdomain",
-    "links": "",
-    "description": "Individuals who independently request our services",
-    "state": "1",
-    "implemented": null
-  },
-  {
-    "parent": "Enterprise",
     "name": "Engineering",
     "type": "subdomain",
     "links": "",
     "description": "Information Technology, Security, Application Development and Support",
-    "state": "0",
-    "implemented": null
-  },
-  {
-    "parent": "Enterprise",
-    "name": "External Domains",
-    "type": "subdomain",
-    "links": "",
-    "description": "All External Domains",
     "state": "0",
     "implemented": null
   },
@@ -361,7 +334,7 @@
   },
   {
     "parent": "Enterprise",
-    "name": "Health Plan",
+    "name": "Healthcare Facility",
     "type": "subdomain",
     "links": "",
     "description": "Healthcare Providers (External Business Stakeholders)",
@@ -375,24 +348,6 @@
     "links": "",
     "description": "Human Resources Department",
     "state": "0",
-    "implemented": null
-  },
-  {
-    "parent": "Enterprise",
-    "name": "Login",
-    "type": "capability",
-    "links": "",
-    "description": "Create an IT ticket if they are unable to login.  This should be tied to valid, verified email address in our system",
-    "state": "1",
-    "implemented": "1"
-  },
-  {
-    "parent": "Enterprise",
-    "name": "Member",
-    "type": "subdomain",
-    "links": "",
-    "description": "The individuals which are the subjects of our services",
-    "state": "1",
     "implemented": null
   },
   {
@@ -486,16 +441,16 @@
     "implemented": "1"
   },
   {
-    "parent": "Health Plan",
-    "name": "HP Management",
+    "parent": "Healthcare Facility",
+    "name": "Account Management",
     "type": "capability",
     "links": "",
-    "description": "Ability to Manage Health Plan Domain",
+    "description": "Ability to Manage Healthcare Facility Domain",
     "state": "2",
     "implemented": null
   },
   {
-    "parent": "HP Management",
+    "parent": "Account Management",
     "name": "Communications Management",
     "type": "capability",
     "links": "",
@@ -504,7 +459,7 @@
     "implemented": null
   },
   {
-    "parent": "HP Management",
+    "parent": "Account Management",
     "name": "Document Management",
     "type": "capability",
     "links": "",
@@ -513,7 +468,7 @@
     "implemented": null
   },
   {
-    "parent": "HP Management",
+    "parent": "Account Management",
     "name": "Invoice Management",
     "type": "capability",
     "links": "",
@@ -522,7 +477,7 @@
     "implemented": null
   },
   {
-    "parent": "HP Management",
+    "parent": "Account Management",
     "name": "Lines of Business Management",
     "type": "capability",
     "links": "",
@@ -531,7 +486,7 @@
     "implemented": null
   },
   {
-    "parent": "HP Management",
+    "parent": "Account Management",
     "name": "Performance Analysis Dashboard",
     "type": "capability",
     "links": "",
@@ -540,7 +495,7 @@
     "implemented": null
   },
   {
-    "parent": "HP Management",
+    "parent": "Account Management",
     "name": "Request Management",
     "type": "capability",
     "links": "",
@@ -549,7 +504,7 @@
     "implemented": null
   },
   {
-    "parent": "HP Management",
+    "parent": "Account Management",
     "name": "Request Types Management",
     "type": "capability",
     "links": "",
@@ -558,7 +513,7 @@
     "implemented": null
   },
   {
-    "parent": "HP Management",
+    "parent": "Account Management",
     "name": "Training Management",
     "type": "capability",
     "links": "",
@@ -567,7 +522,7 @@
     "implemented": null
   },
   {
-    "parent": "HP Management",
+    "parent": "Account Management",
     "name": "User Creation",
     "type": "capability",
     "links": "",
@@ -576,7 +531,7 @@
     "implemented": null
   },
   {
-    "parent": "HP Management",
+    "parent": "Account Management",
     "name": "User Management",
     "type": "capability",
     "links": "",
@@ -585,7 +540,7 @@
     "implemented": null
   },
   {
-    "parent": "HP Management",
+    "parent": "Account Management",
     "name": "User Privilege Management",
     "type": "capability",
     "links": "",
@@ -673,24 +628,6 @@
     "description": "All Documents (contract, attestations, insurance) maintained here.",
     "state": "1",
     "implemented": null
-  },
-  {
-    "parent": "Login",
-    "name": "2 Factor Authentication",
-    "type": "capability",
-    "links": "",
-    "description": null,
-    "state": "1",
-    "implemented": null
-  },
-  {
-    "parent": "Login",
-    "name": "User Validation",
-    "type": "capability",
-    "links": "",
-    "description": "Ability to validate a user's credentials",
-    "state": "0",
-    "implemented": "1"
   },
   {
     "parent": "Payroll / Tax / Benefit Management",
