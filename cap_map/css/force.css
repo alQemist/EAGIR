@@ -1,0 +1,206 @@
+
+body {
+    background: rgb(55, 55, 55);
+    margin: 0px;
+    border: none;
+    font-family: Helvetica, "Nova Flat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgba(220, 220, 220, .8)
+}
+
+.lightdark {
+    position: absolute;
+    top: 7px;
+    cursor: pointer;
+    font-size: .8em !important;
+    margin: 2px;
+    padding: 5px;
+    text-decoration: underline;
+    left: 20px;
+    text-transform: uppercase;
+}
+
+text {
+    fill: rgba(50, 50, 50, .9);
+}
+
+.darkish {
+    background: rgb(255, 255, 255);
+    color: rgba(55, 55, 55, .6);
+    fill:rgba(55, 55, 55, .6);
+}
+
+.darkish text  {
+    fill: rgba(55, 55, 55, .9);
+}
+
+.indicator  {
+    fill: rgba(220, 220, 220, .8);
+}
+
+.subtitle {
+    width: 95%;
+    text-align: right;
+    letter-spacing: 1em;
+    margin: 5px;
+    text-indent: 4px !important;
+    right: 20px;
+    font-size: .6em !important;
+}
+
+.title {
+    color: rgb(220, 220, 220);
+    width: 100%;
+    text-align: left;
+    text-indent: 40px;
+    letter-spacing: 3px;
+}
+
+
+.legend {
+    position: absolute;
+    top: 38%;
+    right: 30px;
+    width: 150px;
+    height: 350px;
+    font-size: 1em;
+}
+
+.node {
+    cursor: pointer;
+}
+
+
+.nodeCircle
+{
+    fill:#cccccc;
+}
+
+
+.link {
+    fill: none;
+    stroke:  #888888;
+    stroke-width: 2px;
+    opacity:.8;
+}
+
+.label {
+    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-anchor: middle;
+    font-weight:bold;
+    fill:white;
+}
+
+.nameText {
+    font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    fill:white !important;
+    opacity:.6;
+    font-size: 1.2em;
+    text-anchor: middle;
+    text-shadow: #CCC 1px 0 3px;
+}
+
+.large {
+    font-size: 1.2em;
+    text-anchor: middle;
+    text-transform: uppercase;
+}
+
+.nameText.large{
+    font-size: 1.5em;
+    text-anchor: middle;
+    fill:black !important;
+}
+
+.heading {
+    font-size: 15px;
+    font-weight:bold;
+}
+
+.separator{
+    width:100%;
+    height:1px;
+}
+
+.svgContainer{
+    width:40%;
+    top:4%;
+    position: absolute;
+}
+
+.content{
+    margin-bottom:10px;
+}
+
+.contentDiv {
+    margin-bottom:20px;
+
+}
+
+.border1{
+    border-bottom: 1px solid lightgray;
+}
+
+.headerBold {
+    font-weight:800;
+}
+
+
+.controlPanel{
+    position:fixed;
+    top:73px;
+    left:1px;
+    font-size:14px;
+    color:lightgray;
+    height:2em;
+    width:3em;
+    cursor: pointer;
+    line-height:3em;
+}
+
+
+.popup, .context-menu {
+    position: absolute;
+    left: -4000px;
+    top: 5%;
+    width: 70%;
+    height: auto;
+    display: inline-block;
+    opacity: 0;
+    text-align: center;
+    background: transparent;
+    padding: 20px;
+    color:"white";
+}
+
+.popup-iframe {
+    width: 100%;
+    border: none;
+    margin-top: 30px;
+}
+
+.context-menu {
+    width: auto;
+    text-align: left;
+    background: transparent;
+}
+
+.context-menu li {
+    list-style: none;
+    background: lightgrey;
+    padding: 0px 5px 0px 5px;
+    margin: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.vtab {
+    position: absolute;
+    top: 5%;
+    transform: rotate(0deg);
+    transform-origin: 0% 50%;
+    font-size: 2em;
+    margin: 0px;
+    text-align: center;
+    border: 0px red solid;
+    left: -50px;
+}

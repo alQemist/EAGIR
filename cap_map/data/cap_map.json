@@ -1,0 +1,706 @@
+[
+  {
+    "parent": "",
+    "name": "Enterprise",
+    "description": "Primary domain of DME-CG organization providing governance over all other domains",
+    "dim_val": "0",
+    "dim_str": null,
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "AP/AR Management",
+    "description": null,
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Architectural Change Management",
+    "description": null,
+    "dim_val": "3",
+    "dim_str": "implemented",
+    "implemented": "1"
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Service Form Creation",
+    "description": "Creating standardized and customized Service forms using third-party tool.",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Service Form Management",
+    "description": "Ability to create and manage library of Service forms",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Attestation Management",
+    "description": "Ability to manage and track Attestation documents",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Business Account Creation",
+    "description": "Ability to add a implemented business account",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Business Account Management",
+    "description": "Ability to manage Business Accounts",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Capital Reserve Management ?",
+    "description": null,
+    "dim_val": "0",
+    "dim_str": "current",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Cash Management",
+    "description": null,
+    "dim_val": "0",
+    "dim_str": "current",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Agent Management",
+    "description": "All name, address, contact, payee information must sync with payroll company, i.e. when something is updated with payroll company or with account, it must be synced",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Communications Management",
+    "description": "Ability to manage Communications",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Contact Method Management",
+    "description": "Ability to manage email,phone,address",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Contract Management",
+    "description": "Ability to manage legal contracts",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Database Management",
+    "description": null,
+    "dim_val": "0",
+    "dim_str": "current",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Document Management",
+    "description": "All Documents (contract, attestations, insurance) maintained here.",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Engineering Admin Console",
+    "description": "Ability to control access to systems, services and digital assets and protect them from unauthorized access. Should have 2FA for access to this console.",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Enterprise Architecture Governance",
+    "description": "Exercise of authority over processes, standards, security, software, technology,data, and digital assets across the enterprise.",
+    "dim_val": "0",
+    "dim_str": "current",
+    "implemented": "1"
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Invoice Management",
+    "description": "Create, read, update, delete privileges for Invoices based on persona privileges.\r",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "License Management",
+    "description": "Ability to manage license documents",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Lines of Business Management",
+    "description": "Ability to manage Lines of Business",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Payroll / Tax / Benefit Management",
+    "description": null,
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Performance Analysis Dashboard",
+    "description": "Ability to view performance metrics and  option to perform ad hoc query depending on the user's persona privileges",
+    "dim_val": "3",
+    "dim_str": "implemented",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Portfolio Management",
+    "description": "Vetting and approval of all soft IT assets (i.e. not hardware)",
+    "dim_val": "3",
+    "dim_str": "implemented",
+    "implemented": "1"
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Service Management",
+    "description": "Ability to manage Services",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Service Types Management",
+    "description": "Ability to manage Service types",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Revenue Recognition",
+    "description": null,
+    "dim_val": "0",
+    "dim_str": "current",
+    "implemented": "1"
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Training Management",
+    "description": null,
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "User Creation",
+    "description": "ability to create a syste user ",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "User Management",
+    "description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "User Privilege Management",
+    "description": "Being able to assign privileges to a user / persona",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "User Validation",
+    "description": "Ability to validate a user's credentials",
+    "dim_val": "0",
+    "dim_str": "current",
+    "implemented": "1"
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Website  Gateway Controls",
+    "description": null,
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise",
+    "name": "Website Banner Management",
+    "description": null,
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "AP/AR Management",
+    "name": "Financial Management",
+    "description": null,
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Architectural Change Management",
+    "name": "Enterprise Architecture Governance",
+    "description": null,
+    "dim_val": "3",
+    "dim_str": "implemented",
+    "implemented": "1"
+  },
+  {
+    "parent": "Service Form Creation",
+    "name": "Healthcare Services Management",
+    "description": "Creating standardized and customized Service forms using third-party tool.",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Service Form Management",
+    "name": "Healthcare Services Management",
+    "description": "Ability to create and manage library of Service forms",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Attestation Management",
+    "name": "Human Resources Management",
+    "description": "Ability to manage and track Attestation documents",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Business Account Creation",
+    "name": "Business Operations Management",
+    "description": "Ability to add a implemented business account",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Business Account Management",
+    "name": "Business Operations Management",
+    "description": "Ability to manage Business Accounts",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Capital Reserve Management ?",
+    "name": "Financial Management",
+    "description": null,
+    "dim_val": "0",
+    "dim_str": "current",
+    "implemented": null
+  },
+  {
+    "parent": "Cash Management",
+    "name": "Financial Management",
+    "description": null,
+    "dim_val": "0",
+    "dim_str": "current",
+    "implemented": null
+  },
+  {
+    "parent": "Agent Management",
+    "name": "Healthcare Services Management",
+    "description": "All name, address, contact, payee information must sync with payroll company, i.e. when something is updated with payroll company or with account, it must be synced",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Communications Management",
+    "name": "Business Operations Management",
+    "description": "Ability to manage Communications",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Communications Management",
+    "name": "Healthcare Services Management",
+    "description": "Ability to manage Communications",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Communications Management",
+    "name": "Account Management",
+    "description": "Ability to manage Communications",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Contact Method Management",
+    "name": "User Management",
+    "description": "Ability to manage email,phone,address",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Contract Management",
+    "name": "Business Operations Management",
+    "description": "Ability to manage legal contracts",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Contract Management",
+    "name": "Human Resources Management",
+    "description": "Ability to manage legal contracts",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Database Management",
+    "name": "Information Systems Management",
+    "description": null,
+    "dim_val": "0",
+    "dim_str": "current",
+    "implemented": null
+  },
+  {
+    "parent": "Document Management",
+    "name": "Attestation Management",
+    "description": "All Documents (contract, attestations, insurance) maintained here.",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Document Management",
+    "name": "Healthcare Services Management",
+    "description": "All Documents (contract, attestations, insurance) maintained here.",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Document Management",
+    "name": "Contract Management",
+    "description": "All Documents (contract, attestations, insurance) maintained here.",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Document Management",
+    "name": "Enterprise Architecture Governance",
+    "description": "All Documents (contract, attestations, insurance) maintained here.",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Document Management",
+    "name": "Account Management",
+    "description": "All Documents (contract, attestations, insurance) maintained here.",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Document Management",
+    "name": "License Management",
+    "description": "All Documents (contract, attestations, insurance) maintained here.",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Engineering Admin Console",
+    "name": "Information Systems Management",
+    "description": "Ability to control access to systems, services and digital assets and protect them from unauthorized access. Should have 2FA for access to this console.",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Enterprise Architecture Governance",
+    "name": "Information Systems Management",
+    "description": "Exercise of authority over processes, standards, security, software, technology,data, and digital assets across the enterprise.",
+    "dim_val": "0",
+    "dim_str": "current",
+    "implemented": "1"
+  },
+  {
+    "parent": "Invoice Management",
+    "name": "Financial Management",
+    "description": "Create, read, update, delete privileges for Invoices based on persona privileges.\r",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Invoice Management",
+    "name": "Account Management",
+    "description": "Create, read, update, delete privileges for Invoices based on persona privileges.\r",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "License Management",
+    "name": "Human Resources Management",
+    "description": "Ability to manage license documents",
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Lines of Business Management",
+    "name": "Business Operations Management",
+    "description": "Ability to manage Lines of Business",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Lines of Business Management",
+    "name": "Account Management",
+    "description": "Ability to manage Lines of Business",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Payroll / Tax / Benefit Management",
+    "name": "Human Resources Management",
+    "description": null,
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Performance Analysis Dashboard",
+    "name": "Healthcare Services Management",
+    "description": "Ability to view performance metrics and  option to perform ad hoc query depending on the user's persona privileges",
+    "dim_val": "3",
+    "dim_str": "implemented",
+    "implemented": null
+  },
+  {
+    "parent": "Performance Analysis Dashboard",
+    "name": "Account Management",
+    "description": "Ability to view performance metrics and  option to perform ad hoc query depending on the user's persona privileges",
+    "dim_val": "3",
+    "dim_str": "implemented",
+    "implemented": null
+  },
+  {
+    "parent": "Portfolio Management",
+    "name": "Enterprise Architecture Governance",
+    "description": "Vetting and approval of all soft IT assets (i.e. not hardware)",
+    "dim_val": "3",
+    "dim_str": "implemented",
+    "implemented": "1"
+  },
+  {
+    "parent": "Service Management",
+    "name": "Business Account Management",
+    "description": "Ability to manage Services",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Service Management",
+    "name": "Healthcare Services Management",
+    "description": "Ability to manage Services",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Service Management",
+    "name": "Account Management",
+    "description": "Ability to manage Services",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Service Types Management",
+    "name": "Business Account Management",
+    "description": "Ability to manage Service types",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Service Types Management",
+    "name": "Business Operations Management",
+    "description": "Ability to manage Service types",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Service Types Management",
+    "name": "Account Management",
+    "description": "Ability to manage Service types",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "Revenue Recognition",
+    "name": "Financial Management",
+    "description": null,
+    "dim_val": "0",
+    "dim_str": "current",
+    "implemented": "1"
+  },
+  {
+    "parent": "Training Management",
+    "name": "Account Management",
+    "description": null,
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "User Creation",
+    "name": "Business Account Management",
+    "description": "ability to create a syste user ",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "User Creation",
+    "name": "Engineering Admin Console",
+    "description": "ability to create a syste user ",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "User Creation",
+    "name": "Account Management",
+    "description": "ability to create a syste user ",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "User Management",
+    "name": "Business Account Management",
+    "description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "User Management",
+    "name": "Engineering Admin Console",
+    "description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "User Management",
+    "name": "Account Management",
+    "description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "User Privilege Management",
+    "name": "Business Account Management",
+    "description": "Being able to assign privileges to a user / persona",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "User Privilege Management",
+    "name": "Engineering Admin Console",
+    "description": "Being able to assign privileges to a user / persona",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "User Privilege Management",
+    "name": "Account Management",
+    "description": "Being able to assign privileges to a user / persona",
+    "dim_val": "2",
+    "dim_str": "in process",
+    "implemented": null
+  },
+  {
+    "parent": "User Validation",
+    "name": "Login",
+    "description": "Ability to validate a user's credentials",
+    "dim_val": "0",
+    "dim_str": "current",
+    "implemented": "1"
+  },
+  {
+    "parent": "Website  Gateway Controls",
+    "name": "Engineering Admin Console",
+    "description": null,
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  },
+  {
+    "parent": "Website Banner Management",
+    "name": "Engineering Admin Console",
+    "description": null,
+    "dim_val": "1",
+    "dim_str": "future",
+    "implemented": null
+  }
+]
