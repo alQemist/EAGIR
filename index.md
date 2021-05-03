@@ -1,4 +1,4 @@
-### FULL EAG APPLICATION IS NOT INLCUDED
+### Open Source Visualization Library
 (EAG authored by Ben Marchbanks)
 ![Image](/docs/assets/img/eag.png)
 
