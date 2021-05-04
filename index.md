@@ -1,4 +1,4 @@
-### Open Source Visualization Library
+### Open Source Visualization Library for Enterprise Architecture
 (EAG authored by Ben Marchbanks)
 ![Image](/docs/assets/img/eag.png)
 
