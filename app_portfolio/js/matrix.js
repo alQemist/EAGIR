@@ -43,7 +43,10 @@ d3.csv("data/matrix.csv", function (d) {
     })
 
     target = d3.select(".svgContainer");
-    addScatterView(target, d, subject, x_y_axis);
+    setTimeout(function(){
+        addScatterView(target, d, subject, x_y_axis);
+    },500)
+
 
     loadedData = d
 
