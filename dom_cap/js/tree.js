@@ -560,7 +560,7 @@ function addTreeView(target, data, subject) {
 
 
     var i = 0,
-        duration = 100,
+        duration = 1000,
         root,
         nodes;
 
