@@ -8,7 +8,7 @@ var gravityDefault = .01;
 var frictionDefault = .95;
 
 var radius = masterRadius = 50;
-var centerRadius = radius + 15;
+var centerRadius = radius + 40;
 //    var reset=true;
 var centered;
 var active = d3.select(null);
@@ -1383,77 +1383,3 @@ function newRequirement() {
 
 }
 
-function toggleNoteBox() {
-
-
-    var noteText = d3.select("#noteContainer")
-
-
-    var opacity = noteText.style("opacity");
-
-    if (opacity == "0") {
-
-        noteText.transition()
-            .duration(400)
-            .style("visibility", "visible")
-            .style("opacity", "1")
-            .style("width", "600px")
-            .style("height", "400px")
-            .style("background", "lightgrey")
-            .style("z-index", "100");
-    } else {
-        noteText.transition()
-            .duration(400)
-            .style("visibility", "invisible")
-            .style("opacity", "0")
-            .style("width", "1px")
-            .style("height", "1px")
-            .style("background", "lightgrey");
-    }
-}
-
-function toggleTop() {
-
-    var topContainer = d3.select(".topContainer");
-
-    var tc = topContainer[0][0];
-
-    if (!tc) {
-
-
-        var bodyContainer = d3.select(".bodyContainer");
-
-        d3.select(".mainContainer").append(function (d) {
-            return top.node();
-        });
-
-        var topContainer = d3.select(".topContainer");
-        topContainer.transition()
-            .duration(750)
-            .style("opacity", 1)
-            .style("visibility", "visible");
-
-
-    } else {
-
-        var topContainer = d3.select(".header1");
-        topContainer.transition()
-            .duration(700)
-            .style("top", "-70px")
-            .style("height", "0px");
-//                    .style("opacity", 0)
-//                    .remove();
-
-        d3.select(".topContainer")
-            .transition()
-            .duration(700)
-            .style("height", "0")
-            .style("opacity", "0")
-            .remove();
-
-        d3.select(".collapseTitle").remove();
-
-//            topContainer.style("visiblity","hidden");
-//            top = d3.select(".topContainer").remove();
-    }
-}
