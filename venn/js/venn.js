@@ -1,4 +1,4 @@
-// Adapted from the great work by Ben Frederick and his GitHub repo https://github.com/benfred/venn.js
+// Adapted from the great work by Ben Frederickson and his GitHub repo https://github.com/benfred/venn.js
 
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-selection'), require('d3-transition')) :
@@ -1322,8 +1322,8 @@
             // mimic the behaviour of d3.scale.category10 from the previous
             // version of d3
             colourMap = {},
-
-            colourScheme = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"],
+            colourScheme = ["rgb(69,83,194)", "rgb(90,93,119)", "rgb(129,21,180)", "rgb(203,66,138)", "rgb(15,118,122)", "rgb(41,136,55)", "rgb(104,60,0)", "rgb(214,6,26)"],
+            //colourScheme = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"],
             colourIndex = 0,
             colours = function (key) {
                 if (key in colourMap) {
@@ -1466,10 +1466,11 @@
                     .filter(function (d) {
                         return d.sets.length == 1;
                     })
-                    .style("fill", function (d) {
-                        return colours(d.sets);
+                    .style("fill", function (d,i) {
+                        let c = colourScheme[i]
+                        return c
                     })
-                    .style("fill-opacity", ".25");
+                    .style("fill-opacity",".7");
 
             }
 
@@ -2127,7 +2128,7 @@ var render = function (d) {
 // highlight the current path
             let selection = d3.select(this).transition("tooltip").duration(400);
             selection.select("path")
-                .style("fill-opacity", d.sets.length == 1 ? .4 : .1)
+                .style("fill-opacity", d.sets.length == 1 ? .7 : .1)
                 .style("stroke-opacity", 1);
         })
         .on("mousemove", function () {
@@ -2138,7 +2139,7 @@ var render = function (d) {
             tooltip.transition().duration(400).style("opacity", 0);
             let selection = d3.select(this).transition("tooltip").duration(400);
             selection.select("path")
-                .style("fill-opacity", d.sets.length == 1 ? .25 : .0)
+                .style("fill-opacity", d.sets.length == 1 ? .7 : .0)
                 .style("stroke-opacity", 0);
         });
 
