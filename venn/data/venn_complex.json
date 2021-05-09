@@ -1,0 +1,78 @@
+[
+  {
+    "doc_title": "Master Data Management - Correlation Analysis",
+    "style_option": 0,
+    "page_title": "Enterprise Architecture and Governance",
+    "narrative": "Analysis of 4 Data Domains",
+    "heading": "Comparing 4 data sets to the Master Data",
+    "show_stats": 1
+  },
+  {
+    "dataset": [
+      {
+        "sets": [
+          0
+        ],
+        "size": 4270,
+        "label": "Master Data List"
+      },
+      {
+        "sets": [
+          1
+        ],
+        "size": 5046,
+        "label": "Enterprise_Architecture"
+      },
+      {
+        "sets": [
+          2
+        ],
+        "size": 8996,
+        "label": "IT Resource Portfolio"
+      },
+      {
+        "sets": [
+          3
+        ],
+        "size": 1025,
+        "label": "System Survey Database"
+      },
+      {
+        "sets": [
+          4
+        ],
+        "size": 2300,
+        "label": "IG Audit"
+      },
+      {
+        "sets": [
+          0,
+          1
+        ],
+        "size": 1095
+      },
+      {
+        "sets": [
+          0,
+          2
+        ],
+        "size": 665
+      },
+      {
+        "sets": [
+          0,
+          3
+        ],
+        "size": 754
+      },
+      {
+        "sets": [
+          0,
+          4
+        ],
+        "size": 1756
+      }
+    ]
+  }
+]
+

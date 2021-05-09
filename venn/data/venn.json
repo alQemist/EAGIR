@@ -1,0 +1,60 @@
+[
+  {
+    "doc_title": "Sample Venn Diagram",
+    "style_option": 1,
+    "page_title": "Enterprise Architecture and Governance",
+    "narrative": "<p>TIPS:<p>USE LIGHT/DARK to toggle the style mode<br>Use EXPORT to download the data for this diagram <br>Use IMPORT to load new data<br>Use RESET to reload the the original data<p>EXPORT (download) the JSON file, customize it to create a new diagram then IMPORT to view.<p>DATA SCHEMA<p>For every circle these data are required:<ul><li>sets:[integer] - index identifies the circle</li><li>size:integer - used to calculate sizes</li><li>label:string - text to be displayed</li></ul><p>To display an intersection these data are required:<ul><li>sets[array]: 2 or more integers identifying the intersecting circles</li><li>size: integer size of the intersection</li><li>label: string text for the intersection label</li></ul><p>OTHER SETTINGS<ul><li>doc_title:string - Title of the web page</li><li>page_title:string - text displayed lower right of the page</li><li>narrative:string - long text displayed here</li><li>heading:string - text displayed above the narrative</li><li>style_option:boolean - sets the style mode to light or dark</li><li>show_stats:boolean - show statistics for each circle here</li></ul>",
+    "heading": "Sample Venn Diagram",
+    "show_stats": 0
+  },
+  {
+    "dataset": [
+      {
+        "sets": [
+          0
+        ],
+        "size": 5000,
+        "label": "Dataset 0"
+      },
+      {
+        "sets": [
+          1
+        ],
+        "size": 5000,
+        "label": "Dataset 1"
+      },
+      {
+        "sets": [
+          2
+        ],
+        "size": 5000,
+        "label": "Dataset 2"
+      },
+      {
+        "sets": [
+          0,
+          1
+        ],
+        "size": 1500,
+        "label": "overlap 0 / 1"
+      },
+      {
+        "sets": [
+          0,
+          2
+        ],
+        "size": 1500,
+        "label": "overlap 0 / 2"
+      },
+      {
+        "sets": [
+          1,
+          2
+        ],
+        "size": 1500,
+        "label": "overlap 1 / 2"
+      }
+    ]
+  }
+]
+

@@ -1,0 +1,31 @@
+<!--
+For support contact ben@alqemy.com
+ -->
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/venn.css" media="screen"/>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="js/read_file.js"></script>
+</head>
+
+<body>
+<div class="toggler lightdark">light</div>
+<input class="selFile headerbuttons lightdark"  type="file" id="myfile" name="myfile" onchange="readURL(this);">
+<button class="inputbutton headerbuttons lightdark" title="import csv file" >Import</button>
+<button class="resetbutton headerbuttons lightdark" title="reset to original dataset ">Reset</button>
+
+<a href="0" id="exportbutton"><button class="exportbutton headerbuttons lightdark" title="export as csv">Export</button></a>
+<div class="legend"></div>
+
+<div id="venn">
+</div>
+<h3 class="subtitle"></h3>
+</body>
+<script src="js/venn.js"></script>
+
