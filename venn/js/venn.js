@@ -1469,7 +1469,7 @@
                     .style("fill", function (d) {
                         return colours(d.sets);
                     })
-                    .style("fill-opacity", ".25");
+                    .style("fill-opacity", ".7");
 
             }
 
@@ -2127,7 +2127,7 @@ var render = function (d) {
 // highlight the current path
             let selection = d3.select(this).transition("tooltip").duration(400);
             selection.select("path")
-                .style("fill-opacity", d.sets.length == 1 ? .4 : .1)
+                .style("fill-opacity", d.sets.length == 1 ? .7 : .1)
                 .style("stroke-opacity", 1);
         })
         .on("mousemove", function () {
@@ -2138,7 +2138,7 @@ var render = function (d) {
             tooltip.transition().duration(400).style("opacity", 0);
             let selection = d3.select(this).transition("tooltip").duration(400);
             selection.select("path")
-                .style("fill-opacity", d.sets.length == 1 ? .25 : .0)
+                .style("fill-opacity", d.sets.length == 1 ? .7 : .0)
                 .style("stroke-opacity", 0);
         });
 
