@@ -12,6 +12,15 @@ These visualizations support **Enterprise Architecture/Domain Modeling** in seve
 - Publish EA source data to stakeholders and application developers
 - Provide insights to Architecture Review Board
 
+### Venn Diagram - venn
+![Image](/docs/assets/img/venn.png)
+[[OPEN]](https://alqemist.github.io/EAGIR/venn/)
+
+Enhanced Features:
+- Import and Export Diagram Data locally (never uploads)
+- Configure Narrative description
+- Toggle Style mode - Light / Dark
+
 ### Entity Relationship Diagram - ERD
 ![Image](/docs/assets/img/erd.png)
 [[OPEN]](https://alqemist.github.io/EAGIR/erd/)
@@ -31,7 +40,8 @@ Enhanced Features:
 - Indicates current level resource commitment
 - Suggest future level of resource commitment
 - Domain ownership indicators
-- Import / Export Data
+- Import / Export Data  (never uploads)
+- Toggle Style mode - Light / Dark
 
 ### Technology Stack Portfolio - tech_portfolio
 ![Image](/docs/assets/img/tech_portfolio.png)
@@ -42,7 +52,8 @@ Enhanced Features:
 - Indicates current level resource commitment
 - Suggest future level of resource commitment
 - Domain ownership indicators
-- Import / Export Data
+- Import / Export Data  (never uploads)
+- Toggle Style mode - Light / Dark
 
 ### Domain Capability Chart - dom_cap
 ![Image](/docs/assets/img/dom_cap.png)
