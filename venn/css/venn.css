@@ -1,0 +1,144 @@
+body {
+    background: rgb(55, 55, 55);
+    margin: 0px;
+    border: none;
+    font-family: Helvetica, "Nova Flat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgba(220, 220, 220, .8) !important;
+
+}
+
+h2{
+    margin:40px;
+}
+.subtitle {
+    position: absolute;
+    bottom: 5px !important;
+    width: 95%;
+    text-align: right;
+    letter-spacing: 1em;
+    margin: 5px;
+    text-indent: 4px !important;
+    right: 20px;
+    font-size: .6em !important;
+}
+
+.selFile{
+    right:300px;
+    opacity: 0;
+    z-index: 3;
+    width:100px;
+    border:1px red solid;
+    cursor: pointer;
+}
+.inputbutton{
+    opacity: 1;
+    right:300px;
+    z-index: 1;
+    user-select: none;
+    cursor: pointer;
+}
+.resetbutton{
+    opacity: 1;
+    right:100px;
+}
+.exportbutton {
+    right:195px;
+}
+.headerbuttons{
+    position: absolute;
+    line-height: 30px;
+    font-size: .8em;
+    cursor: pointer;
+    height:40px;
+    border:none;
+    background: transparent;
+    color: rgba(220, 220,220, .8);
+    text-transform: uppercase;
+}
+
+.lightdark {
+    position: absolute;
+    top: 7px;
+    cursor: pointer;
+    font-size: .8em !important;
+    margin: 2px;
+    padding: 5px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+.toggler{
+    left:20px;
+}
+.subtext{
+    margin:10px;
+}
+text {
+    fill: rgba(250, 250, 250, .8) ;
+    stroke: none;
+}
+
+.indicator-label {
+    fill: rgba(220, 220, 220, .6);
+    font-size: .9em;
+}
+
+.legend-panel {
+    fill: rgba(40, 40, 40, .8);
+}
+
+.darkish {
+    background: rgba(255, 255, 255,.8);
+    color: rgba(55, 55, 55, .8)!important;
+    fill: rgba(55, 55, 55, .8)!important;
+}
+
+.darkish text {
+    fill: rgba(55, 55, 55, .8);
+}
+
+#venn{
+    position:absolute;
+    width:30%;
+    height:30%;
+    margin-right:15%;
+    margin-left:15%;
+    top:40px;
+    text-align:center;
+}
+
+.venntooltip {
+    position: absolute;
+    text-align: center;
+    width: 128px;
+    height: fit-content;
+    background: #333;
+    color: #ddd;
+    padding: 2px;
+    border: 0px;
+    border-radius: 4px;
+    opacity: 0;
+}
+.navbar{
+    background:rgba(0,0,0,.8) !important;
+}
+.legend {
+    text-align:left;
+    font-size:1em;
+    position:absolute;
+    margin:10px;
+    opacity:.1;
+    padding:10px;
+    top:30px;
+    left:30px;
+    width:20%;
+}
+ul{
+    margin-top:20px;
+}
+.legend li{
+    list-style-type:none;
+    margin-bottom:1em;
+    margin-left:-10px;
+}
+
