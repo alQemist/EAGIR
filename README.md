@@ -10,6 +10,7 @@ EAG is an application which has the capability to Model an Enterprise from a Dom
 - Subdomains
 - Capabilities
 - Personas
+- Journey Map
 - Application Portfolio
 - Technology Stack
 - Data Model / Data Dictionary
