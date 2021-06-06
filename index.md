@@ -12,6 +12,15 @@ These visualizations support **Enterprise Architecture/Domain Modeling** in seve
 - Publish EA source data to stakeholders and application developers
 - Provide insights to Architecture Review Board
 
+### User Journey Map - journey_map
+![Image](/docs/assets/img/journey_map.png)
+[[OPEN]](https://alqemist.github.io/EAGIR/journey_map/)
+
+Loads CSV data and renders Power-Point Style Visualization in the browser
+- Import and Export Diagram Data locally (never uploads)
+- Robust details displayed as Tooltips for all data points
+- Toggle Style mode - Light / Dark
+
 ### Venn Diagram - venn
 ![Image](/docs/assets/img/venn.png)
 [[OPEN]](https://alqemist.github.io/EAGIR/venn/)
