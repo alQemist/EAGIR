@@ -23,8 +23,7 @@ function readURL(input) {
 
             reader.onload = function (e) {
                 let d = csvJSON(reader.result)
-                target   = d3.select(".svgContainer");
-                addScatterView(target, d, subject, x_y_axis);
+                formatData(d)
             };
             reader.readAsText(input.files[i]);
         }
@@ -49,7 +48,7 @@ function csvJSON(csv){
 
             for (var j = 0; j < headers.length; j++) {
                 if(currentline[j].length < 1){
-                    alert(headers[j]+ " should not be empty")
+                    //alert(headers[j]+ " should not be empty")
                 }
                 obj[headers[j]] = currentline[j];
 

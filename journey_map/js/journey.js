@@ -1,23 +1,25 @@
 var colors = ["rgba(114,229,239,.9)", "rgba(118,204,108,9)", "rgba(221,142,235,.9)", "rgba(185,246,23,.9)", "rgba(253,137,146,.9)", "rgba(54,229,21,.9)", "rgba(140,171,234,.9)", "rgb(242,231,33)", "rgb(252,143,59)", "rgb(191,205,142)"];
+var legend_colors = ["rgba(255,255,255,1)", "rgba(254,228,80,.2)", "rgb(57,151,14,.2)", "rgb(198,219,174,.2)"]
+var header_color = "rgba(0,50,250,.8)"
 var target
 var column_keys = [];
 var tooltip = d3.select(".tooltip")
 var closebtn = d3.selectAll(".close")
 var font_size = 10;
-var font_size_header = "1.3em"
+var font_size_header = 15
 var char_width = font_size * .5;
 
 var target_svg
-var target_margin = {top: 150, right: 50, bottom: 80, left: 250}
+var target_margin = {top: 80, right: 50, bottom: 80, left: 250}
 var width = window.innerWidth - target_margin.right - target_margin.left
 var height = window.innerHeight - target_margin.top - target_margin.bottom - 60
-var grid_unit_w = (width - (target_margin.left + target_margin.right)) / 11
 var style_option, subject, x_y_axis, trends, page_title
 var row_data
 var loadedData
-var legend_array = {"stages": 10.5, "steps": 8.5, "touchpoints": 6.5, "domains": 4.5}
+var legend_array = {"stages": 10.5, "steps": 8.5, "touch points": 6.5, "domains": 4.5}
 var legend_keys = Object.keys(legend_array)
-var xScale, yScale, legend_item_height, colw, row_height, header_cols, domain_vspacing, chart_width, header_color
+var legend_y = []
+var xScale, yScale, legend_item_height, colw, row_height, header_cols, domain_vspacing, domain_y, chart_width
 var domains = []
 var setLine = d3.line()
 
@@ -39,32 +41,31 @@ d3.json("data/config.json", function (obj) {
     toggleStyle();
 })
 
-d3.csv("data/data.csv", function (d) {
-
-    header_color = "rgba(0,50,250,.8)"
+function formatData(d) {
     column_keys = Object.keys(d[0]);
     header_cols = []
-    domains = [...new Set(d.map((D) => D.domain))];
+    let dset = d.filter(function (item) {
+        return typeof item.domain === 'string' && !!item.domain
+    })
+    domains = [...new Set(dset.map((D) => D.domain))];
     domains.sort()
-    let domain_factor = 12 - domains.length
-    domain_vspacing = font_size * domain_factor
 
-    // create objects to sement data into levels
+// create objects to segment data into levels
     row_data = Object.create({})
     row_data[legend_keys[0]] = []
     row_data[legend_keys[1]] = []
     row_data[legend_keys[2]] = []
 
-    //steps and touchpoints
+//steps and touch points
     d.forEach((D) => {
         let k = legend_keys[D.row - 1]
-        if (D.row == "1") {
-            header_cols.push(D.name)
+        if (D.row == 1) {
+            header_cols.push(D.label)
         }
         row_data[k].push(D)
     })
 
-    xticks = header_cols.length
+    xticks = header_cols.length-2
 
     d.filter(function (d) {
         d.y = 11 - d.row
@@ -74,6 +75,7 @@ d3.csv("data/data.csv", function (d) {
     target = d3.select(".svgContainer");
     setTimeout(function () {
         addScatterView(target, d, subject, x_y_axis);
+
     }, 200)
 
 
@@ -95,7 +97,10 @@ d3.csv("data/data.csv", function (d) {
     d3.select(".toggler").on("click", function () {
         toggleStyle()
     })
+}
 
+d3.csv("data/data.csv", function (d) {
+    formatData(d)
 })
 
 
@@ -218,7 +223,7 @@ function addScatterView(target, jdata, subject, x_y_axis) {
     domain_array = [...new Set(jdata.map(d => d.domain))];
 
     var b = d3.select("body")
-    b.selectAll("svg").remove()
+    b.selectAll(".main_svg").remove()
 
     b.selectAll("h4").remove()
 
@@ -235,30 +240,11 @@ function addScatterView(target, jdata, subject, x_y_axis) {
 
     // ************** Generate the scatter diagram	 *****************
 
-
-    xScale = d3.scaleLinear()
-        .domain([
-            d3.min([0, d3.min(data, function (d) {
-                return 11 - d
-            })]),
-            d3.max([0, 11])
-
-        ])
-        .range([0, width - target_margin.left - target_margin.right])
-    yScale = d3.scaleLinear()
-        .domain([
-            d3.min([0, d3.min(data, function (d) {
-                return 11 - d
-            })]),
-
-            d3.max([0, 11])
-        ])
-        .range([height, 0])
-
     // SVG
     target_svg = target.append('svg')
         .attr('height', height + target_margin.top + target_margin.bottom)
         .attr('width', width + target_margin.right)
+        .classed("main_svg",true)
         .append('g')
         .classed("mg", true)
         .attr('transform', 'translate(' + target_margin.left + ',' + target_margin.top + ')')
@@ -269,17 +255,18 @@ function addScatterView(target, jdata, subject, x_y_axis) {
         .data(row_data[legend_keys[0]])
         .enter()
         .append('path')
-        .attr("d", "M1.5,0.3h188.7c8.8,14.9,17.6,29.8,26.3,44.7c-8.8,14.9-17.6,29.7-26.3,44.6H1.1c-0.3,0.3,26.3-44.6,26.5-44.7\tC27.7,44.9,1.2,0.8,1.5,0.3z")
+        .attr("d", "M0.5,0.6h174.7c8.1,9.8,16.3,19.6,24.4,29.4c-8.1,9.7-16.3,19.5-24.4,29.2H0.1C-0.1,59.4,24.5,30,24.7,29.9\tC24.7,29.9,0.2,0.9,0.5,0.6z")
         .classed("header_arrows", true)
         .style("stroke-width", "0px")
         .style("fill", function (d, i) {
-            return header_color
+            return "url(#gradient2)" //header_color
         })
         .attr("transform", function (d, i) {
-            let x = target_margin.left + (colw) * i
-            let y = yScale(d.y) - legend_item_height * .28
-            let scale_x = 1.5 * header_cols.length / 10
-            return "translate(" + x + "," + y + ") scale(" + scale_x + ",1.5)"
+            let x = target_margin.left + 10 + (colw * i)
+            let y = legend_y[0] * .40
+            let scalew = (colw / 180)
+            let scaleh = (legend_item_height / 80)
+            return "translate(" + x + "," + y + ") scale(" + scalew + "," + scaleh + ")"
         })
 
     //main header
@@ -288,17 +275,23 @@ function addScatterView(target, jdata, subject, x_y_axis) {
         .enter()
         .append('text')
         .text(function (d) {
-            return d.name.toUpperCase()
+            return d.label.toUpperCase()
         })
         .style("font-size", font_size_header)
         .style("fill", "white")
         .classed("header_labels", true)
         .attr('x', function (d, i) {
-            let x = target_margin.left + colw * i + 1
+            let x = target_margin.left + (colw * i)
             return x + (colw * .5)
         })
         .attr('y', function (d) {
-            return yScale(d.y) + (legend_item_height * .15)
+            return legend_y[0]
+        })
+        .on("mouseenter", function (d) {
+            showTooltip(d.description)
+        })
+        .on("mouseleave", function () {
+            showTooltip()
         })
 
     // steps
@@ -307,16 +300,16 @@ function addScatterView(target, jdata, subject, x_y_axis) {
         .enter()
         .append('text')
         .text(function (d) {
-            return d.name.toUpperCase()
+            return "▢ " + d.label.toUpperCase()
         })
         //.style("font-size", font_size * 2)
         .classed("labels lightdark", true)
         .attr('x', function (d) {
             let x = target_margin.left + colw * (d.col - 1)
-            return x + (colw * .5)
+            return x + (colw * .1)
         })
         .attr('y', function (d) {
-            return yScale(d.y) + (legend_item_height * .2) + (d.seq - 1) * 20
+            return legend_y[1] - (legend_item_height * .9) + (d.seq - 1) * 20
         })
         .on("mouseover", function (d) {
             showTooltip(d.description)
@@ -325,14 +318,28 @@ function addScatterView(target, jdata, subject, x_y_axis) {
             showTooltip()
         })
 
-// touchpoints
+    var v_grid = target_svg.selectAll('vgrid')
+        .data(row_data[legend_keys[0]])
+        .enter()
+        .append('path')
+        .classed("vgrid lightdark", true)
+        .attr("stroke","rgba(250,250,250,.8)")
+        .attr("d", function (d,i) {
+            let x1 = 260 + (colw*i)
+            let y2 = legend_y[3]-30
+            let x2 = x1
+            let y1 = legend_y[1] - legend_item_height - 10
+            return setLine([[x1, y1], [x2, y2]])
+        })
+
+// touch points
 
     target_svg.selectAll('label')
         .data(row_data[legend_keys[2]])
         .enter()
         .append('text')
         .text(function (d) {
-            return d.name.toUpperCase()
+            return "▢ " + d.label.toUpperCase()
         })
         .style("font-size", font_size * 1.5)
         .classed("labels lightdark", true)
@@ -345,10 +352,10 @@ function addScatterView(target, jdata, subject, x_y_axis) {
         .style("text-decoration", "none")
         .attr('x', function (d, i) {
             let x = target_margin.left + colw * (d.col - 1)
-            return x + (colw * .5)
+            return x + (colw * .1)
         })
         .attr('y', function (d) {
-            return (yScale(legend_array[legend_keys[2]])) + (d.seq - 1) * 20
+            return legend_y[2] - (legend_item_height * .9) + (d.seq - 1) * 20
         })
     /*.on("mouseover", function (d) {
         showDomain(d)
@@ -372,12 +379,11 @@ function addScatterView(target, jdata, subject, x_y_axis) {
         .style("width", "40px")
         .style("height", "40px")
         .attr('x', function (d) {
-            let x = target_margin.left + colw * (d.col - 1)
-            return x + (colw * .4)
+            let x = 240 + colw * (d.col - 1)
+            return x + (colw * .5)
         })
         .attr('y', function (d, i) {
-
-            return (yScale(legend_array[legend_keys[3]])) + (domains.indexOf(d.domain)) * domain_vspacing + font_size * 2.5
+            return legend_y[3] + (domains.indexOf(d.domain) * domain_vspacing)+domain_vspacing - font_size*.5 - 20
         })
         .transition()
         .duration(1000)
@@ -390,7 +396,7 @@ function addScatterView(target, jdata, subject, x_y_axis) {
 
     var domain_dots = target_svg.selectAll(".domain-dots")
 
-    // domain dot connector to touchpoints section
+    // domain dot connector to touch points section
     domain_dots.each(function (dd) {
         let bb = d3.select(this).node().getBBox()
         target_svg.append("path")
@@ -428,9 +434,9 @@ function addScatterView(target, jdata, subject, x_y_axis) {
 
     target_svg.append("g")
         .attr("class", "xgrid")
-        .attr("transform", "translate(" + (270 + (colw * .5)) + "," + height + ")")
+        .attr("transform", "translate(" + (270 + (colw)) + "," + (legend_y[3]) + ")")
     /*.call(make_x_gridlines()
-         .tickSize(-height)
+         .tickSize(-height*.5)
          .tickFormat("")
      )*/
 
@@ -462,7 +468,6 @@ function addScatterView(target, jdata, subject, x_y_axis) {
         .on("mouseleave", function () {
             showDomain()
         })
-
 }
 
 function showDomain(d) {
@@ -483,7 +488,7 @@ function showDomain(d) {
         .classed("select", function (dd) {
             let id = domains.indexOf(dd.domain)
             let col = dd.col
-            return (id == ID && COL == col) ? true : false
+            return (id == ID && COL == col)
         })
 }
 
@@ -495,10 +500,10 @@ function addLegend() {
     var y = 0;
 
     l.append("rect")
-        .style("width", "240px")
+        .style("width", target_margin.left + "px")
         .style("height", lh)
-        .attr("rx", 6)
-        .attr("ry", 6)
+        .attr("rx", 16)
+        .attr("ry", 16)
         .classed("legend-panel", true)
 
     var x = 20;
@@ -506,48 +511,56 @@ function addLegend() {
     legend_keys.forEach(function (d, i) {
         y = y + (row_height * 1.5);
         l.append("rect")
-            .classed("legend-rect", true)
+            .classed("lightdark", true)
+            .classed("legend-rect", i > 0 && i < 3)
+            .attr("rx",function(){
+                return i > 1 ? 0 : 16
+            })
+            .attr("ry", function(){
+                return i > 1 ? 0 : 16
+            })
             .attr("x", function (d) {
-                let lx = i == 2 || i == 0 ? 0 : x
+                let lx = i == 0 ? 0 : target_margin.left+10
                 return lx
             })
             .attr("y", function () {
-                let y = yScale(legend_array[d]) - 20
-                return y
-            })
-            .attr("rx", function () {
-                let r = i == 2 || i == 0 ? 0 : 12
-                return r
-            })
-            .attr("ry", function () {
-                let r = i == 2 || i == 0 ? 0 : 12
-                return r
+                let y = legend_y[i] - (i == 0 ? legend_item_height * .5  : legend_item_height)
+                y = i < 3 ? y+10 : legend_y[i]-25
+                return y - 20
             })
             .attr("width", function () {
-                let w = i == 2 || i == 0 ? chart_width + 60 : 200
+                let w = chart_width
                 return w + "px"
             })
             .attr("height", function () {
-                h = i < 3 ? legend_item_height : 2.53 * h
+                h = i == 0 ? legend_item_height : 1.9 * legend_item_height
+                h = i < 3 ? h :( h * 1.48)
+                h = i == 2 ? h +  30 : h
                 return h
             })
 
-            .style("fill", function () {
-                let f = i == 2 || i == 0 || i == 0 ? "rgba(200,200,200, .2)" : "none"
+            .attr("fill", function () {
+                let f = i < 3 ? legend_colors[0] : "url(#gradient1)"
+                f = i == 0 ? "none" : f
                 return f
             })
             .classed("domains-rect", function () {
-                return i == 3
+                //return i == 3
             })
     })
 
-    var y = row_height * 2;
+    legends = target_svg.selectAll(".legend-rect")
+
+        //legends.attr("fill","url(#gradient1")
+
+
+    var y = legend_y[3];
 
     legend_keys.forEach(function (d, i) {
         l.append("text")
             .classed("indicator-label", true)
             .attr("y", function () {
-                y = i != 3 ? yScale(legend_array[d]) + row_height * .3 : yScale(legend_array[d])
+                y = legend_y[i]
                 return y
             })
             .attr("x", "120px")
@@ -557,7 +570,7 @@ function addLegend() {
                 return "white"
             })
     })
-
+    domain_y = y
     // add domain legend
 
     domains.forEach(function (d, i) {
@@ -566,14 +579,11 @@ function addLegend() {
                 return getcolor(domains.indexOf(d))
             })
             .style("opacity", 0)
-            .attr("rx", 4)
-            .attr("ry", 4)
-            .style("width", "200px")
-            .style("height", font_size * 3 + "px")
-            .attr('x', "20px")
+            .style("width", 250+"px")
+            .style("height", domain_vspacing*.98 + "px")
+            .attr('x', "0px")
             .attr('y', function () {
-                let dy = yScale(legend_array[legend_keys[3]])
-                return dy + (i * domain_vspacing + font_size * 3)
+                return domain_y + (i * domain_vspacing) +  domain_vspacing *.4
             })
             .transition()
             .duration(1000)
@@ -587,12 +597,32 @@ function addLegend() {
     domains.forEach(function (d, i) {
         l.append("text")
             .classed("indicator-label", true)
-            .attr("y", y + (i * domain_vspacing + font_size * 5))
-            .attr("x", "120px")
-            .style("text-anchor", "middle")
+            .attr("y", domain_y + (i * domain_vspacing)+domain_vspacing)
+            .attr("x", "70px")
+            .style("text-anchor", "start")
             .text(d.toUpperCase())
             .style("fill", function () {
                 return "white"
+            })
+
+    })
+    domains.forEach(function (d, i) {
+        l.append("rect")
+            .classed("legend-icon", true)
+            .attr("width","35px")
+            .attr("height","35px")
+            .attr("fill", function () {
+                return "white"
+            })
+            .attr("x","20px")
+            .attr("y",function(){
+                let y = domain_y + (i * domain_vspacing)+(domain_vspacing-22)
+                return y +"px"
+            })
+            .attr("fill",function(){
+                let dn = d.toLowerCase().replace(" ","_")
+                let ic = "url(#"+dn+")"
+                return ic
             })
 
     })
@@ -602,44 +632,63 @@ function addLegend() {
     domains.forEach(function (d, i) {
         l.append("path")
             .attr("d", function () {
-                let y1 = yScale(legend_array["domains"]) + i * domain_vspacing + font_size * 4.5
+                let y1 = domain_y + (i * domain_vspacing)+domain_vspacing - font_size*.5
                 let y2 = y1
-                let x1 = 220
-                let x2 = chart_width + 60
+                let x1 = target_margin.left + 40
+                let x2 = x1 + chart_width - 60
                 let points = [[x1, y1], [x2, y2]]
                 return setLine(points)
             })
             .classed("domain-lines lightdark", true)
 
     })
-    /*l.append("path")
-        .attr("d", function () {
-            let y1 = yScale(legend_array["touchpoints"]) - font_size * 2.8
-            let y2 = y1
-            let x1 = 240
-            let x2 = chart_width + target_margin.left
-            let points = [[x1, y1], [x2, y2]]
-            return setLine(points)
-        })
-        .classed("touchpoint-connector",true)*/
-
 }
 
 function setSize() {
 
-    width = window.innerWidth - target_margin.right - target_margin.left
-    height = window.innerHeight - target_margin.top - target_margin.bottom - 60
+    width = window.innerWidth - (target_margin.right + target_margin.left)
+    height = window.innerHeight - (target_margin.top + target_margin.bottom)
     row_height = height / legend_keys.length + 1
-    chart_width = width - target_margin.left
-    colw = chart_width / (header_cols.length + 1)
+    chart_width = width - (target_margin.left + target_margin.right) - 260
+    colw = chart_width / (header_cols.length )
 
-    //let size_scale = height < 1000 || width < 1500 ? 1 : 1
+    xScale = d3.scaleLinear()
+        .domain([
+            d3.min([0, d3.min(loadedData, function (d) {
+                return 11 - d
+            })]),
+            d3.max([0, 11])
+
+        ])
+        .range([0, width - target_margin.left - target_margin.right])
+
+    yScale = d3.scaleLinear()
+        .domain([
+            d3.min([0, d3.min(loadedData, function (d) {
+                return 11 - d
+            })]),
+
+            d3.max([0, 11])
+        ])
+        .range([height, 0])
+
     let size_scale = Math.min.apply(this, [height / 1000, width / 2000])
 
-    d3.select(".labels").style("font-size", function () {
-        //return size_scale + "em";
+    d3.selectAll(".labels").style("font-size", function () {
+        return size_scale + "em";
     })
-    legend_item_height = (height * .68) / legend_keys.length
-}
+    d3.selectAll(".legend-icon").attr("transform", function () {
+        return "translate("+size_scale + "," +size_scale+")";
+    })
 
-//setSize()
+    legend_item_height = height / (legend_keys.length * 2)
+
+    legend_y = legend_keys.map(function (d, i) {
+        let t = i == 0 ? .5 : i < legend_keys.length ? i * 2 : i * 3
+        y = i == 3 ? legend_item_height * t - (legend_item_height * .5) : legend_item_height * t + 35
+        return y
+    })
+
+    domain_vspacing = (legend_item_height * 2) / domains.length
+
+}

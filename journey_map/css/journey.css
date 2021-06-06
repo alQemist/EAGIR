@@ -1,16 +1,19 @@
 body {
-    background: rgb(55, 55, 55);
     margin: 0px;
     border: none;
     font-family: Helvetica, "Nova Flat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: rgba(220, 220, 220, .8);
+    background:linear-gradient(#648880, #293f50);
 }
-
+.iconfill{
+    fill:rgba(255,255,255,1);
+    stroke:rgba(255,255,255,1);
+}
 .dots-connector{
-    stroke-dasharray: 1 16;
-    stroke-width:8px;
+    stroke-dasharray: .5 12;
+    stroke-width:4px;
     stroke-linecap: round;
-    stroke:rgba(200,250,200,.8);
+    stroke:rgba(0,250,200,.8);
 }
 .select{
     font-weight: bold;
@@ -18,9 +21,13 @@ body {
 }
 
 .domain-lines{
-    stroke-dasharray: 2;
+    stroke-dasharray: 0;
     stroke-width:2px;
     stroke:rgba(200,250,200,.8);
+}
+
+path .vgrid{
+    stroke:rgba(50,50,50,.2);
 }
 .touchpoint-connector{
     stroke-dasharray: 2;
@@ -31,7 +38,7 @@ body {
     fill:rgba(50,50,50,.2);
 }
 .domain-dots{
-    stroke:rgba(50,50,50,.5);
+    stroke:rgba(2550,255,255,1);
     stroke-width:10px;
     cursor:pointer !important;
 }
@@ -93,11 +100,13 @@ text {
 }
 
 .legend-panel {
-    fill: rgba(40, 40, 40, .8);
+    fill: rgba(0, 0, 0, 1);
 }
-
+.legend-rect{
+    fill:rgba(200,200,200,.2);
+}
 .darkish {
-    background: rgb(255, 255, 255);
+    background: rgb(225, 225, 225);
     color: rgba(55, 55, 55, .6);
 }
 
@@ -115,7 +124,9 @@ text {
 .darkish .indicator-label {
     fill: rgba(220, 220, 220, .6);
 }
-
+.darkish .legend-rect {
+    fill: rgba(250, 250, 250, .6);
+}
 .subtitle {
     position: sticky;
     bottom: 5px;
@@ -144,9 +155,8 @@ text {
 }
 
 .labels {
-    text-anchor: middle;
+    text-anchor: start;
     cursor:pointer;
-    font-size: 1em !important;
 }
 .label{
     font-size: 1.5em;
@@ -222,4 +232,13 @@ text {
 .header_labels{
     text-shadow :1px 1px 1px;
     text-anchor: middle;
+}
+.iconbox{
+    transform: translate(0,-200);
+}
+.stop1{
+    stop-color: rgba(50,50,50,.5);
+}
+.stop2{
+    stop-color: rgba(50,50,50,.9);
 }
