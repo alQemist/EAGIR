@@ -452,7 +452,7 @@ function addScatterView(target, jdata, subject, x_y_axis) {
         .style("opacity", 0)
         .transition()
         .delay(function (d, i) {
-            return 2500 //+ (i*20)
+            return 0 //+ (i*20)
         })
         .duration(function (d, i) {
                 return 1000
