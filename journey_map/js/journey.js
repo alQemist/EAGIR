@@ -21,11 +21,11 @@ var legend_keys = Object.keys(legend_array)
 var legend_y = []
 var xScale, yScale, legend_item_height, colw, row_height, header_cols, domain_vspacing, domain_y, chart_width
 var emotional_scale = {
-    1: {"description": "very unpleasant", "y": -.5},
+    1: {"description": "very unpleasant", "y": -.49},
     2: {"description": "somewhat unpleasant", "y": -.1},
     3: {"description": "somewhat normal", "y": .25},
-    4: {"description": "somewhat pleasant", "y": .75},
-    5: {"description": "very pleasant", "y": .99},
+    4: {"description": "somewhat pleasant", "y": .8},
+    5: {"description": "very pleasant", "y": 1},
 }
 var domains = []
 var setLine = d3.line()
@@ -291,7 +291,7 @@ function addScatterView(target, jdata, subject, x_y_axis) {
         .style("fill", "white")
         .classed("header_labels", true)
         .attr('x', function (d, i) {
-            let x = target_margin.left + (colw * i)
+            let x = target_margin.left + 20 + (colw * i)
             return x + (colw * .5)
         })
         .attr('y', function (d) {
@@ -614,7 +614,7 @@ function addLegend() {
             })
             .attr("y", function () {
                 let y = legend_y[i] - (i == 0 ? legend_item_height * .5  : legend_item_height)
-                y = i < 4 ? y+10 : legend_y[i]-25
+                y = i < 4 ? y+10 : legend_y[i]
                 return y - 20
             })
             .attr("width", function () {
@@ -623,7 +623,7 @@ function addLegend() {
             })
             .attr("height", function () {
                 h = i == 0 ? legend_item_height : 1.9 * legend_item_height
-                h = i < 4 ? h :( h * 1.48)
+                h = i < 4 ? h :( h * 1.4)
                 //h = i == 2 ? h +  30 : h
                 return h
             })
