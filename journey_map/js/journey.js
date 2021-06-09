@@ -16,13 +16,20 @@ var height = window.innerHeight - target_margin.top - target_margin.bottom - 60
 var style_option, subject, x_y_axis, trends, page_title
 var row_data
 var loadedData
-var legend_array = {"stages": 10.5, "steps": 8.5, "touch points": 6.5, "domains": 4.5}
+var legend_array = {"stages": 10.5, "steps": 8.5, "touch points": 6.5,"emotional experience":"0", "domains": 4.5}
 var legend_keys = Object.keys(legend_array)
 var legend_y = []
 var xScale, yScale, legend_item_height, colw, row_height, header_cols, domain_vspacing, domain_y, chart_width
+var emotional_scale = {
+    1: {"description": "very unpleasant", "y": -.5},
+    2: {"description": "somewhat unpleasant", "y": -.1},
+    3: {"description": "somewhat normal", "y": .25},
+    4: {"description": "somewhat pleasant", "y": .75},
+    5: {"description": "very pleasant", "y": .99},
+}
 var domains = []
 var setLine = d3.line()
-
+var setCurveLine = d3.line().curve(d3.curveBundle.beta(1.5));
 function make_x_gridlines() {
     return d3.axisBottom(xScale)
         .ticks(xticks)
@@ -52,9 +59,10 @@ function formatData(d) {
 
 // create objects to segment data into levels
     row_data = Object.create({})
-    row_data[legend_keys[0]] = []
-    row_data[legend_keys[1]] = []
-    row_data[legend_keys[2]] = []
+    Object.keys(legend_keys).forEach(function(d,i){
+        row_data[legend_keys[i]] = []
+    })
+
 
 //steps and touch points
     d.forEach((D) => {
@@ -64,6 +72,8 @@ function formatData(d) {
         }
         row_data[k].push(D)
     })
+
+
 
     xticks = header_cols.length-2
 
@@ -326,7 +336,7 @@ function addScatterView(target, jdata, subject, x_y_axis) {
         .attr("stroke","rgba(250,250,250,.8)")
         .attr("d", function (d,i) {
             let x1 = 260 + (colw*i)
-            let y2 = legend_y[3]-30
+            let y2 = legend_y[4]-50
             let x2 = x1
             let y1 = legend_y[1] - legend_item_height - 10
             return setLine([[x1, y1], [x2, y2]])
@@ -383,7 +393,7 @@ function addScatterView(target, jdata, subject, x_y_axis) {
             return x + (colw * .5)
         })
         .attr('y', function (d, i) {
-            return legend_y[3] + (domains.indexOf(d.domain) * domain_vspacing)+domain_vspacing - font_size*.5 - 20
+            return legend_y[4] + (domains.indexOf(d.domain) * domain_vspacing)+domain_vspacing - font_size*.5 - 20
         })
         .transition()
         .duration(1000)
@@ -393,11 +403,89 @@ function addScatterView(target, jdata, subject, x_y_axis) {
         })
         .style("opacity", .8)
 
+    target_svg.selectAll('emotdots')
+        .data(row_data[legend_keys[3]])
+        .enter()
+        .append('rect')
+        .classed("emotion-dots", true)
+        .style("opacity", 1)
+        .attr("rx", 10)
+        .attr("ry", 10)
+        .style("width", "20px")
+        .style("height", "20px")
+        .attr('x', function (d) {
+            let x = 250 + colw * (d.col - 1)
+            return x + (colw * .5)
+        })
+        .attr('y', function (d, i) {
+            let e = d.label-0
+            f =  emotional_scale[e].y
+            return legend_y[3] - (legend_item_height * f)
+        })
+
+
+    var emotion_dots = target_svg.selectAll(".emotion-dots")
+    var emotion_dots_xy = []
+    var domain_connector_y = []
+    emotion_dots.each(function (dd) {
+            let bb = d3.select(this).node().getBBox()
+            target_svg.append("path")
+                .attr("d", function () {
+                    let x1 = bb.x+10
+                    let y1 = bb.y+10
+                    domain_connector_y.push(y1)
+                    emotion_dots_xy.push([x1,y1])
+                })
+        })
+
+    target_svg.append("text")
+        .attr("x",280)
+        .attr("y",legend_y[3]- legend_item_height +20)
+        .text("positive")
+
+    target_svg.append("text")
+        .attr("x",280)
+        .attr("y",legend_y[3] + legend_item_height-45)
+        .text("negative")
+
+    target_svg.append("path")
+        .classed("lightdark emotion-lines", true)
+        .attr("fill","none")
+        .attr("d", function () {
+            return setCurveLine(emotion_dots_xy)
+        })
+
+    target_svg.selectAll('emotdots')
+        .data(row_data[legend_keys[3]])
+        .enter()
+        .append('rect')
+        .classed("emotion-dots", true)
+        .style("opacity", 1)
+        .attr("rx", 10)
+        .attr("ry", 10)
+        .style("width", "20px")
+        .style("height", "20px")
+        .attr('x', function (d) {
+            let x = 250 + colw * (d.col - 1)
+            return x + (colw * .5)
+        })
+        .attr('y', function (d, i) {
+            let e = d.label-0
+            f =  emotional_scale[e].y
+            return legend_y[3] - (legend_item_height * f)
+        })
+        .on("mouseover", function (d) {
+            let tt = emotional_scale[d.label].description
+            showTooltip(tt)
+        })
+        .on("mouseleave", function () {
+            showTooltip()
+        })
 
     var domain_dots = target_svg.selectAll(".domain-dots")
 
     // domain dot connector to touch points section
-    domain_dots.each(function (dd) {
+    domain_dots.each(function (dd,i) {
         let bb = d3.select(this).node().getBBox()
         target_svg.append("path")
             .classed("lightdark", true)
@@ -405,7 +493,8 @@ function addScatterView(target, jdata, subject, x_y_axis) {
                 let x1 = bb.x + 20
                 let y2 = bb.y
                 let x2 = x1
-                let y1 = yScale(5)
+                let y1 = domain_connector_y[dd.col-1]
+                console.log(y1,i)
                 return setLine([[x1, y1], [x2, y2]])
             })
             .classed("dots-connector", true)
@@ -512,7 +601,7 @@ function addLegend() {
         y = y + (row_height * 1.5);
         l.append("rect")
             .classed("lightdark", true)
-            .classed("legend-rect", i > 0 && i < 3)
+            .classed("legend-rect", i > 0 && i < 4)
             .attr("rx",function(){
                 return i > 1 ? 0 : 16
             })
@@ -525,7 +614,7 @@ function addLegend() {
             })
             .attr("y", function () {
                 let y = legend_y[i] - (i == 0 ? legend_item_height * .5  : legend_item_height)
-                y = i < 3 ? y+10 : legend_y[i]-25
+                y = i < 4 ? y+10 : legend_y[i]-25
                 return y - 20
             })
             .attr("width", function () {
@@ -534,13 +623,13 @@ function addLegend() {
             })
             .attr("height", function () {
                 h = i == 0 ? legend_item_height : 1.9 * legend_item_height
-                h = i < 3 ? h :( h * 1.48)
-                h = i == 2 ? h +  30 : h
+                h = i < 4 ? h :( h * 1.48)
+                //h = i == 2 ? h +  30 : h
                 return h
             })
 
             .attr("fill", function () {
-                let f = i < 3 ? legend_colors[0] : "url(#gradient1)"
+                let f = i < 4 ? legend_colors[0] : "url(#gradient1)"
                 f = i == 0 ? "none" : f
                 return f
             })
@@ -588,7 +677,7 @@ function addLegend() {
             .transition()
             .duration(1000)
             .delay(function () {
-                let dl = (i * 500) + 3000
+                let dl = (i * 500)
                 return dl
             })
             .style("opacity", .8)
@@ -685,7 +774,7 @@ function setSize() {
 
     legend_y = legend_keys.map(function (d, i) {
         let t = i == 0 ? .5 : i < legend_keys.length ? i * 2 : i * 3
-        y = i == 3 ? legend_item_height * t - (legend_item_height * .5) : legend_item_height * t + 35
+        y = i == 4 ? legend_item_height * t - (legend_item_height * .5) : legend_item_height * t + 35
         return y
     })
 
