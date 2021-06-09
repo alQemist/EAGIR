@@ -52,6 +52,31 @@
         .attr("stop-color", "blue")
         .attr("stop-opacity", 1);
 
+    var vg = defs.append("linearGradient")
+		.attr('id', "gradient3")
+		.attr("x1", "0%")
+		.attr("x2", "0%")
+		.attr("y1", "0%")
+		.attr("y2", "100%");
+
+	vg.append("stop")
+		.attr('class', 'start')
+		.attr("offset", "0%")
+		.attr("stop-color", "aqua")
+		.attr("stop-opacity", .8);
+
+	vg.append("stop")
+		.attr('class', 'end')
+		.attr("offset", "50%")
+		.attr("stop-color", "gray")
+		.attr("stop-opacity", 1);
+
+	vg.append("stop")
+		.attr('class', 'end')
+		.attr("offset", "100%")
+		.attr("stop-color", "red")
+		.attr("stop-opacity", 1);
+
     defs.append("pattern")
         .attr("patternUnits", "objectBoundingBox")
         .attr('id', "arrow")

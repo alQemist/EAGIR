@@ -15,6 +15,20 @@ body {
     stroke-linecap: round;
     stroke:rgba(0,250,200,.8);
 }
+.emotion-dots{
+    stroke:blue;
+    fill:white;
+    stroke-width:4px;
+}
+.emotion-lines{
+    stroke: url(#gradient3) !important;
+    stroke-width:10px;
+    opacity: .5;
+}
+path .emotion-lines{
+    stroke: url(#gradient3);
+}
+
 .select{
     font-weight: bold;
     stroke-width:16px !important;
@@ -25,6 +39,7 @@ body {
     stroke-width:2px;
     stroke:rgba(200,250,200,.8);
 }
+
 
 path .vgrid{
     stroke:rgba(50,50,50,.2);
