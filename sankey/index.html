@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <link rel="stylesheet" type="text/css" href="css/sankey.css" media="screen"/>
+    <title>SANKEY Experiment</title>
+</head>
+<body>
+
+<p id="chart">
+
+<div class="tooltip">
+
+</div>
+
+<div class="lightdark toggler">light</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+<script>
+
+    var subject = "EA Artifact Interface Map";
+    document.title = subject
+</script>
+<script src="js/sankey.js"></script>
+<script>
+    var tooltip = d3.select(".tooltip")
+    var graph = {};
+    var b = d3.select("body")
+
+
+    tooltip.on("mouseleave", function () {
+        showTooltip()
+    })
+
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function () {
+            var context = this, args = arguments;
+            var later = function () {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+
+    var myEfficientFn = debounce(function () {
+
+        render();
+
+    }, 50);
+
+    window.addEventListener('resize', myEfficientFn);
+
+    function searchNodes(v, g) {
+
+        if (!v) {
+            d3.selectAll(".node")
+                .style("opacity", 1)
+            d3.selectAll(".link")
+                .style("opacity", 1)
+            return
+        }
+
+        let nl = [];
+        let ll = [];
+        let re = new RegExp(v,"g");
+
+        (g.links).forEach(function (d) {
+            if ((d.target.name).search(re) == 0) {
+                nl.push(d.source.name)
+                nl.push(d.target.name)
+                ll.push(d.target.name)
+            }
+
+            if (d.source.name && (d.source.name).search(re) == 0) {
+                nl.push(d.target.name)
+                //ll.push(d.target.name)
+            }
+            if (d.source.name && (d.source.name).search(re) == 0) {
+                nl.push(d.source.name)
+                ll.push(d.source.name)
+            }
+        })
+
+        d3.selectAll(".node")
+            .style("opacity", function (d) {
+                return nl.indexOf(d.name) > -1 ? 1 : .1
+            })
+        d3.selectAll(".link")
+            .style("opacity", function (d) {
+                return ll.indexOf(d.source.name) > -1 || ll.indexOf(d.target.name) > -1 ? 1 : .1
+            })
+
+    }
+
+    function showTooltip(d) {
+
+        tooltip.selectAll("span").remove()
+        tooltip.style("left", "-4000px")
+            .style("opacity", 0)
+        tooltip.selectAll("button").remove()
+
+        d3.event.preventDefault();
+        let obj =  d3.select(d3.event.currentTarget).node()
+        let obj_pos = obj.getBoundingClientRect()
+
+
+        if (d) {
+            tooltip.append("span")
+                .classed(".tool-content", true)
+                .html(d)
+
+            tooltip.style("top", function (d) {
+                let t = Math.max(obj_pos.y + 35, margin.top) + "px"
+                return t
+            })
+                .style("left", function (d) {
+                    let v = Math.min(obj_pos.x, width - 350) + "px"
+                    return v
+
+                })
+
+
+            tooltip.transition()
+                .duration(4)
+                .style("opacity", 1)
+
+        } else {
+            return
+        }
+
+    }
+
+    function showLinked(n, g) {
+
+        if (!n) {
+            d3.selectAll(".node")
+                .style("opacity", .9)
+            d3.selectAll(".link")
+                .style("opacity", .9)
+            return
+        }
+
+        let nl = [];
+        let ll = [];
+
+        (g.links).forEach(function (d) {
+            if ((d.target.name).localeCompare(n) == 0) {
+                nl.push(d.source.name)
+                nl.push(d.target.name)
+                ll.push(d.target.name)
+            }
+
+            if (d.source.name && (d.source.name).localeCompare(n) == 0) {
+                nl.push(d.target.name)
+                //ll.push(d.target.name)
+            }
+            if (d.source.name && (d.source.name).localeCompare(n) == 0) {
+                nl.push(d.source.name)
+                ll.push(d.source.name)
+            }
+        })
+
+        d3.selectAll(".node")
+            .style("opacity", function (d) {
+                return nl.indexOf(d.name) > -1 ? 1 : .1
+            })
+        d3.selectAll(".link")
+            .style("opacity", function (d) {
+                return ll.indexOf(d.source.name) > -1 || ll.indexOf(d.target.name) > -1 ? 1 : .1
+            })
+
+    }
+
+    function showType(n, g) {
+
+        if (!n) {
+            d3.selectAll(".node")
+                .style("opacity", 1)
+            d3.selectAll(".link")
+                .style("opacity", 1)
+            return
+        }
+
+        let nl = [];
+        let ll = [];
+
+        (g.links).forEach(function (d) {
+
+            if ((d.target.type).localeCompare(n) == 0) {
+                nl.push(d.source.name)
+                nl.push(d.target.name)
+                ll.push(d.target.name)
+            }
+
+            if (d.source.type && (d.source.name).localeCompare(n) == 0) {
+                nl.push(d.target.name)
+                //ll.push(d.target.name)
+            }
+            if (d.source.type && (d.source.name).localeCompare(n) == 0) {
+                nl.push(d.source.name)
+                ll.push(d.source.name)
+            }
+        })
+
+        d3.selectAll(".node")
+            .style("opacity", function (d) {
+                return nl.indexOf(d.name) > -1 ? .9 : .1
+            })
+        d3.selectAll(".link")
+            .style("opacity", function (d) {
+                return ll.indexOf(d.source.name) > -1 || ll.indexOf(d.target.name) > -1 ? 1 : .1
+            })
+
+    }
+
+    function toggleStyle() {
+
+        style_option = !style_option;
+
+        d3.select(".toggler")
+            .html(function () {
+                let tx = !style_option ? "light" : "dark"
+                return tx;
+            })
+
+        d3.select("body")
+            .classed("darkish", function () {
+                return style_option;
+            })
+        d3.selectAll("button")
+            .classed("darkish", function () {
+                return style_option;
+            })
+        d3.selectAll("text")
+            .classed("darkish", function () {
+                return style_option;
+            })
+
+    }
+
+    toggleStyle()
+
+    function render() {
+
+        margin = {top: 80, right: 150, bottom: 60, left: 150},
+            width = window.innerWidth   ,
+            skwidth = width - (margin.left + margin.right) ,
+            height = window.innerHeight - margin.bottom ,
+            skheight = height - (margin.top + margin.bottom)
+
+        var formatNumber = d3.format(",.0f"),    // zero decimal places
+            format = function (d) {
+                return formatNumber(d) + " " + units;
+            },
+            color = d3.scale.category20();
+
+
+        // remove any previous svg
+        d3.selectAll("svg, h4,.searchbox, .searchclear, .legend").remove()
+
+        b.append("h4")
+            .classed("subtitle", true)
+            .html("Enterprise Architecture and Governance")
+
+        b.append("h4")
+            .classed("title", true)
+            .html(subject)
+
+        // append the svg canvas to the page
+
+        var svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width + "px")
+            .attr("height", height + "px")
+            .append("g")
+            .attr("transform",
+                "translate(" + (margin.left) + "," + margin.top + ")");
+
+
+
+
+        var loadData = function (graph) {
+
+            // Set the sankey diagram properties
+            var sankey = d3.sankey()
+                .nodeWidth(35)
+                .nodePadding(8)
+                .size([skwidth, skheight]);
+
+            var path = sankey.link();
+
+            legends = [...new Set(graph.map(d => d.target_type))]
+
+            let s = d3.select("body").append("span")
+                .classed("legend", true)
+                .style("left", function () {
+                    return (width * .28) + "px"
+                })
+
+            legends.forEach(function (d, i) {
+                if (d) {
+                    s.append("div")
+                        .style("background", color(d))
+                        .on("mouseover", function () {
+                            showType(d, graph)
+                        })
+                        .on("mouseleave", function () {
+                            showType()
+                        })
+
+                    s.append("span")
+                        .text(d.toUpperCase())
+                }
+            })
+            searchbox = d3.select(".searchBox")
+
+            searchbox.on("keyup", function () {
+                let v = this.value
+                console.log("search")
+                //showLinked(v,graph)
+            })
+
+
+            //set up graph in same style as original example but empty
+            nodesList = {};
+            nameList = []
+            graphLinks = [];
+
+            graph.forEach(function (d) {
+                nameList.push(d.source);
+                nameList.push(d.target);
+                graphLinks.push({
+                    "source": d.source,
+                    "target": d.target,
+                    "value": +d.value,
+                    "target_description": d.description,
+                    "type": d.source_type
+                });
+                if (typeof nodesList[d.target] != "object") {
+                    nodesList[d.target] = d
+                }
+                if (typeof nodesList[d.source] != "object") {
+                    nodesList[d.source] = d
+                }
+            });
+
+            nameList = [...new Set(nameList.map(d => d))]
+            nameList.sort()
+
+            function getNodeItem(v) {
+                return nodesList[v]
+            }
+
+            nodesList = nameList.map(d => {
+                let item = getNodeItem(d)
+                let obj = {}
+                obj["name"] = d
+                obj["type"] = d == item.source ? item.source_type : item.target_type
+                obj["description"] =  d == item.source ? item.source_description : item.target_description
+                return obj
+            })
+
+            graph.nodes = nodesList.map(d => d);
+
+            var nodeMap = {};
+            graph.nodes.forEach(function (x) {
+                nodeMap[x.name] = x;
+            });
+
+            graph.links = graphLinks.map(function (x) {
+                return {
+                    source: nodeMap[x.source],
+                    target: nodeMap[x.target],
+                    value: x.value
+                };
+            });
+
+            sankey
+                .nodes(graph.nodes)
+                .links(graph.links)
+                .layout(32);
+
+            // add in the links
+            var link = svg.append("g").selectAll(".link")
+                .data(graph.links)
+                .enter().append("path")
+                .attr("class", "link")
+                .attr("d", path)
+                .sort(function (a, b) {
+                    return b.dy - a.dy;
+                });
+
+
+
+// add in the nodes
+            var node = svg.append("g").selectAll(".node")
+                .data(graph.nodes)
+                .enter().append("g")
+                .attr("class", "node")
+                .attr("transform", function (d) {
+                    return "translate(" + d.x + "," + d.y + ")";
+                })
+                .call(d3.behavior.drag()
+                    .origin(function (d) {
+                        return d;
+                    })
+                    .on("dragstart", function () {
+                        this.parentNode.appendChild(this);
+                    })
+                    .on("drag", dragmove));
+
+
+// add the rectangles for the nodes
+            var rect = node.append("rect")
+                .attr("height", function (d) {
+                    return Math.abs(d.dy)  +"px";
+                })
+                .attr("width", sankey.nodeWidth())
+                .style("fill", function (d) {
+                    let c = d.type
+                    return d.color = color(c) // color(d.name.replace(/ .*/, ""));
+                })
+                .style("stroke", function (d) {
+                    return d3.rgb(d.color);
+                })
+                .on("mouseover", function (d) {
+                    var str = "<b>" + d.name.toUpperCase() + " (" + d.type + ")</b><p>"
+                    str += d.description.toUpperCase()
+                    showTooltip(str)
+                    showLinked(d.name, graph)
+                })
+                .on("mouseleave", function () {
+                    showTooltip()
+                    showLinked()
+                })
+
+
+// add in the title for the nodes
+            node.append("text")
+                .attr("x", -10)
+                .attr("y", function (d) {
+                    return d.dy / 2 ;
+                })
+                .attr("dy", ".35em")
+                .attr("text-anchor", "end")
+                .attr("transform", null)
+                .text(function (d) {
+                    return d.name;
+                })
+                .filter(function (d) {
+                    return d.x < width / 2;
+                })
+                .attr("x", 10 + sankey.nodeWidth())
+                .attr("text-anchor", "start");
+
+// the function for moving the nodes
+            function dragmove(d) {
+                d3.select(this).attr("transform",
+                    "translate(" + d.x + "," + (
+                        d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
+                    ) + ")");
+                sankey.relayout();
+                link.attr("d", path);
+            }
+
+            var searchbox = b.append("input")
+                .classed("searchbox", true)
+                .attr("type", "text")
+                .attr("placeholder", "search")
+                .style("right", margin.right * .5 + "px")
+                .on("keyup", function () {
+                    let v = this.value
+                    searchNodes(v, graph)
+                })
+            b.append("div")
+                .classed("searchclear", true)
+                .style("right", margin.right * .5 + "px")
+                .html("X")
+                .on("click", function () {
+                    searchbox.property("value", "")
+                    searchNodes()
+                })
+        }
+
+
+        d3.select(".toggler").on("click", function () {
+            toggleStyle()
+        })
+
+        d3.json("data/sankey.json", function (d) {
+            loadData(d)
+        })
+
+    }
+
+    myEfficientFn()
+
+
+
+</script>
+
+</body>
+</html>

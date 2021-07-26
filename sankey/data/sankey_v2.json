@@ -1,0 +1,389 @@
+[
+  {
+    "source": "Business Account Management",
+    "target": "Gryphon",
+    "target_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "source_description": "Ability to manage Business Accounts",
+    "target_type": "Web App",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Clinical Services Management",
+    "target": "Gryphon",
+    "target_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "source_description": "Ability to manage Clinical Services",
+    "target_type": "Web App",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "CodeIgniter",
+    "target": "PHP",
+    "target_description": "PHP: Hypertext Preprocessor.",
+    "source_description": "CodeIgniter is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications",
+    "target_type": "Technology",
+    "source_type": "Framework",
+    "value": "5"
+  },
+  {
+    "source": "Data Warehouse",
+    "target": "FileMaker Pro Server 19",
+    "target_description": "Server Application running on Windows OS",
+    "source_description": "",
+    "target_type": "Server Software",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Data Warehouse",
+    "target": "FXphp",
+    "target_description": "PHP API Framework for FileMaker Pro Server",
+    "source_description": "",
+    "target_type": "Framework",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Data Warehouse",
+    "target": "PHP",
+    "target_description": "PHP: Hypertext Preprocessor.",
+    "source_description": "",
+    "target_type": "Technology",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Data Warehouse",
+    "target": "QuickSight",
+    "target_description": "AWS Dashboard Reporting application (service)",
+    "source_description": "",
+    "target_type": "Cloud Service",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Data Warehouse",
+    "target": "RDS (AWS)",
+    "target_description": "Relational Database Service",
+    "source_description": "",
+    "target_type": "Cloud Service",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "EAG",
+    "target": "CodeIgniter",
+    "target_description": "CodeIgniter is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture",
+    "target_type": "Framework",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "EAG",
+    "target": "d3js",
+    "target_description": "Javascript framework for creating SVG charts and graphs",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture",
+    "target_type": "Framework",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "EAG",
+    "target": "FileMaker Pro Client 19",
+    "target_description": "Client Application running on Windows and MacOS",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture",
+    "target_type": "Client Software",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "EAG",
+    "target": "FileMaker Pro Server 19",
+    "target_description": "Server Application running on Windows OS",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture",
+    "target_type": "Server Software",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "EAG",
+    "target": "FileMaker Webdirect",
+    "target_description": "Web publishing of FileMaker database layouts",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture",
+    "target_type": "Web App",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "EAG",
+    "target": "ODBC",
+    "target_description": "Open Database Connectivity is a standard application programming interface for accessing database management systems",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture",
+    "target_type": "Technology",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "EAG",
+    "target": "PHP",
+    "target_description": "PHP: Hypertext Preprocessor.",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture",
+    "target_type": "Technology",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "EAG",
+    "target": "RDS (AWS)",
+    "target_description": "Relational Database Service",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture",
+    "target_type": "Cloud Service",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "Enterprise Architecture Governance",
+    "target": "EAG",
+    "target_description": "Modeling and Documentation tool used for Enterprise Architecture",
+    "source_description": "Exercise of authority over processes, standards, security, software, technology,data, and digital assets across the enterprise.",
+    "target_type": "Web App",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "FileMaker Pro Server 19",
+    "target": "PHP",
+    "target_description": "PHP: Hypertext Preprocessor.",
+    "source_description": "Server Application running on Windows OS",
+    "target_type": "Technology",
+    "source_type": "Server Software",
+    "value": "5"
+  },
+  {
+    "source": "FileMaker Pro Server 19",
+    "target": "Windows Server 2016 Datacenter - Prod",
+    "target_description": "Production Server for FileMaker",
+    "source_description": "Server Application running on Windows OS",
+    "target_type": "Server Software",
+    "source_type": "Server Software",
+    "value": "5"
+  },
+  {
+    "source": "Gryphon",
+    "target": "Form Builder",
+    "target_description": "Library for creating HTML Forms",
+    "source_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "target_type": "Framework",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "Gryphon",
+    "target": "GitLAB",
+    "target_description": "CI/CD Pipeline",
+    "source_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "target_type": "SAAS",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "Gryphon",
+    "target": "Laravel",
+    "target_description": "PHP Application Framework",
+    "source_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "target_type": "Framework",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "Gryphon",
+    "target": "PHP",
+    "target_description": "PHP: Hypertext Preprocessor.",
+    "source_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "target_type": "Technology",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "Gryphon",
+    "target": "RDS (AWS)",
+    "target_description": "Relational Database Service",
+    "source_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "target_type": "Cloud Service",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "Invoice Management",
+    "target": "Coupa API",
+    "target_description": "Invoicing API",
+    "source_description": "Create, read, update, delete privileges for Invoices based on persona privileges.\r",
+    "target_type": "API",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Invoice Management",
+    "target": "Quickbooks",
+    "target_description": "Financial Management",
+    "source_description": "Create, read, update, delete privileges for Invoices based on persona privileges.\r",
+    "target_type": "SAAS",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Laravel",
+    "target": "PHP",
+    "target_description": "PHP: Hypertext Preprocessor.",
+    "source_description": "PHP Application Framework",
+    "target_type": "Technology",
+    "source_type": "Framework",
+    "value": "5"
+  },
+  {
+    "source": "License Management",
+    "target": "PayChex",
+    "target_description": "Service for Managing Personnel and Payroll",
+    "source_description": "Ability to manage license documents",
+    "target_type": "API",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Narrative Report to PDF",
+    "target": "PDFlib",
+    "target_description": "PDF creation library",
+    "source_description": "Generating a PDF of the Narrative Report",
+    "target_type": "Server Software",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Payroll Tax Benefit Management",
+    "target": "PayChex",
+    "target_description": "Service for Managing Personnel and Payroll",
+    "source_description": "",
+    "target_type": "API",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "AWS Simple Storage Services (S3)",
+    "target_description": "Document storage as objects for optimization (without content indexing)",
+    "source_description": "Master Business Application",
+    "target_type": "Cloud Service",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "CodeIgniter",
+    "target_description": "CodeIgniter is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications",
+    "source_description": "Master Business Application",
+    "target_type": "Framework",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "Coupa API",
+    "target_description": "Invoicing API",
+    "source_description": "Master Business Application",
+    "target_type": "API",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "d3js",
+    "target_description": "Javascript framework for creating SVG charts and graphs",
+    "source_description": "Master Business Application",
+    "target_type": "Framework",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "FileMaker Pro Client 19",
+    "target_description": "Client Application running on Windows and MacOS",
+    "source_description": "Master Business Application",
+    "target_type": "Client Software",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "FileMaker Pro Server 19",
+    "target_description": "Server Application running on Windows OS",
+    "source_description": "Master Business Application",
+    "target_type": "Server Software",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "PayChex",
+    "target_description": "Service for Managing Personnel and Payroll",
+    "source_description": "Master Business Application",
+    "target_type": "API",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "PDFlib",
+    "target_description": "PDF creation library",
+    "source_description": "Master Business Application",
+    "target_type": "Server Software",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "QuickSight",
+    "target_description": "AWS Dashboard Reporting application (service)",
+    "source_description": "Master Business Application",
+    "target_type": "Cloud Service",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "QuickSight",
+    "target": "AWS Simple Storage Services (S3)",
+    "target_description": "Document storage as objects for optimization (without content indexing)",
+    "source_description": "AWS Dashboard Reporting application (service)",
+    "target_type": "Cloud Service",
+    "source_type": "Cloud Service",
+    "value": "5"
+  },
+  {
+    "source": "QuickSight",
+    "target": "RDS (AWS)",
+    "target_description": "Relational Database Service",
+    "source_description": "AWS Dashboard Reporting application (service)",
+    "target_type": "Cloud Service",
+    "source_type": "Cloud Service",
+    "value": "5"
+  },
+  {
+    "source": "WordPress",
+    "target": "Elementor",
+    "target_description": "Word Press plugin for editing pages",
+    "source_description": "PHP framework for creating websites",
+    "target_type": "Plugin",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "WordPress",
+    "target": "PHP",
+    "target_description": "PHP: Hypertext Preprocessor.",
+    "source_description": "PHP framework for creating websites",
+    "target_type": "Technology",
+    "source_type": "Web App",
+    "value": "5"
+  }
+]
