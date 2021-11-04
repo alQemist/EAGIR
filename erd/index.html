@@ -8,14 +8,27 @@
 </head>
 
 <body>
+<div class="headerdiv">
+    <button class="headerbuttons lightdark toggler ">light</button>
+
+    <input class="selFile  lightdark headerbuttons" type="file" id="myfile" name="myfile" onchange="readURL(this);">
+    <button class="inputbutton  lightdark headerbuttons" title="import csv file">Load</button>
+    <button class="resetbutton lightdark headerbuttons" title="reset to original dataset ">Reset</button>
+
+    <a href="0" id="exportbutton">
+        <button class="exportbutton lightdark headerbuttons" title="export as csv">Save Changes</button>
+    </a>
+
+</div>
 <div id="graph"></div>
 <div class="tooltip"></div>
 <h2 class="title">ENTERPRISE ARCHITECTURE ERD</h2>
-
+<h4 class="subtitle">Enterprise Architecture and Governance</h4>
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.1.1/d3.min.js"></script>
 <script src="js/erd_symbols.js"></script>
 <script src="js/erd.js"></script>
 <script src="js/api.js"></script>
+<script src="js/read_file.js"></script>
 
 
 </body>

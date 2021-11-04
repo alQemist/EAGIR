@@ -1,15 +1,127 @@
 html, body, #graph {
     font-family: 'Roboto', sans-serif;
 }
+body {
+    margin: 0px;
+    border: none;
+    font-family: Helvetica, "Nova Flat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: linear-gradient(#648880, #293f50);
+}
 
+#graph{
+    z-index: 0;
+}
+.toggler{
+    z-index: 10;
+    left: 20px;
+}
+.lightdark {
+    position: absolute;
+    top: 7px;
+    cursor: pointer;
+    font-size: .8em !important;
+    margin: 2px;
+    padding: 5px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+text {
+    fill: rgba(220, 220, 220, .6);
+    stroke: none;
+    text-decoration: none !important;
+}
+
+.darkish {
+    background: rgb(235, 235, 235);
+    color: rgba(55, 55, 55, .8) !important;
+}
+
+.darkish text {
+    fill: rgba(55, 55, 55, .8);
+}
+
+.darkish path {
+    stroke: rgba(50, 50, 50, .3);
+}
+.selector{
+    right:520px;
+    line-height: 2em;
+    height: 2.5em;
+    text-align: center !important;
+    top:10px;
+    z-index: 4;
+}
+.selector-label{
+    position: absolute !important;
+    right:660px;
+    line-height: 40px;
+    top:5px;
+    z-index: 5;
+}
+.selFile{
+    right:280px !important;
+    opacity: 0;
+    z-index: 3;
+    width:300px;
+    border:1px red solid;
+    display:inline-block;
+}
+.inputbutton{
+    opacity: 1;
+    right:300px !important;;
+    z-index: 1;
+    user-select: none;
+}
+.resetbutton{
+    opacity: 1;
+    right:220px !important;
+    z-index: 7;
+}
+.exportbutton {
+    right:100px !important;
+    z-index: 8;
+}
 .title {
     position: absolute;
     font-size: 1.2em;
     color: rgba(50, 50, 50, .6);
-    top: 30px;
-    left: 60px;
+    top: 20px;
+    left: 100px;
     letter-spacing: .5em;
+    color:rgba(255,255,255,.50);
 }
+.subtitle {
+    position: absolute;
+    bottom: 10px;
+    width: 95%;
+    text-align: right;
+    letter-spacing: 1em;
+    margin: 5px;
+    text-indent: 4px !important;
+    right: 20px;
+    font-size: .6em !important;
+    color:rgba(255,255,255,.50);
+}
+.selector-box{
+    position: absolute;
+    top:5px;
+    background-color: #dddddd;
+    right:450px;
+}
+
+.headerdiv .lightdark .lightdark-btn{
+    position: absolute;
+    cursor: pointer;
+    font-size: .8em !important;
+    margin: 2px;
+    padding: 5px;
+    text-decoration: underline;
+    left: 55px !important;;
+    top:7px !important;
+}
+
+
 
 .icon {
     cursor: pointer;
@@ -81,4 +193,16 @@ svg {
     width: 30px !important;
     height: 30px !important;
     opacity: 1 !important;
+}
+.headerbuttons{
+    position: absolute !important;
+    line-height: 30px;
+    font-size: .8em;
+    cursor: pointer;
+    height:40px;
+    border:none;
+    background: transparent;
+color:rgba(255,255,255,.50);
+    text-transform: uppercase;
+    top:5px;
 }

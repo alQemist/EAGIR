@@ -1,6 +1,32 @@
 
 
 function  saveChanges (d) {
+
+    let nx = d.x/width
+    let ny = d.y/height
+    let sdata = []
+    origData.forEach(function(xd){
+
+        if(xd.entity_id == d.entity_id){
+            xd.fixed_x = nx
+            xd.fixed_y = ny
+        }else{
+            xd.fixed_x = xd.fixed_x/width
+            xd.fixed_y = xd.fixed_y/height
+        }
+        delete xd.x
+        delete xd.y
+        sdata.push(xd)
+    })
+
+
+    const jsonstr = JSON.stringify(sdata)
+    const xdata = new Blob([jsonstr])
+    const a = document.getElementById('exportbutton');
+    a.href = URL.createObjectURL(xdata)
+
+    load(sdata)
+
     var data = (d.entity_id).concat("-").concat(d.x/width).concat("-").concat(d.y/height)
 
     let url = "http://localhost:8888/d3-erd/erd_api.php?data="+data;
@@ -22,6 +48,7 @@ function getJsonData(callback){
         d3.json('data/sample_data.json',function(data){
             load(data);
         })
+        return
     }
 
     let url = "http://localhost:8888/d3-erd/erd_api.php?v=dev"
@@ -45,6 +72,6 @@ function getJsonData(callback){
 // otherwise load the local json sample data
 
 setTimeout(function(){
-    getJsonData() // loads data/sample_data.json
     //getJsonData(load) // load data from database
+    getJsonData() // load data from local file
 },100)

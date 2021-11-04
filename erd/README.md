@@ -4,6 +4,7 @@
 
 Designed to produce a data-driven Entity Relationship Diagram from a Data Dictionary.
 
+
 This solution was just one facet of a larger Enterprise Architecture project undertaken to model and document the business domains and their relationships to the data architecture.
 
 The Data Dictionary was used as the source of data driving the ERD. Whatever the data source the model should be as follows:
@@ -63,5 +64,12 @@ If is_fixed = 1 then the entity (nodes) will be in fixed positions.
 		var is_fixed = 0 
 
 DRAGGING AND SAVING NEW NODE POSITIONS:
-Saving new positions for dragged nodes happens automatically if the api.js is used. Otherwise its not possible using static json file as a datasource.
+
+Saving new positions for dragged nodes happens automatically if settings in the api.js beginning on line 74
+
+    setTimeout(function(){
+    //getJsonData(load) // load data from database, automatic saves
+    getJsonData() // load data from local file and save changes to a local json file.
+    },100)
+
 

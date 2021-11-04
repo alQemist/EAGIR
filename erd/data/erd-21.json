@@ -1,0 +1,62 @@
+[
+  {
+    "entity": "bills",
+    "entity_key": "bills",
+    "entity_id": "16",
+    "fixed_x": 0.36181196777539926,
+    "fixed_y": 0.2571428571428571,
+    "physical": "1",
+    "status": "1",
+    "description": null,
+    "items": "1:id:id for the bill record:,1:payroll_batch_id:id for the payroll period:1M",
+    "domain": "Finance",
+    "index": 0,
+    "node_width": 0,
+    "fixed": 1
+  },
+  {
+    "entity": "billitems",
+    "entity_key": "billitems",
+    "entity_id": "15",
+    "fixed_x": 0.5526516869538469,
+    "fixed_y": 0.4,
+    "physical": "0",
+    "status": "1",
+    "description": null,
+    "items": "1:id:primary key:,1:amount:amount of the item:,1:bills_id:foriegn key:1M,1:therapist_id:foriegn key:11,1:date_assessed:date of assessment:,1:type:type of assessment:,1:description: details about the bill item:,1:therapy_network_id:foriegn key:1M,1:type:type of assessment:,1:description:details about assessment:,1:assessment_id:key for assessment:",
+    "domain": "Finance",
+    "index": 1,
+    "node_width": 0,
+    "fixed": 1
+  },
+  {
+    "entity": "therapist",
+    "entity_key": "therapist",
+    "entity_id": "3",
+    "fixed_x": 0.35096423776334623,
+    "fixed_y": 0.515079365079365,
+    "physical": "1",
+    "status": "1",
+    "description": null,
+    "items": "1:id:id for record:,1:name:therapist_name:",
+    "domain": "Clinical Services",
+    "index": 2,
+    "node_width": 0,
+    "fixed": 1
+  },
+  {
+    "entity": "therapy_network",
+    "entity_key": "therapy_network",
+    "entity_id": "4",
+    "fixed_x": 0.363419038888296,
+    "fixed_y": 0.6023809523809524,
+    "physical": "1",
+    "status": "1",
+    "description": null,
+    "items": "1:id:auto increment primary key:,1:name:name of company:11",
+    "domain": "Clinical Services",
+    "index": 3,
+    "node_width": 0,
+    "fixed": 1
+  }
+]
