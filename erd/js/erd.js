@@ -17,7 +17,7 @@ var char_width = 10 // width of one character
 var row_height = 22;
 var er_keys = [];
 var domains = [];
-var node, node_header, link, subtext, text
+var node, node_header, link, subtext, text,title_text
 var node_data = [];
 var nodeitems;
 var items_data = [];
@@ -72,12 +72,7 @@ function toggleStyle() {
 }
 
 function toggle_animation() {
-    console.log("toggle", is_fixed)
     is_fixed = !is_fixed
-
-    //node.remove()
-    //init()
-    //simulation.nodes(data.nodes).alphaTarget(0.3).restart()
 }
 
 
@@ -119,7 +114,7 @@ function setRectWidth(d) {
 }
 
 function setRectHeight(d) {
-    let h = d.items.length ? d.items.length * row_height : row_height * .5
+    let h = d.columns.length ? d.columns.length * row_height : row_height * .5
     return h + row_height * 2;
 }
 
@@ -137,7 +132,7 @@ function setTextY(d) {
 }
 
 function setRectY(d) {
-    let y = d.items ? row_height : row_height
+    let y = d.columns ? row_height : row_height
     return y;
 }
 
@@ -161,8 +156,7 @@ function factorData() {
             return {
                 domain: d.domain,
                 node_width: d.node_width,
-                items: d.items,
-                physical: d.physical,
+                columns: d.columns,
                 label: d.label,
                 index: d.index,
                 status: d.status,
@@ -187,31 +181,27 @@ function factorItems() {
 
     objData.forEach(function (d) {
         var obj = {...d}
-        delete obj["items"]
+        delete obj["columns"]
         delete obj["entity"]
         obj["label"] = d["entity"]
-        obj["items"] = []
+        obj["columns"] = []
         var iw = 0// width of item word
         var max_w = d["entity"].length * char_width
 
-        if (!!d["items"]) {
-            var a = d["items"].split(",")
+        if (!!d["columns"]) {
+            var a = d["columns"]
 
             a.forEach(function (i) {
-                let ia = i.split(":")
 
-                let label = ia[1]
-                let status = ia[0]
-                let descr = ia[2]
-                iw = label.length * char_width
+                iw = i['label'].length * char_width
                 var iobj = Object()
-                iobj["label"] = label
-                iobj["status"] = status
-                iobj["descr"] = descr.replace("|", ",")
-                iobj["iskey"] = label.localeCompare("id") == 0 ? true : false
+                iobj["label"] = i['label']
+                iobj["status"] = i['status']
+                iobj["descr"] = i['description'].replace("|", ",")
+                iobj["iskey"] = i['label'].localeCompare("id") == 0 ? true : false
 
 
-                obj['items'].push(iobj)
+                obj['columns'].push(iobj)
                 items_data.push(iobj)
                 max_w = Math.max.apply(this, [iw, max_w])
             })
@@ -232,17 +222,16 @@ function factorLinks() {
         var de = d["entity_key"];
         var di = d["index"];
         jsonData.forEach(function (e) {
-            if (e["items"] != null && d["items"] != null) {
+            if (e["columns"] != null && d["columns"] != null) {
 
-                var a = e["items"].toString().split(",")
+                var a = e["columns"]//.toString().split(",")
 
                 a.forEach(function (item, i) {
-                    let status_label = item.split(":")
-                    let label = status_label[1];
-                    let rel = status_label[3]
+                    let label = item['label']
+                    let rel = item['relationship']
                     let eid = de + "_id"
 
-                    var isvalid = !label.localeCompare(eid);
+                    var isvalid = !item['label'].localeCompare(eid);
                     if (isvalid) {
                         er_keys.push(de + "_id")
                         var obj = Object();
@@ -271,9 +260,15 @@ var load = function (jdata) {
     origData = jdata
     //console.table(jsonData)
 
-    const jsonstr = JSON.stringify(jsonData)
-    const xdata = new Blob([jsonstr])
-    const a = document.getElementById('exportbutton');
+    let jsonObj = Object()
+    jsonObj['title']=title_text
+    jsonObj['style_option']=style_option
+    jsonObj['is_fixed']=is_fixed
+    jsonObj['data']=jsonData
+
+    let jsonstr = JSON.stringify(jsonObj)
+    let xdata = new Blob([jsonstr])
+    let a = document.getElementById('exportbutton');
     a.href = URL.createObjectURL(xdata)
     a.download = "erd.json";
 
@@ -286,7 +281,7 @@ var load = function (jdata) {
 
     var eItems = jsonData.map(function (e) {
         let obj = Object;
-        obj[e.entity] = e.items
+        obj[e.entity] = e.columns
     })
 
     var range = 3
@@ -325,8 +320,6 @@ function setSize() {
     col_spacing = (window.innerWidth * .75) / cols;
     row_spacing = (window.innerHeight * .75) / rows;
 
-    let title_text = "ENTERPRISE ARCHITECTURE ERD"
-
     d3.select(".title")
         .html(title_text)
 
@@ -362,8 +355,8 @@ var addSubtext = function () {
         .each(function (d, i) {
             let target = d3.select(this)
 
-            if (d.items.length) {
-                d.items.forEach(function (item) {
+            if (d.columns.length) {
+                d.columns.forEach(function (item) {
                     let label = item.label
                     let descr = item.descr
                     let status = (er_keys.indexOf(label) > -1) ? icons[2] : icons[item.status - 0]
@@ -541,7 +534,7 @@ function drawChart(data) {
             return (d.index)
         }))
         .force("collide", d3.forceCollide(function (d) {
-            return (50 + (10 * d.items.length))
+            return (50 + (10 * d.columns.length))
         }).iterations(50))
         .force("charge", d3.forceManyBody().strength(-10))
         .force("center", d3.forceCenter(width * .42, height * .58))
@@ -678,7 +671,7 @@ function drawChart(data) {
         .classed("subtext-node", true)
         .append("text")
         .text(function (d) {
-            return d.items.length ? "▢ " + d.items[0]["label"] : ""
+            return d.columns.length ? "▢ " + d.columns[0]["label"] : ""
         })
         .classed("textnode", true)
         .attr("x", 0)

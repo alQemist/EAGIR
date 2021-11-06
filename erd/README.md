@@ -8,28 +8,32 @@ Designed to produce a data-driven Entity Relationship Diagram from a Data Dictio
 This solution was just one facet of a larger Enterprise Architecture project undertaken to model and document the business domains and their relationships to the data architecture.
 
 The Data Dictionary was used as the source of data driving the ERD. Whatever the data source the model should be as follows:
+    
+        title: Title of the chart
 
-	   entity:      name of entity (can be singular or plural)
+        style_option: toggles the style from light to dark modes
 
-	   entity_key:  singular name of entity  (must be singular as its used to create the relationships)
+        is_fixed: boolean, all elements are in fixed positions (1) or float (0)
 
-	   entity_id:   unique entity id
+       data.entity:      name of entity (can be singular or plural)
 
-	   *fixed_x:     x position as a decimal (percentage),
+       data.data.entity_key:  singular name of entity  (must be singular as its used to create the relationships)
 
-	   *fixed_y:     y position as a decimal (percentage),
+       data.entity_id:   unique entity id
 
-	   physical:    boolean indicator that data is physical or not,
+       data.*fixed_x:     x position as a decimal (percentage),
 
-	   status":     boolean indicator that entity is approved for release,
+       data.*fixed_y:     y position as a decimal (percentage),
 
-	   description: description of the data used for tooltips,
+       data.status":     boolean indicator that entity is approved for release,
 
-	   items:       array of columns under each entity with these elements delimited by ":"
+       data.description: description of the data used for tooltips,
+
+       data.columns:       json array of columns under each entity 
    
                 status:boolean indicator that data is approved for release,
                 
-                name:column name
+                column:column name
                 
                 description: column description
                 
@@ -45,23 +49,28 @@ The Data Dictionary was used as the source of data driving the ERD. Whatever the
    domain:      name of domain the entity is under
    
 	   Sample JSON
-	  {
-	    "entity": "assessments",
-	    "entity_key": "assessment",
-	    "entity_id": "16",
-	    "fixed_x": "0.638562",
-	    "fixed_y": "0.291789",
-	    "physical": "1",
-	    "status": "0",
-	    "description": null,
-	    "items": "1:id:id for the assessment record:,1:request_id:id for the request record:1M",
+
+        {
+        "title": "ENTITY RELATIONSHIP DIAGRAM",
+        "style_option": 1,
+        "is_fixed": true,
+          data:[{
+            "entity": "assessments",
+            "entity_key": "assessment",
+            "entity_id": "16",
+            "fixed_x": "0.638562",
+            "fixed_y": "0.291789",
+            "physical": "1",
+            "status": "0",
+            "description": null,
+            "columns": [{
+                "status":1,"label":id,"description":"id for the assessment record","relationship":""
+            }],
 	    "domain": "Clinical Assessments"
-	  }
+	  }]
+}
 
-* NOTE: fixed_x and fixed_y values are ignored if the setting below is 0, this allows the forceDirected layout to "run".
-If is_fixed = 1 then the entity (nodes) will be in fixed positions. 
-
-		var is_fixed = 0 
+* NOTE: fixed_x and fixed_y values are ignored if the "is_fixed" is 0, this allows the forceDirected layout to "run".
 
 DRAGGING AND SAVING NEW NODE POSITIONS:
 

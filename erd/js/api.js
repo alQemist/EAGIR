@@ -19,10 +19,15 @@ function  saveChanges (d) {
         sdata.push(xd)
     })
 
+    let jsonObj = Object()
+    jsonObj['title']=title_text
+    jsonObj['style_option']=style_option
+    jsonObj['is_fixed']=is_fixed
+    jsonObj['data']=sdata
 
-    const jsonstr = JSON.stringify(sdata)
-    const xdata = new Blob([jsonstr])
-    const a = document.getElementById('exportbutton');
+    let jsonstr = JSON.stringify(jsonObj)
+    let xdata = new Blob([jsonstr])
+    let a = document.getElementById('exportbutton');
     a.href = URL.createObjectURL(xdata)
 
     load(sdata)
@@ -45,8 +50,14 @@ function  saveChanges (d) {
 function getJsonData(callback){
 
     if(!callback){
-        d3.json('data/sample_data.json',function(data){
+        d3.json('data/erd.json',function(json){
+            title_text = json.title
+            style_option = json.style_option
+            is_fixed = json.is_fixed
+            data = json.data
             load(data);
+            toggleStyle()
+
         })
         return
     }

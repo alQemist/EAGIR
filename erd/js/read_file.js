@@ -36,8 +36,14 @@ function readURL(input) {
                 var reader = new FileReader();
 
                 reader.onload = function (e) {
-                    let d = exti == 0 ? csvJSON(reader.result) : JSON.parse(reader.result)
-                    load(d);
+                    let json = exti == 0 ? csvJSON(reader.result) : JSON.parse(reader.result)
+                    title_text = json.title
+                    style_option = json.style_option
+                    is_fixed = json.is_fixed
+                    data = json.data
+                    toggleStyle()
+                    load(data);
+
                 };
                 reader.readAsText(input.files[i]);
             }
