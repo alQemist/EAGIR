@@ -754,10 +754,6 @@ function drawChart(data) {
                 .attr("x", function (d) {
                     let new_x = d.fixed_x ? d.fixed_x : d.x;
                     return new_x - setRectWidth(d) * .4;
-                    //return d.x - setRectWidth(d) * .4
-                })
-                .attr("y", function (d) {
-                    // return d.y + setTextY(d) + row_height
                 })
                 .attr("y", function (d, i) {
                     let new_y = d.fixed_y ? d.fixed_y : d.y;

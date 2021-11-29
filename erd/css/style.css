@@ -5,7 +5,7 @@ body {
     margin: 0px;
     border: none;
     font-family: Helvetica, "Nova Flat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: linear-gradient(#648880, #293f50);
+    background: rgb(55, 55, 55)
 }
 
 #graph{
