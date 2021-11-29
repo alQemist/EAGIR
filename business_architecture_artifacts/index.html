@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+        @import url(css/style.css);
+    </style>
+
+    <title>SANKEY Experiment</title>
+</head>
+<body>
+
+<p id="chart">
+<div class="tooltip">
+
+</div>
+
+<div class="headerdiv">
+    <button class=" headerbuttons lightdark toggler">light</button>
+
+    <input class="selFile  lightdark headerbuttons" type="file" id="myfile" name="myfile" onchange="readURL(this);">
+    <button class="inputbutton  lightdark headerbuttons" title="import csv file">Import</button>
+    <button class="resetbutton lightdark headerbuttons" title="reset to original dataset ">Reset</button>
+
+    <a href="0" id="exportbutton">
+        <button class="exportbutton lightdark headerbuttons" title="export as csv">Export</button>
+    </a>
+
+</div>
+<!---->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+<script src="js/sankey.js"></script>
+<script src="js/piechart.js"></script>
+<script>
+    var styleOption = 0;
+    var jsonData = {}
+    var origData = {}
+    d3.json("data/sankey.json",function(d){
+        jsonData = d
+        origData = d
+
+        // add json data to download button
+        const jsonstr = JSON.stringify(d)
+        const data = new Blob([jsonstr])
+        const a = document.getElementById('exportbutton');
+        a.href = URL.createObjectURL(data)
+        a.download = "sankey.json";
+    });
+    var subject = decodeURI("EA%20Artifact%20Interface%20Map");
+    document.title = subject
+</script>
+<script>
+    var colors = ["rgba(114,229,239,.9)", "rgba(118,204,108,9)", "rgba(221,142,235,.9)", "rgba(185,246,23,.9)", "rgba(253,137,146,.9)", "rgba(54,229,21,.9)", "rgba(140,171,234,.9)", "rgb(242,231,33)", "rgb(252,143,59)", "rgb(191,205,142)"];
+    var target
+    var tooltip = d3.select(".tooltip")
+    var legend = []
+    var closebtn = d3.selectAll(".close")
+    var font_size = 10;
+    var style_option = 0;
+    var target_margin, width, height, skwidth, skheight, nodePadding
+    var graph = {};
+    var b = d3.select("body")
+    var legends = []
+    var indicators = {}
+
+    tooltip.on("mouseleave", function () {
+        showTooltip()
+    })
+
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function () {
+            var context = this, args = arguments;
+            var later = function () {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+
+    var myEfficientFn = debounce(function () {
+        render();
+    }, 50);
+
+    window.addEventListener('resize', myEfficientFn);
+
+
+    function color(i) {
+        let c = legends.indexOf(i)
+        return colors[c]
+    }
+
+    function addLegend(graph) {
+
+        d3.selectAll(".node rect").each(function (d) {
+
+            if (typeof d.type == "string") {
+                indicators[d.type]++
+            }
+
+        })
+
+        d3.selectAll(".legend").remove()
+
+        let s = d3.select("body").append("span")
+            .classed("legend", true)
+            .style("left", function () {
+                return (width * .28) + "px"
+            })
+
+        Object.keys(indicators).forEach(function (d, i) {
+
+            if (d) {
+                let sd = s.append("div")
+                    .classed("indicator", true)
+                    .style("background", color(d))
+                    .html(indicators[d])
+                    .on("mouseover", function () {
+                        showType(d, graph)
+                    })
+                    .on("mouseleave", function () {
+                        showType()
+                    })
+
+                s.append("span")
+                    .text(d.toUpperCase())
+            }
+        })
+
+        var pie = new pieChart()
+        pie.width = 60
+        pie.heigth = 60
+        pie.inner_radius = 10
+        pie.data = indicators
+        pie.y = 45
+        pie.x = 600
+
+        pie.makeIt()
+
+    }
+
+    function showSlice(t) {
+        d3.selectAll(".legend span")
+            .classed("indicator-select", function (d, i) {
+                let txt = (Object.keys(indicators)[i])
+                return !txt.localeCompare(t) ? 1 : 0
+            })
+            .style("background", function (d, i) {
+                let txt = (Object.keys(indicators)[i])
+                let c = !txt.localeCompare(t) ? color(txt) : "transparent"
+                return c
+            })
+    }
+
+    function searchNodes(v, g) {
+
+        if (!v) {
+            d3.selectAll(".node")
+                .style("opacity", 1)
+            d3.selectAll(".link")
+                .style("opacity", 1)
+            return
+        }
+
+        let nl = [];
+        let ll = [];
+        let ss = v.toUpperCase()
+        let re = new RegExp(ss, "g");
+
+        (g.links).forEach(function (d) {
+            if ((d.target.name.toUpperCase()).search(re) == 0) {
+                nl.push(d.source.name)
+                nl.push(d.target.name)
+                ll.push(d.target.name)
+            }
+
+            if (d.source.name.toUpperCase() && (d.source.name.toUpperCase()).search(re) == 0) {
+                nl.push(d.target.name)
+                nl.push(d.source.name)
+                //ll.push(d.target.name)
+            }
+            if (d.source.name && (d.source.name.toUpperCase()).search(re) == 0) {
+                nl.push(d.source.name)
+                ll.push(d.source.name)
+            }
+        })
+
+
+        d3.selectAll(".node")
+            .style("opacity", function (d) {
+                return nl.indexOf(d.name) > -1 ? 1 : .1
+            })
+        d3.selectAll(".link")
+            .style("opacity", function (d) {
+                return ll.indexOf(d.source.name) > -1 || ll.indexOf(d.target.name) > -1 ? 1 : .1
+            })
+
+    }
+
+    function showTooltip(d) {
+
+        tooltip.selectAll("span").remove()
+        tooltip.style("left", "-4000px")
+            .style("opacity", 0)
+        tooltip.selectAll("button").remove()
+
+
+        if (d) {
+            d3.event.preventDefault();
+            let obj = d3.select(d3.event.currentTarget).node()
+            let obj_pos = obj.getBoundingClientRect()
+            let xv = obj_pos.x + 45
+            x = Math.min(xv, width - 350)
+            let y = (x == width - 350) ? obj_pos.y + obj_pos.height : obj_pos.y
+
+            tooltip.append("span")
+                .classed(".tool-content", true)
+                .html(d)
+
+            tooltip.style("top", function (d) {
+                return y + "px"
+            })
+                .style("left", function (d) {
+                    return x + "px"
+                })
+
+            tooltip.transition()
+                .style("opacity", 0)
+                .duration(1000)
+                .style("opacity", 1)
+
+            setTimeout(function () {
+                showTooltip()
+            }, 5000)
+
+        } else {
+            return
+        }
+
+    }
+
+    function showLinked(n, g) {
+
+        if (!n) {
+            d3.selectAll(".node")
+                .style("opacity", 1)
+            d3.selectAll(".link")
+                .style("opacity", 1)
+            return
+        }
+
+        let nl = [];
+        let ll = [];
+
+        (g.links).forEach(function (d) {
+            if ((d.target.name).localeCompare(n) == 0) {
+                nl.push(d.source.name)
+                nl.push(d.target.name)
+                ll.push(d.target.name)
+            }
+
+            if (d.source.name && (d.source.name).localeCompare(n) == 0) {
+                nl.push(d.target.name)
+
+                if (d.ty == 0) ll.push(d.target.name)
+                if (d.sy == 0) ll.push(d.source.name)
+            }
+            if (d.source.name && (d.source.name).localeCompare(n) == 0) {
+                nl.push(d.source.name)
+                //ll.push(d.source.name)
+            }
+        })
+
+        let merged_links = nl.filter(function (d) {
+            return ll.indexOf(d) != -1
+        })
+
+        d3.selectAll(".node")
+            .style("opacity", function (d) {
+                return nl.indexOf(d.name) > -1 ? 1 : .1
+            })
+        d3.selectAll(".link")
+            .style("opacity", function (d) {
+                //return ll.indexOf(d.source.name) > -1 || ll.indexOf(d.target.name) > -1 ? 1 : .1
+                return merged_links.indexOf(d.source.name) > -1 || merged_links.indexOf(d.target.name) > -1 ? 1 : .1
+            })
+
+    }
+
+    function showType(n, g) {
+
+        if (!n) {
+            d3.selectAll(".node")
+                .style("opacity", 1)
+            d3.selectAll(".link")
+                .style("opacity", 1)
+            return
+        }
+
+        let nl = [];
+        let ll = [];
+
+        (g.links).forEach(function (d) {
+
+            if ((d.target.type).localeCompare(n) == 0) {
+                nl.push(d.target.name)
+                ll.push(d.target.name)
+            }
+
+            if (d.source.type && (d.source.name).localeCompare(n) == 0) {
+                nl.push(d.target.name)
+                ll.push(d.target.name)
+            }
+            if (d.source.type && (d.source.type).localeCompare(n) == 0) {
+                nl.push(d.source.name)
+                ll.push(d.source.name)
+            }
+
+        })
+
+        d3.selectAll(".node")
+            .style("opacity", function (d) {
+                return nl.indexOf(d.name) > -1 ? 1 : .1
+            })
+        d3.selectAll(".link")
+            .style("opacity", function (d) {
+                return ll.indexOf(d.source.name) > -1 || ll.indexOf(d.target.name) > -1 ? 1 : .1
+            })
+
+    }
+
+    function toggleStyle() {
+
+        style_option = !style_option;
+
+        d3.select(".toggler")
+            .html(function () {
+                let tx = !style_option ? "light" : "dark"
+                return tx;
+            })
+
+        d3.select("body")
+            .classed("darkish", function () {
+                return style_option;
+            })
+        d3.selectAll("button")
+            .classed("darkish", function () {
+                return style_option;
+            })
+        d3.selectAll("text")
+            .classed("darkish", function () {
+                return style_option;
+            })
+
+    }
+
+    toggleStyle()
+
+    function render() {
+
+        margin = {top: 110, right: 150, bottom: 40, left: 150},
+            width = window.innerWidth   ,
+            skwidth = width - (margin.left + margin.right) ,
+            height = window.innerHeight - margin.bottom ,
+            skheight = height - (margin.top + margin.bottom)
+
+        var formatNumber = d3.format(",.0f"),    // zero decimal places
+            format = function (d) {
+                return formatNumber(d) + " " + units;
+            }
+
+        // remove any previous svg
+        d3.selectAll("svg, h4,.searchbox, .searchclear, .legend").remove()
+
+        b.append("h4")
+            .classed("subtitle", true)
+            .html("Enterprise Architecture and Governance")
+
+        b.append("h4")
+            .classed("title", true)
+            .html(subject)
+
+        // append the svg canvas to the page
+
+        var svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width + "px")
+            .attr("height", height + "px")
+            .append("g")
+            .attr("transform",
+                "translate(" + (margin.left) + "," + margin.top + ")");
+
+
+        var loadData = function (graph) {
+
+            indicators = {}
+            // Set the sankey diagram properties
+            var sankey = d3.sankey()
+                .nodeWidth(35)
+                .nodePadding(8)
+                .size([skwidth, skheight]);
+
+            var path = sankey.link();
+
+            let legendsa = [...new Set(graph.map(d => d.target_type))]
+            let legendsb = [...new Set(graph.map(d => d.source_type))]
+            let concatA = legendsa.concat(legendsb)
+
+            legends = concatA.filter((item, pos) => concatA.indexOf(item) === pos)
+
+            legends.forEach(function (d, i) {
+                indicators[d] = 0
+            })
+
+
+            searchbox = d3.select(".searchBox")
+
+
+            //set up graph in same style as original example but empty
+            nodesList = {};
+            nameList = []
+            graphLinks = [];
+
+            graph.forEach(function (d) {
+                nameList.push(d.source);
+                nameList.push(d.target);
+                graphLinks.push({
+                    "source": d.source,
+                    "target": d.target,
+                    "value": +d.value,
+                    "target_description": d.description,
+                    "type": d.source_type
+                });
+                if (typeof nodesList[d.target] != "object") {
+                    nodesList[d.target] = d
+                }
+                if (typeof nodesList[d.source] != "object") {
+                    nodesList[d.source] = d
+                }
+            });
+
+            nameList = [...new Set(nameList.map(d => d))]
+            nameList.sort()
+
+            function getNodeItem(v) {
+                return nodesList[v]
+            }
+
+            nodesList = nameList.map(d => {
+                let item = getNodeItem(d)
+                let obj = {}
+                obj["name"] = d
+                obj["type"] = d == item.source ? item.source_type : item.target_type
+                obj["description"] = d == item.source ? item.source_description : item.target_description
+                return obj
+            })
+
+            graph.nodes = nodesList.map(d => d);
+
+            var nodeMap = {};
+            graph.nodes.forEach(function (x) {
+                nodeMap[x.name] = x;
+            });
+
+            graph.links = graphLinks.map(function (x) {
+                return {
+                    source: nodeMap[x.source],
+                    target: nodeMap[x.target],
+                    value: x.value
+                };
+            });
+
+            sankey
+                .nodes(graph.nodes)
+                .links(graph.links)
+                .layout(32);
+
+            // add in the links
+            var link = svg.append("g").selectAll(".link")
+                .data(graph.links)
+                .enter().append("path")
+                .attr("class", "link")
+                .attr("d", path)
+                .sort(function (a, b) {
+                    return b.dy - a.dy;
+                });
+
+
+// add in the nodes
+            var node = svg.append("g").selectAll(".node")
+                .data(graph.nodes)
+                .enter().append("g")
+                .attr("class", "node")
+                .attr("transform", function (d) {
+                    return "translate(" + d.x + "," + d.y + ")";
+                })
+                .call(d3.behavior.drag()
+                    .origin(function (d) {
+                        return d;
+                    })
+                    .on("dragstart", function () {
+                        this.parentNode.appendChild(this);
+                    })
+                    .on("drag", dragmove));
+
+
+// add the rectangles for the nodes
+            var rect = node.append("rect")
+                .attr("height", function (d) {
+                    return Math.abs(d.dy) + "px";
+                })
+                .attr("width", sankey.nodeWidth())
+                .style("fill", function (d) {
+                    let c = d.type
+                    return d.color = color(c) // color(d.name.replace(/ .*/, ""));
+                })
+                .style("stroke", function (d) {
+                    return d3.rgb(d.color);
+                })
+                .on("mouseover", function (d) {
+                    var str = "<b>" + d.name.toUpperCase() + " (" + d.type + ")</b><p>"
+                    str += d.description.toUpperCase()
+                    showTooltip(str)
+                    showLinked(d.name, graph)
+                })
+                .on("mouseleave", function () {
+                    showTooltip()
+                    showLinked()
+                })
+
+
+// add in the title for the nodes
+            node.append("text")
+                .attr("x", -10)
+                .attr("y", function (d) {
+                    return d.dy / 2;
+                })
+                .attr("dy", ".35em")
+                .attr("text-anchor", "end")
+                .attr("transform", null)
+                .text(function (d) {
+                    return d.name;
+                })
+                .filter(function (d) {
+                    return d.x < width / 2;
+                })
+                .attr("x", 10 + sankey.nodeWidth())
+                .attr("text-anchor", "start");
+
+// the function for moving the nodes
+            function dragmove(d) {
+                d3.select(this).attr("transform",
+                    "translate(" + d.x + "," + (
+                        d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
+                    ) + ")");
+                sankey.relayout();
+                link.attr("d", path);
+            }
+
+            var searchbox = b.append("input")
+                .classed("searchbox", true)
+                .attr("type", "text")
+                .attr("placeholder", "search")
+                .style("right", "100px")
+                .on("keyup", function () {
+                    let v = this.value
+                    searchNodes(v, graph)
+                })
+            b.append("div")
+                .classed("searchclear", true)
+                .style("right",  "100px")
+                .html("X")
+                .on("click", function () {
+                    searchbox.property("value", "")
+                    searchNodes()
+                })
+        }
+
+
+        d3.select(".toggler").on("click", function () {
+            toggleStyle()
+        })
+
+
+        loadData(jsonData)
+        addLegend(jsonData)
+    }
+
+    myEfficientFn()
+
+
+</script>
+<script src="js/read_file.js" charset="utf-8"></script>
+</body>
+</html>
+

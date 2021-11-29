@@ -1,0 +1,1721 @@
+[
+  {
+    "source": "2 Factor Authentication",
+    "target": "User Management",
+    "target_description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "source_description": "",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Administrators Guide Management",
+    "target": "Document Management",
+    "target_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "source_description": "Documenting and managing the How-To manuals for administering Business Systems of Record",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "AP\/AR Management",
+    "target": "Quickbooks",
+    "target_description": "Financial Management",
+    "source_description": "Ability to manage and report on Accounts Payable and Account Receivable",
+    "target_type": "Microservice",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Application Portfolio Management",
+    "target": "EAG",
+    "target_description": "Modeling and Documentation tool used for Enterprise Architecture and Data Governance. It is the Single Source of Truth for all Enterprise Metadata.",
+    "source_description": "Ability to fully vet technologies for consideration as candidates for the portfolio and ability to manage their metadata including cost, licensing, etc.",
+    "target_type": "Web App",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Architectural Change Management",
+    "target": "EAG",
+    "target_description": "Modeling and Documentation tool used for Enterprise Architecture and Data Governance. It is the Single Source of Truth for all Enterprise Metadata.",
+    "source_description": "",
+    "target_type": "Web App",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Assessment Data Capture",
+    "target": "Cognito Forms",
+    "target_description": "Third party tool for creating and managing custom forms for data collection",
+    "source_description": "capability to capture data during Clinician's assessment",
+    "target_type": "Microservice",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Assessment Data Capture",
+    "target": "Form Builder",
+    "target_description": "Library for creating HTML Forms",
+    "source_description": "capability to capture data during Clinician's assessment",
+    "target_type": "Plugin",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Assessment Data Capture",
+    "target": "Periscope Legacy System",
+    "target_description": "Master Business Application",
+    "source_description": "capability to capture data during Clinician's assessment",
+    "target_type": "Client Software",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Assessment Lifecycle Management",
+    "target": "Assessment Data Capture",
+    "target_description": "capability to capture data during Clinician's assessment",
+    "source_description": "Capability to manage the full life-cycle of an Assessment from assessment form creation to delivery of the Narrative Report",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Assessment Lifecycle Management",
+    "target": "Assessment Form Editor",
+    "target_description": "Creating standardized and customized assessment forms using third-party tool.",
+    "source_description": "Capability to manage the full life-cycle of an Assessment from assessment form creation to delivery of the Narrative Report",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Assessment Lifecycle Management",
+    "target": "Assessment Form Management",
+    "target_description": "Ability to create and manage library of assessment forms",
+    "source_description": "Capability to manage the full life-cycle of an Assessment from assessment form creation to delivery of the Narrative Report",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Assessment Lifecycle Management",
+    "target": "Narrative Report Data Merge",
+    "target_description": "Merging assessment data with the associated narrative template",
+    "source_description": "Capability to manage the full life-cycle of an Assessment from assessment form creation to delivery of the Narrative Report",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Assessment Lifecycle Management",
+    "target": "Narrative Report Editing",
+    "target_description": "Capability to edit the narrative report after assessment data has been merged",
+    "source_description": "Capability to manage the full life-cycle of an Assessment from assessment form creation to delivery of the Narrative Report",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Assessment Lifecycle Management",
+    "target": "Narrative Report PDF Storage",
+    "target_description": "Storing the Narrative Report PDF document for on-demand access.",
+    "source_description": "Capability to manage the full life-cycle of an Assessment from assessment form creation to delivery of the Narrative Report",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Assessment Lifecycle Management",
+    "target": "Narrative Report Status Management",
+    "target_description": "Ability to change status of Narrative Report to completed",
+    "source_description": "Capability to manage the full life-cycle of an Assessment from assessment form creation to delivery of the Narrative Report",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Assessment Lifecycle Management",
+    "target": "Narrative Report Template Editor",
+    "target_description": "Ability to create a Narrative Report template defining the merged text with the assessment data",
+    "source_description": "Capability to manage the full life-cycle of an Assessment from assessment form creation to delivery of the Narrative Report",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Assessment Lifecycle Management",
+    "target": "Narrative Report to PDF",
+    "target_description": "Generating a PDF of the Narrative Report",
+    "source_description": "Capability to manage the full life-cycle of an Assessment from assessment form creation to delivery of the Narrative Report",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Assessment Lifecycle Management",
+    "target": "AWS QuickSight",
+    "target_description": "AWS Dashboard Reporting application (service)",
+    "source_description": "Capability to manage the full life-cycle of an Assessment from assessment form creation to delivery of the Narrative Report",
+    "target_type": "Cloud Service",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Assessment Lifecycle Management",
+    "target": "Cognito Forms",
+    "target_description": "Third party tool for creating and managing custom forms for data collection",
+    "source_description": "Capability to manage the full life-cycle of an Assessment from assessment form creation to delivery of the Narrative Report",
+    "target_type": "Microservice",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Attestation Management",
+    "target": "Document Management",
+    "target_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "source_description": "Ability to manage and track Attestation documents",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "AWS QuickSight",
+    "target": "AWS RDS",
+    "target_description": "Relational Database Service",
+    "source_description": "AWS Dashboard Reporting application (service)",
+    "target_type": "Cloud Service",
+    "source_type": "Cloud Service",
+    "value": "5"
+  },
+  {
+    "source": "AWS QuickSight",
+    "target": "AWS Simple Storage Services (S3)",
+    "target_description": "Document storage as objects for optimization (without content indexing)",
+    "source_description": "AWS Dashboard Reporting application (service)",
+    "target_type": "Cloud Service",
+    "source_type": "Cloud Service",
+    "value": "5"
+  },
+  {
+    "source": "Background Check",
+    "target": "MBS",
+    "target_description": "FileMaker Plugin used for facilitating cURL and many other functions not available as native to FM (up to 2016)",
+    "source_description": "ability to check a persons credentials, standings, or criminal record during the onboarding process and for annual license and insurance renewals.",
+    "target_type": "Technology",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Big Data Analytics",
+    "target": "AWS Sagemaker",
+    "target_description": "AWS service for AI and ML processing",
+    "source_description": "Ability to apply complex AI and ML algorithms to large amounts of data in order to gain in-depth analysis and insight.",
+    "target_type": "Cloud Service",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Business Account Management",
+    "target": "Business Account Creation",
+    "target_description": "Ability to add a new business account",
+    "source_description": "Ability to manage Business Accounts",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Account Management",
+    "target": "Request Lifecycle Management",
+    "target_description": "Ability to manage Requests",
+    "source_description": "Ability to manage Business Accounts",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Account Management",
+    "target": "Request Types Management",
+    "target_description": "Ability to manage request types",
+    "source_description": "Ability to manage Business Accounts",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Account Management",
+    "target": "User Creation",
+    "target_description": "ability to create a syste user ",
+    "source_description": "Ability to manage Business Accounts",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Account Management",
+    "target": "User Management",
+    "target_description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "source_description": "Ability to manage Business Accounts",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Account Management",
+    "target": "User Privilege Management",
+    "target_description": "Being able to assign privileges to a user \/ persona",
+    "source_description": "Ability to manage Business Accounts",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Account Management",
+    "target": "Gryphon",
+    "target_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "source_description": "Ability to manage Business Accounts",
+    "target_type": "Web App",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Business Administration",
+    "target": "Payroll Management",
+    "target_description": "Capability for managing all aspects of payroll",
+    "source_description": "Capability to manage day to day business operations.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Continuity",
+    "target": "Assessment Lifecycle Management",
+    "target_description": "Capability to manage the full life-cycle of an Assessment from assessment form creation to delivery of the Narrative Report",
+    "source_description": "The advanced planning and preparation of an organization to maintaining business functions or quickly resuming after a disaster has occurred.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Continuity",
+    "target": "Narrative Report Data Merge",
+    "target_description": "Merging assessment data with the associated narrative template",
+    "source_description": "The advanced planning and preparation of an organization to maintaining business functions or quickly resuming after a disaster has occurred.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Continuity",
+    "target": "Request Billing",
+    "target_description": "Ability to calculate billing amounts and post Invoices to Financial Management System",
+    "source_description": "The advanced planning and preparation of an organization to maintaining business functions or quickly resuming after a disaster has occurred.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Continuity",
+    "target": "Request Lifecycle Management",
+    "target_description": "Ability to manage Requests",
+    "source_description": "The advanced planning and preparation of an organization to maintaining business functions or quickly resuming after a disaster has occurred.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Goals Management",
+    "target": "Document Management",
+    "target_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "source_description": "Documenting and publishing the Goals of the Business, Mission Statement, Vision Statement, etc...",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Operations Management",
+    "target": "Business Account Management",
+    "target_description": "Ability to manage Business Accounts",
+    "source_description": "Ability to manage Business Operations domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Operations Management",
+    "target": "Business Administration",
+    "target_description": "Capability to manage day to day business operations.",
+    "source_description": "Ability to manage Business Operations domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Operations Management",
+    "target": "Communications Management",
+    "target_description": "Ability to manage Communications",
+    "source_description": "Ability to manage Business Operations domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Operations Management",
+    "target": "Contract Management",
+    "target_description": "Ability to manage legal contracts",
+    "source_description": "Ability to manage Business Operations domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Operations Management",
+    "target": "Customer Relationship Management",
+    "target_description": "Tools for monitoring and measuring activity for all customers",
+    "source_description": "Ability to manage Business Operations domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Operations Management",
+    "target": "Lines of Business Management",
+    "target_description": "Ability to manage Lines of Business",
+    "source_description": "Ability to manage Business Operations domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Operations Management",
+    "target": "Request Lifecycle Management",
+    "target_description": "Ability to manage Requests",
+    "source_description": "Ability to manage Business Operations domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Operations Management",
+    "target": "Request Types Management",
+    "target_description": "Ability to manage request types",
+    "source_description": "Ability to manage Business Operations domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Operations Management",
+    "target": "User Management",
+    "target_description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "source_description": "Ability to manage Business Operations domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Business Rules Management",
+    "target": "Document Management",
+    "target_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "source_description": "Managing the Rules used to govern business processes, process logic, and procedures",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Cash Management",
+    "target": "Quickbooks",
+    "target_description": "Financial Management",
+    "source_description": "",
+    "target_type": "Microservice",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Clinical Services Management",
+    "target": "Assessment Lifecycle Management",
+    "target_description": "Capability to manage the full life-cycle of an Assessment from assessment form creation to delivery of the Narrative Report",
+    "source_description": "Ability to manage Clinical Services",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Clinical Services Management",
+    "target": "Clinician Management",
+    "target_description": "All name, address, contact, payee information must sync with payroll company, i.e. when something is updated with payroll company or with account, it must be synced",
+    "source_description": "Ability to manage Clinical Services",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Clinical Services Management",
+    "target": "Communications Management",
+    "target_description": "Ability to manage Communications",
+    "source_description": "Ability to manage Clinical Services",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Clinical Services Management",
+    "target": "Performance Analysis Dashboard",
+    "target_description": "Ability to view performance metrics and  option to perform ad hoc query depending on the user's persona privileges",
+    "source_description": "Ability to manage Clinical Services",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Clinical Services Management",
+    "target": "Request Lifecycle Management",
+    "target_description": "Ability to manage Requests",
+    "source_description": "Ability to manage Clinical Services",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Clinical Services Management",
+    "target": "Training Access Management",
+    "target_description": "",
+    "source_description": "Ability to manage Clinical Services",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Clinical Services Management",
+    "target": "Training Media Management",
+    "target_description": "",
+    "source_description": "Ability to manage Clinical Services",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Clinical Services Management",
+    "target": "Gryphon",
+    "target_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "source_description": "Ability to manage Clinical Services",
+    "target_type": "Web App",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "CodeIgniter",
+    "target": "PHP",
+    "target_description": "PHP: Hypertext Preprocessor.",
+    "source_description": "CodeIgniter is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications",
+    "target_type": "Technology",
+    "source_type": "Framework",
+    "value": "5"
+  },
+  {
+    "source": "Contract Management",
+    "target": "Document Management",
+    "target_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "source_description": "Ability to manage legal contracts",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Data Governance",
+    "target": "EAG",
+    "target_description": "Modeling and Documentation tool used for Enterprise Architecture and Data Governance. It is the Single Source of Truth for all Enterprise Metadata.",
+    "source_description": "A framework of policies, procedures and technologies designed to control enterprise data over the life-cycle.",
+    "target_type": "Web App",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Data Warehouse",
+    "target": "AWS Athena",
+    "target_description": "",
+    "source_description": "Data store which federates data from multiple sources into a single repository as a Single Source of Truth for reporting and visualizations.",
+    "target_type": "Cloud Service",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Data Warehouse",
+    "target": "AWS QuickSight",
+    "target_description": "AWS Dashboard Reporting application (service)",
+    "source_description": "Data store which federates data from multiple sources into a single repository as a Single Source of Truth for reporting and visualizations.",
+    "target_type": "Cloud Service",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Data Warehouse",
+    "target": "AWS RDS",
+    "target_description": "Relational Database Service",
+    "source_description": "Data store which federates data from multiple sources into a single repository as a Single Source of Truth for reporting and visualizations.",
+    "target_type": "Cloud Service",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Data Warehouse",
+    "target": "FileMaker Pro Server 19",
+    "target_description": "Server Application running on Windows OS",
+    "source_description": "Data store which federates data from multiple sources into a single repository as a Single Source of Truth for reporting and visualizations.",
+    "target_type": "Server Software",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Data Warehouse",
+    "target": "FXphp",
+    "target_description": "PHP API Framework for FileMaker Pro Server",
+    "source_description": "Data store which federates data from multiple sources into a single repository as a Single Source of Truth for reporting and visualizations.",
+    "target_type": "Framework",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Data Warehouse",
+    "target": "PHP",
+    "target_description": "PHP: Hypertext Preprocessor.",
+    "source_description": "Data store which federates data from multiple sources into a single repository as a Single Source of Truth for reporting and visualizations.",
+    "target_type": "Technology",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Database Management",
+    "target": "AWS RDS",
+    "target_description": "Relational Database Service",
+    "source_description": "",
+    "target_type": "Cloud Service",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Database Management",
+    "target": "FileMaker Pro Server 19",
+    "target_description": "Server Application running on Windows OS",
+    "source_description": "",
+    "target_type": "Server Software",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "DevOps Management",
+    "target": "Aha",
+    "target_description": "Workflow Management",
+    "source_description": "Manage the SDLC at all phases from development onward.",
+    "target_type": "Microservice",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "DevOps Management",
+    "target": "Freshdesk",
+    "target_description": "Technical support ticketing",
+    "source_description": "Manage the SDLC at all phases from development onward.",
+    "target_type": "Microservice",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "DevOps Management",
+    "target": "JIRA",
+    "target_description": "Used for work management",
+    "source_description": "Manage the SDLC at all phases from development onward.",
+    "target_type": "Microservice",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Document Management",
+    "target": "Document Analytics",
+    "target_description": "Ability to perform AI ML analysis on text documents",
+    "source_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Document Management",
+    "target": "Document Retrieval",
+    "target_description": "Ability to open \/ save locally any type document from S3",
+    "source_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Document Management",
+    "target": "Document Search",
+    "target_description": "Ability to search and find documents in a central document repository (CDR) and have the ability to apply Machine Learning (ML) and Artificial Intelligence(AI) for both simple and complex data analysis.",
+    "source_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Document Management",
+    "target": "Document Security",
+    "target_description": "The ability to assign a mandatory level of security to a document",
+    "source_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Document Management",
+    "target": "Document Storage",
+    "target_description": "",
+    "source_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Document Management",
+    "target": "Document Upload",
+    "target_description": "Ability to upload any type of document to S3",
+    "source_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Document Management",
+    "target": "EAG",
+    "target_description": "Modeling and Documentation tool used for Enterprise Architecture and Data Governance. It is the Single Source of Truth for all Enterprise Metadata.",
+    "source_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "target_type": "Web App",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Document Management",
+    "target": "Gryphon",
+    "target_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "source_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "target_type": "Web App",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Document Management",
+    "target": "PayChex",
+    "target_description": "Service for Managing Personnel and Payroll",
+    "source_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "target_type": "API",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "EAG",
+    "target": "AWS RDS",
+    "target_description": "Relational Database Service",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture and Data Governance. It is the Single Source of Truth for all Enterprise Metadata.",
+    "target_type": "Cloud Service",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "EAG",
+    "target": "CodeIgniter",
+    "target_description": "CodeIgniter is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture and Data Governance. It is the Single Source of Truth for all Enterprise Metadata.",
+    "target_type": "Framework",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "EAG",
+    "target": "d3js",
+    "target_description": "Javascript framework for creating SVG charts and graphs",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture and Data Governance. It is the Single Source of Truth for all Enterprise Metadata.",
+    "target_type": "Framework",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "EAG",
+    "target": "FileMaker Pro Client 19",
+    "target_description": "Client Application running on Windows and MacOS",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture and Data Governance. It is the Single Source of Truth for all Enterprise Metadata.",
+    "target_type": "Client Software",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "EAG",
+    "target": "FileMaker Pro Server 19",
+    "target_description": "Server Application running on Windows OS",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture and Data Governance. It is the Single Source of Truth for all Enterprise Metadata.",
+    "target_type": "Server Software",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "EAG",
+    "target": "FileMaker Webdirect",
+    "target_description": "Web publishing of FileMaker database layouts",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture and Data Governance. It is the Single Source of Truth for all Enterprise Metadata.",
+    "target_type": "Web App",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "EAG",
+    "target": "ODBC",
+    "target_description": "Open Database Connectivity is a standard application programming interface for accessing database management systems",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture and Data Governance. It is the Single Source of Truth for all Enterprise Metadata.",
+    "target_type": "Technology",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "EAG",
+    "target": "PHP",
+    "target_description": "PHP: Hypertext Preprocessor.",
+    "source_description": "Modeling and Documentation tool used for Enterprise Architecture and Data Governance. It is the Single Source of Truth for all Enterprise Metadata.",
+    "target_type": "Technology",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "Engineering Admin Console",
+    "target": "Engineering KPI Reporting",
+    "target_description": "Capability of reporting and monitoring KPI for the Engineering Domain",
+    "source_description": "Ability to control access to systems, services and digital assets and protect them from unauthorized access. Should have 2FA for access to this console.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering Admin Console",
+    "target": "Request Types Master Data Management",
+    "target_description": "Capability to manage the Master list of Request Types to which all custom request types must be attributed as children",
+    "source_description": "Ability to control access to systems, services and digital assets and protect them from unauthorized access. Should have 2FA for access to this console.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering Admin Console",
+    "target": "User Management",
+    "target_description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "source_description": "Ability to control access to systems, services and digital assets and protect them from unauthorized access. Should have 2FA for access to this console.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering Admin Console",
+    "target": "Website  Gateway Controls",
+    "target_description": "",
+    "source_description": "Ability to control access to systems, services and digital assets and protect them from unauthorized access. Should have 2FA for access to this console.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering Admin Console",
+    "target": "Website Banner Management",
+    "target_description": "",
+    "source_description": "Ability to control access to systems, services and digital assets and protect them from unauthorized access. Should have 2FA for access to this console.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering KPI Reporting",
+    "target": "Compliance Auditing",
+    "target_description": "Ability to measure and report on compliance performance with regard to regulated standards such as ISO",
+    "source_description": "Capability of reporting and monitoring KPI for the Engineering Domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering KPI Reporting",
+    "target": "Engineering Work Hours Report",
+    "target_description": "Work Hours Report",
+    "source_description": "Capability of reporting and monitoring KPI for the Engineering Domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering Systems Management",
+    "target": "Application Portfolio Management",
+    "target_description": "Ability to fully vet technologies for consideration as candidates for the portfolio and ability to manage their metadata including cost, licensing, etc.",
+    "source_description": "Ability to manage all technical systems, hardware, software, data, media and the human assets required to support and administer the same.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering Systems Management",
+    "target": "Business Continuity",
+    "target_description": "The advanced planning and preparation of an organization to maintaining business functions or quickly resuming after a disaster has occurred.",
+    "source_description": "Ability to manage all technical systems, hardware, software, data, media and the human assets required to support and administer the same.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering Systems Management",
+    "target": "Code Management",
+    "target_description": "",
+    "source_description": "Ability to manage all technical systems, hardware, software, data, media and the human assets required to support and administer the same.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering Systems Management",
+    "target": "Data Warehouse",
+    "target_description": "Data store which federates data from multiple sources into a single repository as a Single Source of Truth for reporting and visualizations.",
+    "source_description": "Ability to manage all technical systems, hardware, software, data, media and the human assets required to support and administer the same.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering Systems Management",
+    "target": "Database Management",
+    "target_description": "",
+    "source_description": "Ability to manage all technical systems, hardware, software, data, media and the human assets required to support and administer the same.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering Systems Management",
+    "target": "DevOps Management",
+    "target_description": "Manage the SDLC at all phases from development onward.",
+    "source_description": "Ability to manage all technical systems, hardware, software, data, media and the human assets required to support and administer the same.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering Systems Management",
+    "target": "Engineering Admin Console",
+    "target_description": "Ability to control access to systems, services and digital assets and protect them from unauthorized access. Should have 2FA for access to this console.",
+    "source_description": "Ability to manage all technical systems, hardware, software, data, media and the human assets required to support and administer the same.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering Systems Management",
+    "target": "Enterprise Architecture Governance",
+    "target_description": "System of Record used as the Single Source of Truth, documenting standards used to govern processes, security, software, technology,data (governance), and digital assets across the enterprise.",
+    "source_description": "Ability to manage all technical systems, hardware, software, data, media and the human assets required to support and administer the same.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering Systems Management",
+    "target": "Login",
+    "target_description": "Create an IT ticket if they are unable to login.  This should be tied to valid, verified email address in our system",
+    "source_description": "Ability to manage all technical systems, hardware, software, data, media and the human assets required to support and administer the same.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Engineering Systems Management",
+    "target": "Master Data Management",
+    "target_description": "Managing HCPCS, HCPCS Fee schedule and ICD10, etc",
+    "source_description": "Ability to manage all technical systems, hardware, software, data, media and the human assets required to support and administer the same.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Enterprise Architecture Governance",
+    "target": "Administrators Guide Management",
+    "target_description": "Documenting and managing the How-To manuals for administering Business Systems of Record",
+    "source_description": "System of Record used as the Single Source of Truth, documenting standards used to govern processes, security, software, technology,data (governance), and digital assets across the enterprise.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Enterprise Architecture Governance",
+    "target": "Application Portfolio Management",
+    "target_description": "Ability to fully vet technologies for consideration as candidates for the portfolio and ability to manage their metadata including cost, licensing, etc.",
+    "source_description": "System of Record used as the Single Source of Truth, documenting standards used to govern processes, security, software, technology,data (governance), and digital assets across the enterprise.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Enterprise Architecture Governance",
+    "target": "Architectural Change Management",
+    "target_description": "",
+    "source_description": "System of Record used as the Single Source of Truth, documenting standards used to govern processes, security, software, technology,data (governance), and digital assets across the enterprise.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Enterprise Architecture Governance",
+    "target": "Business Goals Management",
+    "target_description": "Documenting and publishing the Goals of the Business, Mission Statement, Vision Statement, etc...",
+    "source_description": "System of Record used as the Single Source of Truth, documenting standards used to govern processes, security, software, technology,data (governance), and digital assets across the enterprise.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Enterprise Architecture Governance",
+    "target": "Business Rules Management",
+    "target_description": "Managing the Rules used to govern business processes, process logic, and procedures",
+    "source_description": "System of Record used as the Single Source of Truth, documenting standards used to govern processes, security, software, technology,data (governance), and digital assets across the enterprise.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Enterprise Architecture Governance",
+    "target": "Data Governance",
+    "target_description": "A framework of policies, procedures and technologies designed to control enterprise data over the life-cycle.",
+    "source_description": "System of Record used as the Single Source of Truth, documenting standards used to govern processes, security, software, technology,data (governance), and digital assets across the enterprise.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Enterprise Architecture Governance",
+    "target": "Policy and Guidelines Management",
+    "target_description": "Documenting Best Practices and Guidelines as standards for Domains",
+    "source_description": "System of Record used as the Single Source of Truth, documenting standards used to govern processes, security, software, technology,data (governance), and digital assets across the enterprise.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Enterprise Architecture Governance",
+    "target": "Technology Stack Management",
+    "target_description": "Ability to fully vet technologies for consideration as candidates for the portfolio and ability to manage their metadata.",
+    "source_description": "System of Record used as the Single Source of Truth, documenting standards used to govern processes, security, software, technology,data (governance), and digital assets across the enterprise.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Enterprise Architecture Governance",
+    "target": "EAG",
+    "target_description": "Modeling and Documentation tool used for Enterprise Architecture and Data Governance. It is the Single Source of Truth for all Enterprise Metadata.",
+    "source_description": "System of Record used as the Single Source of Truth, documenting standards used to govern processes, security, software, technology,data (governance), and digital assets across the enterprise.",
+    "target_type": "Web App",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "FileMaker Pro Server 19",
+    "target": "PHP",
+    "target_description": "PHP: Hypertext Preprocessor.",
+    "source_description": "Server Application running on Windows OS",
+    "target_type": "Technology",
+    "source_type": "Server Software",
+    "value": "5"
+  },
+  {
+    "source": "FileMaker Pro Server 19",
+    "target": "Windows Server 2016 Datacenter - Prod",
+    "target_description": "Production Server for FileMaker",
+    "source_description": "Server Application running on Windows OS",
+    "target_type": "Server Software",
+    "source_type": "Server Software",
+    "value": "5"
+  },
+  {
+    "source": "Financial Management",
+    "target": "AP\/AR Management",
+    "target_description": "Ability to manage and report on Accounts Payable and Account Receivable",
+    "source_description": "Ability to govern the financial activities of the enterprise and establish the requirements for systems,services, and processes which control and manage finance activities.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Financial Management",
+    "target": "Cash Management",
+    "target_description": "",
+    "source_description": "Ability to govern the financial activities of the enterprise and establish the requirements for systems,services, and processes which control and manage finance activities.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Financial Management",
+    "target": "Invoice Management",
+    "target_description": "Create, read, update, delete privileges for Invoices based on persona privileges.\r",
+    "source_description": "Ability to govern the financial activities of the enterprise and establish the requirements for systems,services, and processes which control and manage finance activities.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Financial Management",
+    "target": "Revenue Recognition",
+    "target_description": "",
+    "source_description": "Ability to govern the financial activities of the enterprise and establish the requirements for systems,services, and processes which control and manage finance activities.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Gryphon",
+    "target": "AWS RDS",
+    "target_description": "Relational Database Service",
+    "source_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "target_type": "Cloud Service",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "Gryphon",
+    "target": "Form Builder",
+    "target_description": "Library for creating HTML Forms",
+    "source_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "target_type": "Plugin",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "Gryphon",
+    "target": "GitLAB",
+    "target_description": "CI\/CD Pipeline",
+    "source_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "target_type": "Microservice",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "Gryphon",
+    "target": "Laravel",
+    "target_description": "PHP Application Framework",
+    "source_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "target_type": "Framework",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "Gryphon",
+    "target": "PHP",
+    "target_description": "PHP: Hypertext Preprocessor.",
+    "source_description": "Internal business application for the enterprise, code named Gryphon, pending official name",
+    "target_type": "Technology",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "HP Management",
+    "target": "Communications Management",
+    "target_description": "Ability to manage Communications",
+    "source_description": "Ability to Manage Health Plan Domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "HP Management",
+    "target": "Document Management",
+    "target_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "source_description": "Ability to Manage Health Plan Domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "HP Management",
+    "target": "Invoice Management",
+    "target_description": "Create, read, update, delete privileges for Invoices based on persona privileges.\r",
+    "source_description": "Ability to Manage Health Plan Domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "HP Management",
+    "target": "Lines of Business Management",
+    "target_description": "Ability to manage Lines of Business",
+    "source_description": "Ability to Manage Health Plan Domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "HP Management",
+    "target": "Performance Analysis Dashboard",
+    "target_description": "Ability to view performance metrics and  option to perform ad hoc query depending on the user's persona privileges",
+    "source_description": "Ability to Manage Health Plan Domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "HP Management",
+    "target": "Request Lifecycle Management",
+    "target_description": "Ability to manage Requests",
+    "source_description": "Ability to Manage Health Plan Domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "HP Management",
+    "target": "Request Types Management",
+    "target_description": "Ability to manage request types",
+    "source_description": "Ability to Manage Health Plan Domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "HP Management",
+    "target": "Training Access Management",
+    "target_description": "",
+    "source_description": "Ability to Manage Health Plan Domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "HP Management",
+    "target": "User Creation",
+    "target_description": "ability to create a syste user ",
+    "source_description": "Ability to Manage Health Plan Domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "HP Management",
+    "target": "User Management",
+    "target_description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "source_description": "Ability to Manage Health Plan Domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "HP Management",
+    "target": "User Privilege Management",
+    "target_description": "Being able to assign privileges to a user \/ persona",
+    "source_description": "Ability to Manage Health Plan Domain",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Human Resources Management",
+    "target": "Attestation Management",
+    "target_description": "Ability to manage and track Attestation documents",
+    "source_description": "Ability to manage all aspects of the employee relationship from recruiting to retirement.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Human Resources Management",
+    "target": "Clinician Management",
+    "target_description": "All name, address, contact, payee information must sync with payroll company, i.e. when something is updated with payroll company or with account, it must be synced",
+    "source_description": "Ability to manage all aspects of the employee relationship from recruiting to retirement.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Human Resources Management",
+    "target": "Contract Management",
+    "target_description": "Ability to manage legal contracts",
+    "source_description": "Ability to manage all aspects of the employee relationship from recruiting to retirement.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Human Resources Management",
+    "target": "License Management",
+    "target_description": "Ability to manage license documents",
+    "source_description": "Ability to manage all aspects of the employee relationship from recruiting to retirement.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Human Resources Management",
+    "target": "Payroll Tax Benefit Management",
+    "target_description": "",
+    "source_description": "Ability to manage all aspects of the employee relationship from recruiting to retirement.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Human Resources Management",
+    "target": "Personnel Onboarding",
+    "target_description": "Ability to onboard new associates through recruiting, verification and credentialing.",
+    "source_description": "Ability to manage all aspects of the employee relationship from recruiting to retirement.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Human Resources Management",
+    "target": "Training Access Management",
+    "target_description": "",
+    "source_description": "Ability to manage all aspects of the employee relationship from recruiting to retirement.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Human Resources Management",
+    "target": "User Management",
+    "target_description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "source_description": "Ability to manage all aspects of the employee relationship from recruiting to retirement.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Invoice Management",
+    "target": "Coupa API",
+    "target_description": "Invoicing API",
+    "source_description": "Create, read, update, delete privileges for Invoices based on persona privileges.\r",
+    "target_type": "API",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Invoice Management",
+    "target": "Quickbooks",
+    "target_description": "Financial Management",
+    "source_description": "Create, read, update, delete privileges for Invoices based on persona privileges.\r",
+    "target_type": "Microservice",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Laravel",
+    "target": "PHP",
+    "target_description": "PHP: Hypertext Preprocessor.",
+    "source_description": "PHP Application Framework",
+    "target_type": "Technology",
+    "source_type": "Framework",
+    "value": "5"
+  },
+  {
+    "source": "License Management",
+    "target": "Document Management",
+    "target_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "source_description": "Ability to manage license documents",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "License Management",
+    "target": "MBS",
+    "target_description": "FileMaker Plugin used for facilitating cURL and many other functions not available as native to FM (up to 2016)",
+    "source_description": "Ability to manage license documents",
+    "target_type": "Technology",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "License Management",
+    "target": "PayChex",
+    "target_description": "Service for Managing Personnel and Payroll",
+    "source_description": "Ability to manage license documents",
+    "target_type": "API",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Login",
+    "target": "2 Factor Authentication",
+    "target_description": "",
+    "source_description": "Create an IT ticket if they are unable to login.  This should be tied to valid, verified email address in our system",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Login",
+    "target": "User Management",
+    "target_description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "source_description": "Create an IT ticket if they are unable to login.  This should be tied to valid, verified email address in our system",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "MBS",
+    "target": "cURL",
+    "target_description": "cURL is a computer software project providing a library and command-line tool for transferring data using various network protocols. The name stands for \"Client URL\", which was first released in 1996",
+    "source_description": "FileMaker Plugin used for facilitating cURL and many other functions not available as native to FM (up to 2016)",
+    "target_type": "Technology",
+    "source_type": "Technology",
+    "value": "5"
+  },
+  {
+    "source": "Narrative Report PDF Storage",
+    "target": "Document Management",
+    "target_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "source_description": "Storing the Narrative Report PDF document for on-demand access.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Narrative Report to PDF",
+    "target": "PDFlib",
+    "target_description": "PDF creation library",
+    "source_description": "Generating a PDF of the Narrative Report",
+    "target_type": "Server Software",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Office 365",
+    "target": "Excel",
+    "target_description": "",
+    "source_description": "Email, Word, Excel",
+    "target_type": "Client Software",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Office 365",
+    "target": "Outlook",
+    "target_description": "",
+    "source_description": "Email, Word, Excel",
+    "target_type": "Client Software",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Office 365",
+    "target": "PowerPoint",
+    "target_description": "",
+    "source_description": "Email, Word, Excel",
+    "target_type": "Client Software",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Office 365",
+    "target": "Word",
+    "target_description": "",
+    "source_description": "Email, Word, Excel",
+    "target_type": "Client Software",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Payroll Calculations",
+    "target": "PayChex",
+    "target_description": "Service for Managing Personnel and Payroll",
+    "source_description": "Ability to determine individual paycheck amounts for non-salaried clinical staff.",
+    "target_type": "API",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Payroll Management",
+    "target": "Payroll Calculations",
+    "target_description": "Ability to determine individual paycheck amounts for non-salaried clinical staff.",
+    "source_description": "Capability for managing all aspects of payroll",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Payroll Management",
+    "target": "Payroll Tax Benefit Management",
+    "target_description": "",
+    "source_description": "Capability for managing all aspects of payroll",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Payroll Tax Benefit Management",
+    "target": "PayChex",
+    "target_description": "Service for Managing Personnel and Payroll",
+    "source_description": "",
+    "target_type": "API",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "AWS QuickSight",
+    "target_description": "AWS Dashboard Reporting application (service)",
+    "source_description": "Master Business Application",
+    "target_type": "Cloud Service",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "AWS Simple Storage Services (S3)",
+    "target_description": "Document storage as objects for optimization (without content indexing)",
+    "source_description": "Master Business Application",
+    "target_type": "Cloud Service",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "CodeIgniter",
+    "target_description": "CodeIgniter is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications",
+    "source_description": "Master Business Application",
+    "target_type": "Framework",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "Coupa API",
+    "target_description": "Invoicing API",
+    "source_description": "Master Business Application",
+    "target_type": "API",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "d3js",
+    "target_description": "Javascript framework for creating SVG charts and graphs",
+    "source_description": "Master Business Application",
+    "target_type": "Framework",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "FileMaker Pro Client 19",
+    "target_description": "Client Application running on Windows and MacOS",
+    "source_description": "Master Business Application",
+    "target_type": "Client Software",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "FileMaker Pro Server 19",
+    "target_description": "Server Application running on Windows OS",
+    "source_description": "Master Business Application",
+    "target_type": "Server Software",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "PayChex",
+    "target_description": "Service for Managing Personnel and Payroll",
+    "source_description": "Master Business Application",
+    "target_type": "API",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Periscope Legacy System",
+    "target": "PDFlib",
+    "target_description": "PDF creation library",
+    "source_description": "Master Business Application",
+    "target_type": "Server Software",
+    "source_type": "Client Software",
+    "value": "5"
+  },
+  {
+    "source": "Personnel Onboarding",
+    "target": "Background Check",
+    "target_description": "ability to check a persons credentials, standings, or criminal record during the onboarding process and for annual license and insurance renewals.",
+    "source_description": "Ability to onboard new associates through recruiting, verification and credentialing.",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Policy and Guidelines Management",
+    "target": "Document Management",
+    "target_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "source_description": "Documenting Best Practices and Guidelines as standards for Domains",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Request Billing",
+    "target": "Quickbooks",
+    "target_description": "Financial Management",
+    "source_description": "Ability to calculate billing amounts and post Invoices to Financial Management System",
+    "target_type": "Microservice",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Request Creation",
+    "target": "Request Electronic Onboarding",
+    "target_description": "Ability to receive new request digitally via a transport protocol",
+    "source_description": "Ability to create and edit a request for services",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Request Electronic Onboarding",
+    "target": "WinSCP",
+    "target_description": "WinSCP is an open source free SFTP client, FTP client, WebDAV client, S3 client and SCP client for Windows. Its main function is file transfer between a local and a remote computer. ",
+    "source_description": "Ability to receive new request digitally via a transport protocol",
+    "target_type": "Client Software",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Request Lifecycle Management",
+    "target": "Assessment Data Capture",
+    "target_description": "capability to capture data during Clinician's assessment",
+    "source_description": "Ability to manage Requests",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Request Lifecycle Management",
+    "target": "Clinician Management",
+    "target_description": "All name, address, contact, payee information must sync with payroll company, i.e. when something is updated with payroll company or with account, it must be synced",
+    "source_description": "Ability to manage Requests",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Request Lifecycle Management",
+    "target": "Document Management",
+    "target_description": "All Documents (contract, attestations, insurance) maintained here.",
+    "source_description": "Ability to manage Requests",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Request Lifecycle Management",
+    "target": "Request Billing",
+    "target_description": "Ability to calculate billing amounts and post Invoices to Financial Management System",
+    "source_description": "Ability to manage Requests",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Request Lifecycle Management",
+    "target": "Request Creation",
+    "target_description": "Ability to create and edit a request for services",
+    "source_description": "Ability to manage Requests",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Request Lifecycle Management",
+    "target": "Request Search",
+    "target_description": "",
+    "source_description": "Ability to manage Requests",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "Request Lifecycle Management",
+    "target": "AWS QuickSight",
+    "target_description": "AWS Dashboard Reporting application (service)",
+    "source_description": "Ability to manage Requests",
+    "target_type": "Cloud Service",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Request Lifecycle Management",
+    "target": "Cognito Forms",
+    "target_description": "Third party tool for creating and managing custom forms for data collection",
+    "source_description": "Ability to manage Requests",
+    "target_type": "Microservice",
+    "source_type": "capability",
+    "value": "4"
+  },
+  {
+    "source": "Request Types Master Data Management",
+    "target": "Request Types Management",
+    "target_description": "Ability to manage request types",
+    "source_description": "Capability to manage the Master list of Request Types to which all custom request types must be attributed as children",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "User Management",
+    "target": "Contact Method Management",
+    "target_description": "Ability to manage email,phone,address",
+    "source_description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "User Management",
+    "target": "User Creation",
+    "target_description": "ability to create a syste user ",
+    "source_description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "User Management",
+    "target": "User Notifications",
+    "target_description": "",
+    "source_description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "User Management",
+    "target": "User Privilege Management",
+    "target_description": "Being able to assign privileges to a user \/ persona",
+    "source_description": "Ability to manage users and their access privileges based on the persona's(administrative) privileges",
+    "target_type": "capability",
+    "source_type": "capability",
+    "value": "3"
+  },
+  {
+    "source": "WordPress",
+    "target": "Elementor",
+    "target_description": "Word Press plugin for editing pages",
+    "source_description": "PHP framework for creating websites",
+    "target_type": "Plugin",
+    "source_type": "Web App",
+    "value": "5"
+  },
+  {
+    "source": "WordPress",
+    "target": "PHP",
+    "target_description": "PHP: Hypertext Preprocessor.",
+    "source_description": "PHP framework for creating websites",
+    "target_type": "Technology",
+    "source_type": "Web App",
+    "value": "5"
+  }
+];

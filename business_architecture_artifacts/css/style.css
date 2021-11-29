@@ -1,0 +1,235 @@
+
+.selector{
+    right:520px;
+    line-height: 2em;
+    height: 2.5em;
+    text-align: center !important;
+    top:10px;
+}
+.selector-label{
+    position: absolute !important;
+    right:660px;
+    line-height: 40px;
+    top:5px;
+}
+.selFile{
+    right:480px !important;
+    opacity: 0;
+    z-index: 3;
+    width:300px;
+    border:1px red solid;
+    display:inline-block;
+}
+.inputbutton{
+    opacity: 1;
+    right:520px !important;;
+    z-index: 1;
+    user-select: none;
+}
+.resetbutton{
+    opacity: 1;
+    right:350px !important;
+}
+.exportbutton {
+    right:430px !important;
+}
+
+.selector-box{
+    position: absolute;
+    top:5px;
+    right:550px;
+}
+.headerdiv .lightdark .lightdark-btn{
+    position: absolute;
+    cursor: pointer;
+    font-size: .8em !important;
+    margin: 2px;
+    padding: 5px;
+    text-decoration: underline;
+    left: 55px !important;;
+    top:7px !important;
+}
+.headerbuttons{
+    position: absolute !important;
+    line-height: 30px;
+    font-size: .8em;
+    cursor: pointer;
+    height:40px;
+    border:none;
+    background: transparent;
+    color: rgba(220, 220, 220, .8);
+    text-transform: uppercase;
+    top:5px;
+}
+.node rect {
+    cursor: move;
+    fill-opacity: .9;
+    shape-rendering: crispEdges;
+    stroke-width: 0px;
+}
+
+.node text {
+    pointer-events: none;
+    text-shadow: 0 2 0 #fff;
+    font-size: .9em;
+}
+
+.link {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .3;
+    stroke-width: 8px;
+}
+
+.link:hover {
+    stroke-opacity: .5;
+}
+
+body {
+    margin: 0px;
+    border: none;
+    font-family: Helvetica, "Nova Flat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgba(240, 240, 240, .8);
+    background: linear-gradient(#648880, #293f50);
+}
+
+#chart{
+    margin-text:50px;
+}
+.legend {
+    position:absolute;
+    top: 55px;
+    height: 25px;
+    width: 100%;
+}
+.legend div{
+    position:relative;
+    display:inline-block;
+    width: 25px;
+    height: 25px;
+    margin:5px 10px -5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.legend span{
+    display:inline-block;
+    line-height: 20px;
+    font-size: .7em;
+}
+.legend input{
+    margin-left:50px;
+    margin-bottom:15px;
+    width:200px;
+    padding:5px;
+}
+.searchbox{
+    position: absolute;
+    top:10px;
+    z-index: 10000;
+    width:200px;
+    padding:5px;
+}
+.searchclear{
+    position: absolute;
+    top:11px;
+    z-index: 10000;
+    width:20px;
+    height:25px;
+    line-height: 25px;
+    padding:2px;
+    background-color: grey;
+    text-align: center;
+    color:white;
+}
+
+.subtitle {
+    position: sticky;
+    bottom: 10px;
+    width: 95%;
+    text-align: right;
+    letter-spacing: 1em;
+    margin: 5px;
+    text-indent: 4px !important;
+    right: 20px;
+    font-size: .6em !important;
+}
+
+.title {
+    position: absolute;
+    top: 55px !important;
+    width: 95%;
+    text-align: left;
+    margin: 5px;
+    text-indent: 4px !important;
+    left: 100px !important;
+    font-size: 1.5em !important;
+    text-transform: uppercase;
+}
+.indicator{
+    text-align: center;
+    line-height: 1.5em;
+    border: 1px solid transparent;
+    text-shadow:-1px 1px 0px grey;
+    padding:4px;
+}
+.indicator-select{
+    text-decoration: underline;
+    font-weight: bold;
+    margin-left: -14px !important;
+    text-indent:10px;
+    padding-right:8px;
+}
+
+.lightdark {
+    position: absolute;
+    top: 7px;
+    cursor: pointer;
+    font-size: .8em !important;
+    margin: 2px;
+    padding: 5px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.toggler {
+    left: 20px;
+
+}
+
+text {
+    fill: rgba(220, 220, 220, .6);
+    stroke: none;
+    text-decoration: none !important;
+}
+
+.darkish {
+    background: rgb(235, 235, 235);
+    color: rgba(55, 55, 55, .6);
+}
+
+.darkish text {
+    fill: rgba(55, 55, 55, .8);
+}
+
+.darkish path {
+    stroke: rgba(50, 50, 50, .3);
+}
+
+.tooltip {
+    max-width: 300px;
+    min-width: 200px;
+    height: auto;
+    position: absolute;
+    top: 15%;
+    left: -4000px;
+    opacity: 0;
+    padding: 10px;
+    background: rgba(50, 50, 50, .9);
+    color: white;
+    font-size: .7em;
+}
+
+.tool-content {
+    margin-top: 30px !important;
+    z-index: 0 !important;
+}
