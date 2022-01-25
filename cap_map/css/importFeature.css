@@ -1,0 +1,153 @@
+a {
+    color: floralwhite;
+}
+.btn{
+    border-radius: .2em;
+    background-color: transparent;
+    color: rgba(240, 240, 240, .8);
+}
+.popup{
+    position: absolute;
+    width:auto;
+    right:2%;
+    background: black;
+    padding: 40px;
+    margin-left:2%;
+    margin-bottom:2%;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height:80%;
+    top:80px !important;
+    color: floralwhite;
+}
+.popup table, th, tr, td{
+    border-collapse: collapse;
+    color:white;
+    font-size: .7em;
+    border: 1px solid rgba(200,200,200,.3);
+    padding:4px;
+}
+.close{
+    position: absolute;
+    top:10px;
+    right:15px;
+    width:20px;
+    height:20px;
+    background-color: grey;
+    text-align: center;
+    padding: 4px;
+    cursor: pointer;
+}
+.tagline{
+    background-image: url("img/tagline.png");
+    width:200px;
+    height:30px;
+    background-repeat: no-repeat;
+    background-color:white;
+}
+.logo{
+    background-image: url("img/logo_horizontal.png");
+    width:200px;
+    height:100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color:white;
+}
+.selector {
+    background-color: white;
+    border: thin solid blue;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.2em;
+    padding: 0.3em 0.3em 0.3em .5em;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    min-width: 140px !important;
+    cursor: pointer;
+}
+.selector.minimal {
+    background-image:
+            linear-gradient(45deg, transparent 50%, gray 50%),
+            linear-gradient(135deg, gray 50%, transparent 50%),
+            linear-gradient(to right, #ccc, #ccc);
+    background-position:
+            calc(100% - 20px) calc(.6em + 2px),
+            calc(100% - 15px) calc(.6em + 2px),
+            calc(100% - 2.5em) 0.3em;
+    background-size:
+            5px 5px,
+            5px 5px,
+            1px 1.5em;
+    background-repeat: no-repeat;
+}
+
+.selector.minimal:focus {
+    background-image:
+            linear-gradient(45deg, green 50%, transparent 50%),
+            linear-gradient(135deg, transparent 50%, green 50%),
+            linear-gradient(to right, #ccc, #ccc);
+    background-position:
+            calc(100% - 15px) 1em,
+            calc(100% - 20px) 1em,
+            calc(100% - 2.5em) 0.5em;
+    background-size:
+            5px 5px,
+            5px 5px,
+            1px 1.5em;
+    background-repeat: no-repeat;
+    border-color: green;
+    outline: 0;
+}
+
+.date.selector{
+    right:450px;
+    line-height: 2em;
+    height: 2.5em;
+    text-align: center !important;
+    top:10px;
+}
+.selector-label{
+    position: absolute !important;
+    right:590px;
+    line-height: 40px;
+    top:5px;
+}
+.selFile{
+
+    opacity: 0;
+    z-index: 3;
+    width:300px;
+    border:1px red solid;
+    display:inline-block;
+}
+.inputbutton{
+    opacity: 1;
+    z-index: 1;
+    user-select: none;
+}
+.resetbutton{
+    opacity: 1;
+}
+
+.selector-box{
+    position: absolute;
+    top:5px;
+    right:480px;
+}
+.headerdiv .lightdark .lightdark-btn{
+    position: absolute;
+    cursor: pointer;
+    font-size: .8em !important;
+    margin: 2px;
+    padding: 5px;
+    text-decoration: underline;
+    left: 55px !important;;
+    top:7px !important;
+}

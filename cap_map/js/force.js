@@ -19,7 +19,6 @@ var textBoxVisible = false;
 var scaleMaster = null;
 var scaleMasterBase = 1.4;
 
-
 var skipCount = 0;
 var skipAmount = 0;
 
@@ -175,7 +174,7 @@ function setLegend() {
 }
 
 
-function addForceView(target, jsonData, subject) {
+function addForceView() {
 
     var b = d3.select("body")
 
@@ -367,7 +366,6 @@ function update2() {
 
         })
         .style("fill", function (d, i) {
-            console.log(d)
            let c = indicator_colors[dim_array.indexOf(d.dim_str)]
             return c;
         })
@@ -472,12 +470,8 @@ function addNames() {
                         text1.append("text")
                             .attr('x', 0)
                             .attr("y", function (d) {
-                                let y = (n.length == 1) ? labelshift*.5 : (i * 15)
+                                let y = (n.length == 1) ? labelshift * .5 : (i * 15)
                                 return y
-                            })
-                            .style("text-shadow", function(d){
-                                let ts = d.depth != 1 ? "2px 2px 0px black" :"none"
-                                return ts
                             })
 
                             .attr("class", "nameText")
@@ -488,10 +482,13 @@ function addNames() {
                                     return false
                                 }
                             })
+                            .style("fill", function (d) {
+                                let c = colorsText[dim_array.indexOf(d.dim_str)]
+                                return c ? "black" : "white"
+                            })
                             .text(display)
                     }
                 }
-
             }
         );
 
